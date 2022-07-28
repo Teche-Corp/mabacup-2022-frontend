@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# schematics-frontend-2022
 
-## Getting Started
+## Commit Message Convention
 
-First, run the development server:
+This website follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+### Format
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`<type>(optional scope): <description>`
+Contoh: `feat(pre-event): add speakers section`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 1. Type
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Type yang bisa digunakan adalah:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- feat → Jika ada penambahan/pengurangan fitur codingan. Contoh: `feat: add table on landing page`, `feat: remove table from landing page`
+- fix → Jika ada bug fixing, diikuti dengan bugnya. Contoh: `fix: illustration overflows in mobile view`
+- BREAKING CHANGE → Jika ada perubahan yang signifikan. Contoh: `BREAKING CHANGE: change login flow to not save token in localStorage`
+- docs → Update documentation (README.md)
+- style → Update style, tidak mengubah logic sama sekali (reorder import, fix whitespace, remove comment)
+- chore → Jika menginstall, mengupdate dependecies
+- refactor → Jika ada perubahan code, dengan end result yang sama, tetapi approach berbeda yang lebih baik.
+- ci → Update github workflows, husky
+- test → Update testing suite
+- perf → Fix sesuatu yang bersifat improve performance (derived state, memo)
+- vercel → Jika ada commit kosong untuk trigger vercel deployment. Contoh: `vercel: trigger deployment`
 
-## Learn More
+### 2. Description
 
-To learn more about Next.js, take a look at the following resources:
+Description harus bisa mendeskripsikan apa yang dikerjakan.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Jika ada beberapa hal yang dikerjakan, maka lakukan commit secara bertahap.**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Setelah titik dua, ada spasi. Contoh: `feat: add something`
+- Jika type `fix` langsung sebut issuenya. Contoh: `fix: file size limiter not working`
+- Gunakan kata imperative, dan present tense: "change" bukan "changed" atau "changes"
+- Jangan gunakan huruf kapital di awal kalimat description
+- Jangan tambahkan titik di akhir description
