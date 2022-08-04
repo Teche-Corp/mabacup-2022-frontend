@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import { Parallax } from "react-scroll-parallax";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,11 +12,224 @@ export default function Home() {
         <link rel='icon' href='/mabacup-logo.svg' />
       </Head>
 
-      <main className=''>
-        <p className='font-secondary '>Font Poppins</p>
-        <p className='font-primary '>Font Poppins</p>
-        <p className='font-primary_outline'>Font Poppins</p>
-        <p className='font-primary_shadow'>Font Poppins</p>
+      <main className='content overflow-x-hidden'>
+        <section className='w-full min-h-screen'>
+          <div className='w-full min-h-screen pt-40 relative'>
+            {/* Images */}
+
+            <Parallax
+              className='xl:w-[33%] 2xl:w-[30%] absolute xl:left-16 2xl:left-20 z-0 bottom-[3.5rem]'
+              speed={10}
+            >
+              <img src='/images/hero/frame-left.png' alt='frame-left' />
+            </Parallax>
+            <img
+              className='w-64 absolute left-28 bottom-12 z-0'
+              src='/images/hero/kubah.png'
+              alt='kubah'
+            />
+            <Parallax
+              className='xl:w-[33%] 2xl:w-[30%] absolute xl:right-16 2xl:right-20 z-0 bottom-16'
+              speed={10}
+            >
+              <img src='/images/hero/frame.png' alt='frame-right' />
+            </Parallax>
+            <img
+              className='w-64 absolute right-28 bottom-12 z-0'
+              src='/images/hero/kubah.png'
+              alt='kubah'
+            />
+
+            <img
+              className='xl:w-[30%] 2xl:w-[35%] absolute right-[50%] bottom-12 translate-x-1/2'
+              src='/images/hero/terumbu.png'
+              alt='terumbu'
+            />
+
+            <Parallax
+              className='absolute z-1 left-32 bottom-12 xl:w-64 2xl:w-96'
+              translateX={["0px", "200px"]}
+              scale={[1.3, 0.5]}
+              speed={-10}
+              opacity={[2, 0]}
+            >
+              <img
+                className='mx-auto'
+                src='/images/hero/fish-left.svg'
+                alt='fish-left'
+              />
+            </Parallax>
+            <Parallax
+              className='absolute z-1 right-32 bottom-12 xl:w-64 2xl:w-96'
+              translateX={["0px", "-200px"]}
+              scale={[1.3, 0.5]}
+              speed={-10}
+              opacity={[2, 0]}
+            >
+              <img
+                className='mx-auto'
+                src='/images/hero/fish-right.svg'
+                alt='fish-right'
+              />
+            </Parallax>
+
+            {/* Mabacup text */}
+            <h1 className='primary-title font-primary uppercase text-4xl text-center pt-16'>
+              Maba cup 2022
+            </h1>
+            <Parallax speed={-5} scale={[0.8, 1]}>
+              <h1 className='secondary-title font-primary text-center text-8xl relative pt-8 z-1'>
+                The Adventure Seeker
+              </h1>
+            </Parallax>
+
+            <Link href={"#about"}>
+              <a className='dive-button absolute xl:bottom-64 2xl:bottom-32 right-1/2 translate-x-1/2 font-secondary font-medium text-2xl text-white bg-red-200 px-16 py-3 rounded-3xl'>
+                Dive Deeper
+              </a>
+            </Link>
+          </div>
+        </section>
+        <section id='about' className='w-full min-h-screen pt-48'>
+          <div className='about-mabacup w-1/2 h-72 mx-auto rounded-3xl relative'>
+            <img
+              className='w-28 absolute -top-8 -left-8'
+              src='/images/about/mutiara.png'
+              alt='mutiara'
+            />
+            <h1 className='font-primary text-white text-3xl text-center -translate-y-4'>
+              About Maba Cup
+            </h1>
+            <div className='px-12 mt-12'>
+              <p className='font-secondary text-xl leading-8 text-white font-semibold text-center'>
+                Maba Cup merupakan event tahunan yang diselenggarakan oleh
+                Departemen Event Lembaga Minat & Bakat ITS. Memiliki motto “Dari
+                maba, oleh maba, dan untuk maba”, event ini terdiri dari
+                pelatihan manajerial dan berbagai perlombaan.{" "}
+              </p>
+            </div>
+            <img
+              className='w-28 absolute -bottom-8 -right-8'
+              src='/images/about/rumput-laut.png'
+              alt='rumput laut'
+            />
+          </div>
+
+          <Parallax translateX={["0px", "100px"]} speed={15}>
+            <img
+              className='w-48'
+              src='/images/about/fish-bottom-right.svg'
+              alt='fish-left'
+            />
+          </Parallax>
+        </section>
+        <section id='three' className='w-full min-h-screen relative'>
+          <div className='w-10/12 mx-auto pt-24 '>
+            <h1 className='font-primary text-center text-5xl text-white'>
+              Timeline Maba Cup 2022
+            </h1>
+            <div className='w-full mt-12 h-72 flex justify-center items-center'>
+              <div className='timeline-div mx-auto h-3 md:w-10/12 xl:w-3/4 flex justify-between rounded-lg'>
+                <div className='h-6 w-6 bg-[#ECBE58] rounded-full -translate-y-1/4 hover:scale-110 transition duration-300'>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
+                    Agustus 2022
+                  </p>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -bottom-20 w-[10rem] -translate-x-[40%] text-center'>
+                    Open Recruitment Staff
+                  </p>
+                </div>
+                <div className='h-6 w-6 bg-[#ECBE58] rounded-full -translate-y-1/4 hover:scale-110 transition duration-300'>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
+                    September 2022
+                  </p>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -bottom-20 w-48 -translate-x-[40%] text-center'>
+                    Open Recruitment Brand Ambassador
+                  </p>
+                </div>
+                <div className='h-6 w-6 bg-[#ECBE58] rounded-full -translate-y-1/4 hover:scale-110 transition duration-300'>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
+                    September 2022
+                  </p>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -bottom-20 w-32 -translate-x-[40%] text-center'>
+                    Pre Event Maba Cup
+                  </p>
+                </div>
+                <div className='h-6 w-6 bg-[#ECBE58] rounded-full -translate-y-1/4 hover:scale-110 transition duration-300'>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
+                    September 2022
+                  </p>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -bottom-20 w-32 -translate-x-[40%] text-center'>
+                    Main Event Maba Cup
+                  </p>
+                </div>
+                <div className='h-6 w-6 bg-[#ECBE58] rounded-full -translate-y-1/4 hover:scale-110 transition duration-300'>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
+                    Nopember 2022
+                  </p>
+                  <p className='font-secondary text-lg font-semibold absolute text-white -bottom-20 w-32 -translate-x-[40%] text-center'>
+                    Closing
+                    <br />
+                    Maba Cup
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Parallax
+            className='absolute bottom-12 right-0'
+            translateX={["0px", "-100px"]}
+            speed={-15}
+          >
+            <img
+              className='w-48 rotate-180 relative z-0'
+              src='/images/about/fish-bottom-left.svg'
+              alt='fish-right'
+            />
+          </Parallax>
+        </section>
+        <section className='w-full min-h-screen'>
+          <div className='w-10/12 pt-32 flex gap-8 justify-between items-center mx-auto relative z-10'>
+            <div className='event-card w-[24rem] h-80 rounded-3xl p-8'>
+              <h1 className='font-primary text-white text-5xl text-center'>
+                Pre Event
+              </h1>
+
+              <Link href={"#"}>
+                <a className='event-button font-secondary font-medium text-2xl block w-56 h-16 mt-32 text-white rounded-3xl mx-auto flex justify-center items-center'>
+                  See Details
+                </a>
+              </Link>
+            </div>
+            <div className='event-card w-[24rem] h-80 rounded-3xl p-8'>
+              <h1 className='font-primary text-white text-5xl text-center'>
+                Main Event
+              </h1>
+
+              <Link href={"#"}>
+                <a className='event-button font-secondary font-medium text-2xl block w-56 h-16 mt-32 text-white rounded-3xl mx-auto flex justify-center items-center'>
+                  See Details
+                </a>
+              </Link>
+            </div>
+            <div className='event-card w-[24rem] h-80 rounded-3xl p-8'>
+              <h1 className='font-primary text-white text-5xl text-center'>
+                Closing
+              </h1>
+
+              <Link href={"#"}>
+                <a className='event-button font-secondary font-medium text-2xl block w-56 h-16 mt-32 text-white rounded-3xl mx-auto flex justify-center items-center'>
+                  See Details
+                </a>
+              </Link>
+            </div>
+          </div>
+        </section>
+        <img
+          className='w-full relative z-10'
+          src='/images/retrospeksi/rounded.png'
+          alt='rounded'
+        />
+        <section className='w-full min-h-[calc(100vh-300px)] bg-[#28388F]'></section>
       </main>
     </div>
   );

@@ -26,8 +26,76 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.content {
+  background: linear-gradient(
+    180deg,
+    #fff6e6 4.48%,
+    #b5dae2 16%,
+    #5189c4 31.18%,
+    #27378e 72.44%,
+    #262626 120%
+  );
+}
+
+.primary-title {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 199, 0, 1) -30.77%,
+    rgba(255, 161, 0, 1) 51.24%,
+    rgba(255, 107, 0, 1) 146.15%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.secondary-title {
+  background: linear-gradient(
+    90.34deg,
+    #27378e 0.12%,
+    #235592 31.46%,
+    #1f7196 99.88%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.dive-button {
+  background: linear-gradient(
+    93.32deg,
+    #27378e 0%,
+    #3d63ab 54.26%,
+    #5189c4 100%
+  );
+}
+
+.about-mabacup {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+}
+
+.timeline-div {
+  background: linear-gradient(90deg, #ebac08 0%, #91a75d 35.69%, #37a2b2 100%);
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.event-button {
+  background: linear-gradient(180deg, #d8328e 0%, #3f205c 100%);
 }
