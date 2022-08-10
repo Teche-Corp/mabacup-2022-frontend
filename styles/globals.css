@@ -44,58 +44,53 @@ body {
   );
 }
 
-.primary-title {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 199, 0, 1) -30.77%,
-    rgba(255, 161, 0, 1) 51.24%,
-    rgba(255, 107, 0, 1) 146.15%
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-.secondary-title {
-  background: linear-gradient(
-    90.34deg,
-    #27378e 0.12%,
-    #235592 31.46%,
-    #1f7196 99.88%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-.dive-button {
-  background: linear-gradient(
-    93.32deg,
-    #27378e 0%,
-    #3d63ab 54.26%,
-    #5189c4 100%
+.hero {
+  background: radial-gradient(
+    124.1% 402.07% at 117.33% -15.37%,
+    #fff6e6 0%,
+    #e3e6e2 9.45%,
+    #5189c4 63.64%,
+    #2368b1 100%
   );
 }
 
 .about-mabacup {
   background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.3) 100%
+    93.43deg,
+    rgba(255, 255, 255, 0.05) 2.55%,
+    rgba(255, 255, 255, 0.3) 94.75%
   );
-}
-
-.timeline-div {
-  background: linear-gradient(90deg, #ebac08 0%, #91a75d 35.69%, #37a2b2 100%);
+  stroke: red;
+  stroke-width: 4px;
 }
 
 .event-card {
-  background: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(
+    139.65deg,
+    rgba(255, 255, 255, 0.05) 1.24%,
+    rgba(255, 255, 255, 0.3) 96.08%
+  );
+  backdrop-filter: blur(15px);
 }
 
 .event-button {
   background: linear-gradient(180deg, #d8328e 0%, #3f205c 100%);
+}
+
+.oprec {
+  background: radial-gradient(
+    109.44% 354.6% at 102.67% -3.31%,
+    #addea3 0%,
+    #43a8ad 65.94%,
+    #246a8c 100%
+  );
+}
+
+.retro {
+  background: linear-gradient(180deg, #273580 0%, #272d51 100%);
+}
+
+.border-custom {
+  border-color: ;
+  stroke: ;
 }
