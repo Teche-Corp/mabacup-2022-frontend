@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
       </Head>
 
       <main className='content overflow-x-hidden'>
-        <section className='w-full min-h-screen hero overflow-hidden'>
+        <Navbar />
+        <section id='hero' className='w-full min-h-screen hero overflow-hidden'>
           <div className="w-full h-screen relative bg-[url('/images/hero/light.png')] bg-cover">
             <Parallax className='ml-24 pt-72 2xl:pt-48 w-fit h-fit' speed={20}>
               <div className=''>
@@ -24,17 +26,23 @@ export default function Home() {
                 <h1 className='font-primary text-white text-7xl mt-3 mb-8'>
                   The Adventure Seeker
                 </h1>
-                <a
-                  href='#about'
-                  className='font-secondary font-medium text-lg text-[#2C7994] bg-white rounded-[2.5rem] px-5 py-3 cursor-pointer'
-                >
-                  Dive Deeper
-                </a>
+                <div className='inline-block hover:scale-105 transition duration-200 ease-in-out'>
+                  <a
+                    href='#about'
+                    className='dive-button font-secondary font-medium text-base text-white rounded-[2.5rem] px-6 py-3 cursor-pointer '
+                  >
+                    Dive Deeper
+                  </a>
+                </div>
               </div>
             </Parallax>
 
             {/* terumbu image */}
-            <Parallax className='absolute left-0 -bottom-6 w-64' speed={-5}>
+            <Parallax
+              className='absolute left-0 -bottom-6 w-64'
+              speed={-10}
+              scale={[0.9, 1.2]}
+            >
               <img
                 className='w-64'
                 src='/images/hero/terumbu-kiri.png'
@@ -46,6 +54,7 @@ export default function Home() {
             <Parallax
               className='w-36 absolute bottom-10 right-[19rem] z-[1]'
               speed={-10}
+              scale={[0.9, 1.2]}
             >
               <img className='' src='/images/hero/seaweed.png' alt='seaweed' />
             </Parallax>
@@ -54,6 +63,7 @@ export default function Home() {
             <Parallax
               className='absolute w-[34rem] -right-40 -bottom-[5rem] z-[1]'
               speed={-15}
+              scale={[0.9, 1.2]}
             >
               <img
                 className=''
@@ -66,6 +76,7 @@ export default function Home() {
             <Parallax
               className='absolute w-[34rem] -bottom-20 right-52 z-[0]'
               speed={-15}
+              scale={[0.9, 1.2]}
             >
               <img
                 className=''
@@ -288,7 +299,7 @@ export default function Home() {
               </Link>
               <Link href={"#"}>
                 <a className='ml-4 mt-8 inline-block px-5 py-3 border-2 border-solid border-white text-white rounded-lg font-medium'>
-                  Daftar Sekarang
+                  Unduh Guidebook
                 </a>
               </Link>
             </div>
@@ -317,12 +328,22 @@ export default function Home() {
             alt='mutiara'
           />
           <img
-            className='w-full relative z-[2]'
-            src='/images/retrospeksi/rounded.png'
+            className='w-full relative z-[1]'
+            src='/images/retrospeksi/rounded-new.png'
             alt='rounded'
           />
+          <img
+            className='absolute w-64 right-0 -top-24 z-0'
+            src='/images/retrospeksi/terumbu-kanan.png'
+            alt='terumbu kanan'
+          />
+          <img
+            className='absolute w-56 left-0 -top-20 z-0'
+            src='/images/retrospeksi/terumbu-kiri.png'
+            alt='terumbu kiri'
+          />
         </div>
-        <section className='retro w-full min-h-[calc(100vh-300px)]'></section>
+        <section className='retro w-full min-h-[calc(100vh-350px)]'></section>
       </main>
     </div>
   );

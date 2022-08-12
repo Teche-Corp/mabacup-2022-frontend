@@ -36,7 +36,7 @@ body {
 .content {
   background: linear-gradient(
     180deg,
-    #fff6e6 4.48%,
+    #fff6e6 10.48%,
     #b5dae2 16%,
     #5189c4 31.18%,
     #27378e 72.44%,
@@ -51,6 +51,26 @@ body {
     #e3e6e2 9.45%,
     #5189c4 63.64%,
     #2368b1 100%
+  );
+}
+
+.dive-button {
+  background: linear-gradient(
+    261.31deg,
+    #e73776 -2.11%,
+    #bc2788 48.56%,
+    #951898 96.99%
+  );
+
+  transition: all 0.3s ease-in-out;
+}
+
+.dive-button:hover {
+  background: linear-gradient(
+    90.76deg,
+    #e73776 -5.76%,
+    #bc2788 44.43%,
+    #951898 110.63%
   );
 }
 
