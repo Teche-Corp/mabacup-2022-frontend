@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
         <div className="flex justify-between mt-8 items-center border-t-2 pt-2">
             <p className="text-white">© 2020 Mabacup</p>
-            <img src="/images/footer/logos.png" alt="Mabacup 2022" />
+            <img src="/footer/logos.png" alt="Mabacup 2022" />
         </div>
     </footer>
   );

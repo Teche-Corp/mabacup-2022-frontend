@@ -48,7 +48,7 @@ const Navbar = () => {
     <div className='fixed top-0 z-50'>
       <nav
         className={`${
-          colorChange ? "bg-[#27378E]" : ""
+          colorChange ? "bg-[#27378E] duration-300 ease-in-out" : "duration-300 ease-in-out"
         } h-20 relative z-50 select-none w-screen font-secondary flex justify-between items-center px-5 md:px-16 lg:px-24`}
       >
         {/* header logo */}
