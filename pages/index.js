@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
-import Navbar from "../components/Navbar";
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
@@ -14,10 +14,11 @@ export default function Home() {
         <link rel='icon' href='/mabacup-logo.svg' />
       </Head>
 
+      <Layout>
+
       <main className='content overflow-x-hidden'>
-        <Navbar />
         <section id='hero' className='w-full min-h-screen hero overflow-hidden'>
-          <div className="w-full h-screen relative bg-[url('/images/hero/light.png')] bg-cover">
+          <div className="w-full h-screen relative bg-[url('/hero/light.png')] bg-cover">
             <Parallax className='ml-24 pt-72 2xl:pt-48 w-fit h-fit' speed={20}>
               <div className=''>
                 <h1 className='font-secondary text-white text-3xl tracking-widest'>
@@ -45,7 +46,7 @@ export default function Home() {
             >
               <img
                 className='w-64'
-                src='/images/hero/terumbu-kiri.png'
+                src='/hero/terumbu-kiri.png'
                 alt='terumbu kiri'
               />
             </Parallax>
@@ -56,7 +57,7 @@ export default function Home() {
               speed={-10}
               scale={[0.9, 1.2]}
             >
-              <img className='' src='/images/hero/seaweed.png' alt='seaweed' />
+              <img className='' src='/hero/seaweed.png' alt='seaweed' />
             </Parallax>
 
             {/* building primary image */}
@@ -67,7 +68,7 @@ export default function Home() {
             >
               <img
                 className=''
-                src='/images/hero/building-primary.png'
+                src='/hero/building-primary.png'
                 alt='building primary'
               />
             </Parallax>
@@ -80,7 +81,7 @@ export default function Home() {
             >
               <img
                 className=''
-                src='/images/hero/building-secondary.png'
+                src='/hero/building-secondary.png'
                 alt='building secondary'
               />
             </Parallax>
@@ -92,7 +93,7 @@ export default function Home() {
             >
               <img
                 className=''
-                src='/images/hero/ikan-primary.svg'
+                src='/hero/ikan-primary.svg'
                 alt='ikan primary'
               />
             </Parallax>
@@ -104,7 +105,7 @@ export default function Home() {
             >
               <img
                 className=''
-                src='/images/hero/ikan-secondary.svg'
+                src='/hero/ikan-secondary.svg'
                 alt='ikan secondary'
               />
             </Parallax>
@@ -113,7 +114,7 @@ export default function Home() {
 
             <img
               className='w-full absolute bottom-0 z-[2]'
-              src='/images/hero/sand.png'
+              src='/hero/sand.png'
               alt='sand'
             />
           </div>
@@ -122,7 +123,7 @@ export default function Home() {
           <div className='about-mabacup w-3/4 h-72 mx-auto rounded-3xl relative z-[1]'>
             <img
               className='w-28 absolute -top-8 -left-8 -rotate-12'
-              src='/images/about/mutiara.png'
+              src='/about/mutiara.png'
               alt='mutiara'
             />
             <h1 className='font-primary text-4xl text-[#6FA1CD] bg-white w-fit px-8 py-2 rounded-full mx-auto text-center -translate-y-6'>
@@ -138,7 +139,7 @@ export default function Home() {
             </div>
             <img
               className='w-28 absolute -bottom-8 -right-8'
-              src='/images/about/rumput-laut.png'
+              src='/about/rumput-laut.png'
               alt='rumput laut'
             />
           </div>
@@ -150,7 +151,7 @@ export default function Home() {
           >
             <img
               className='w-48'
-              src='/images/about/fish-bottom-right.svg'
+              src='/about/fish-bottom-right.svg'
               alt='fish-left'
             />
           </Parallax>
@@ -214,7 +215,7 @@ export default function Home() {
           >
             <img
               className='w-48 rotate-180 relative z-0'
-              src='/images/about/fish-bottom-left.svg'
+              src='/about/fish-bottom-left.svg'
               alt='fish-right'
             />
           </Parallax>
@@ -305,18 +306,18 @@ export default function Home() {
             </div>
             <img
               className='absolute bottom-0 right-2 w-[31rem]'
-              src='/images/oprec/building.png'
+              src='/oprec/building.png'
               alt='building oprec'
             />
             <img
               className='absolute bottom-12 right-[42%] w-40'
-              src='/images/oprec/ikan-primary.png'
+              src='/oprec/ikan-primary.png'
               alt='ikan primary'
             />
 
             <img
               className='absolute right-16 top-0 w-72'
-              src='/images/oprec/ikan-secondary.png'
+              src='/oprec/ikan-secondary.png'
               alt='ikan secondary'
             />
           </div>
@@ -324,27 +325,28 @@ export default function Home() {
         <div className='relative'>
           <img
             className='absolute w-48 z-[3] -top-16 right-[50%] translate-x-1/2'
-            src='/images/retrospeksi/mutiara.png'
+            src='/retrospeksi/mutiara.png'
             alt='mutiara'
           />
           <img
             className='w-full relative z-[1]'
-            src='/images/retrospeksi/rounded-new.png'
+            src='/retrospeksi/rounded-new.png'
             alt='rounded'
           />
           <img
             className='absolute w-64 right-0 -top-24 z-0'
-            src='/images/retrospeksi/terumbu-kanan.png'
+            src='/retrospeksi/terumbu-kanan.png'
             alt='terumbu kanan'
           />
           <img
             className='absolute w-56 left-0 -top-20 z-0'
-            src='/images/retrospeksi/terumbu-kiri.png'
+            src='/retrospeksi/terumbu-kiri.png'
             alt='terumbu kiri'
           />
         </div>
         <section className='retro w-full min-h-[calc(100vh-350px)]'></section>
       </main>
+      </Layout>
     </div>
   );
 }
