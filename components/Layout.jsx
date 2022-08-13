@@ -1,6 +1,6 @@
 import React from "react";
 // import Nav from "./Nav";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   console.log(children);
@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
     <div>
       {/* <Nav /> */}
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
