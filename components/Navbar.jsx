@@ -7,8 +7,7 @@ import { HiSpeakerphone } from "react-icons/hi";
 import { BsStars } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-const Navbar = () => {
-  const [showNav, setShowNav] = useState(false);
+const Navbar = ({ showNav, setShowNav }) => {
   const [showEvents, setShowEvents] = useState(false);
   const [hideEvents, setHideEvents] = useState(true);
   const [colorChange, setColorchange] = useState(false);
@@ -176,7 +175,7 @@ const Navbar = () => {
             onClick={toggleShowNav}
             className='py-4 border-2 border-t-0 border-black px-7'
           >
-            <Link href='/about'>
+            <Link href='#about'>
               <a className='flex items-center justify-center w-full text-2xl font-secondary text-border-thin '>
                 About
               </a>

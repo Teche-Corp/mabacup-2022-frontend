@@ -4,8 +4,10 @@ import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
 import Layout from "../components/Layout";
+import { useState } from "react";
 
 export default function Home() {
+  const [showNav, setShowNav] = useState(false);
   return (
     <>
       <Head>
@@ -14,15 +16,15 @@ export default function Home() {
         <link rel='icon' href='/mabacup-logo.svg' />
       </Head>
 
-      <Layout>
-        <main className=' overflow-x-hidden'>
+      <Layout showNav={showNav} setShowNav={setShowNav}>
+        <main className={`${showNav ? "touch-non" : ""} overflow-x-hidden`}>
           <section
             id='hero'
             className='w-full min-h-screen hero overflow-hidden'
           >
             <div className="w-full h-screen relative bg-[url('/hero/light-mobile.png')] sm:bg-[url('/hero/light.png')] bg-cover">
               <Parallax
-                className='block mx-auto lg:ml-24 pt-[15rem] sm:pt-[18rem] lg:pt-[20rem] 2xl:pt-[14rem] w-fit h-fit'
+                className='block mx-auto lg:ml-24 pt-[12rem] sm:pt-[18rem] lg:pt-[20rem] 2xl:pt-[14rem] w-fit h-fit'
                 speed={20}
               >
                 <div className='flex flex-col items-center lg:block w-4/5 sm:w-full mx-auto'>
@@ -35,7 +37,7 @@ export default function Home() {
                   <div className='inline-block hover:scale-105 transition duration-200 ease-in-out'>
                     <a
                       href='#about'
-                      className='dive-button font-secondary font-medium text-base text-white rounded-[2.5rem] px-6 py-3 cursor-pointer '
+                      className='relative z-[9] dive-button font-secondary font-medium text-base text-white rounded-[2.5rem] px-6 py-3 cursor-pointer '
                     >
                       Dive Deeper
                     </a>
@@ -133,7 +135,7 @@ export default function Home() {
                 alt='sand'
               />
               <img
-                className='block sm:hidden w-full absolute bottom-0 z-[2]'
+                className='block sm:hidden translate-y-[8px] w-full absolute bottom-0 z-[2]'
                 src='/hero/sand-mobile.png'
                 alt='sand'
               />
