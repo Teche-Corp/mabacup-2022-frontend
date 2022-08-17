@@ -14,19 +14,15 @@ export default function UnderMaintenance() {
           </a>
           <p className="text-white pt-10 font-light lg:text-xl font-secondary">Urgent needs? feel free to contact us.</p>
           {/* Instagram */}
-          <a target="_blank" href="https://instagram.com/mabacupits">
-            <div className="flex gap-2 items-center mt-2 font-secondary">
-              <FaInstagram className="text-white" size={28} />
-              <p className="text-white">@mabacupits</p>
-            </div>
-          </a>
+          <div className="flex gap-2 items-center mt-2 font-secondary">
+            <FaInstagram className="text-white" size={28} />
+            <p className="text-white">@mabacupits</p>
+          </div>
           {/* Line */}
-          <a target="_blank" href="https://instagram.com/">
-            <div className="flex gap-2 mt-2 items-center font-secondary">
-              <FaLine className="text-white" size={28} />
-              <p className="text-white font-base ">@899jpfck</p>
-            </div>
-          </a>
+          <div className="flex gap-2 mt-2 items-center font-secondary">
+            <FaLine className="text-white" size={28} />
+            <p className="text-white font-base ">@899jpfck</p>
+          </div>          
         </div>
       </section>
     </>
