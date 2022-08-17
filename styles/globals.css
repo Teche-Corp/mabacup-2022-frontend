@@ -36,21 +36,10 @@ body {
 .content {
   background: linear-gradient(
     180deg,
-    #fff6e6 10.48%,
-    #b5dae2 16%,
-    #5189c4 31.18%,
-    #27378e 72.44%,
-    #262626 120%
-  );
-}
-
-.hero {
-  background: radial-gradient(
-    124.1% 402.07% at 117.33% -15.37%,
-    #fff6e6 0%,
-    #e3e6e2 9.45%,
-    #5189c4 63.64%,
-    #2368b1 100%
+    #b5dae2 -10.01%,
+    #5189c4 24.3%,
+    #27378e 57.01%,
+    #262626 110.81%
   );
 }
 
@@ -71,6 +60,15 @@ body {
     #e73776 -5.76%,
     #bc2788 44.43%,
     #951898 110.63%
+  );
+}
+
+.oprec-button {
+  background: linear-gradient(
+    261.31deg,
+    #e73776 -2.11%,
+    #bc2788 48.56%,
+    #951898 96.99%
   );
 }
 
@@ -110,4 +108,27 @@ body {
   background: linear-gradient(180deg, #273580 0%, #272d51 100%);
 }
 
+@media only screen and (max-width: 500px) {
+  .hero {
+    background: linear-gradient(
+      192.09deg,
+      #d9e0e2 -9.2%,
+      #83a7cb 18.14%,
+      #3574b6 52.94%,
+      #2368b1 100%
+    );
+  }
+}
 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 500px) {
+  .hero {
+    background: radial-gradient(
+      124.1% 402.07% at 117.33% -15.37%,
+      #fff6e6 0%,
+      #e3e6e2 9.45%,
+      #5189c4 63.64%,
+      #2368b1 100%
+    );
+  }
+}

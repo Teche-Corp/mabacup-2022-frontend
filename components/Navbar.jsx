@@ -48,10 +48,19 @@ const Navbar = () => {
     <div className='fixed top-0 z-50'>
       <nav
         className={`${
-          colorChange ? "bg-[#27378E] duration-300 ease-in-out" : "duration-300 ease-in-out"
+          colorChange
+            ? "bg-[#27378E] duration-300 ease-in-out"
+            : "duration-300 ease-in-out"
         } h-20 relative z-50 select-none w-screen font-secondary flex justify-between items-center px-5 md:px-16 lg:px-24`}
       >
         {/* header logo */}
+        <Link href='/'>
+          <a className='md:hidden opacity-0 relative z-50 flex gap-1'>
+            <div className='flex flex-col justify-center'>
+              <img src='/mabacup.svg' alt='' />
+            </div>
+          </a>
+        </Link>
         <Link href='/'>
           <a className='relative z-50 flex gap-1'>
             <div className='flex flex-col justify-center'>
@@ -94,7 +103,7 @@ const Navbar = () => {
               <FaAngleDown
                 className={`mt-1 ${
                   showEvents ? "rotate-180" : "rotate-0"
-                } transition duration-150 text-3xl md:text-lg`}
+                } transition duration-150 text-2xl md:text-lg`}
               />
             </button>
             {/* events */}
@@ -106,7 +115,7 @@ const Navbar = () => {
               >
                 <div className='flex flex-col w-full gap-2'>
                   <div onClick={toggleShowEvents}>
-                    <Link href='/nlc'>
+                    <Link href='/'>
                       <a className='text-slate-900'>
                         <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100 border-b-2'>
                           <h2>Pre Event</h2>
@@ -116,7 +125,7 @@ const Navbar = () => {
                   </div>
 
                   <div onClick={toggleShowEvents}>
-                    <Link href='/nst'>
+                    <Link href='/'>
                       <a className='text-slate-900'>
                         <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100 border-b-2 '>
                           <h2>Main Event</h2>
@@ -125,7 +134,7 @@ const Navbar = () => {
                     </Link>
                   </div>
                   <div onClick={toggleShowEvents}>
-                    <Link href='/reeva'>
+                    <Link href='/'>
                       <a className='text-slate-900'>
                         <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100'>
                           <h2>Closing</h2>
@@ -144,40 +153,45 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <button
-          className={`hidden md:block w-52 h-[2.5rem] rounded-lg text-white ${
-            colorChange ? "bg-[#5189C4]" : "bg-[#27378E]"
-          }`}
-        >
+        <button className='oprec-button hidden md:block w-32 lg:w-52 h-[2.5rem] font-medium rounded-lg text-white'>
           Open Recruitment Staff
         </button>
 
-        {/* {showNav && ( */}
         <ul
           className={`flex md:hidden translate-y-full ${
             showNav ? "translate-x-0 opacity-1" : "translate-x-full opacity-0"
-          } text-white z-20 transition duration-300 md:flex-row flex-col bg-[#464646] md:static absolute bottom-0 left-0 md:w-auto w-full md:gap-5 lg:gap-10 xl:gap-[67px]`}
+          } text-white z-20 transition duration-300 flex-col h-screen bg-[#27378E] absolute bottom-0 left-0  w-full`}
         >
           <li
             onClick={toggleShowNav}
             className='py-4 border-2 border-black px-7'
           >
+            <Link href='/'>
+              <a className='flex items-center justify-center w-full text-2xl font-secondary text-border-thin '>
+                Home
+              </a>
+            </Link>
+          </li>
+          <li
+            onClick={toggleShowNav}
+            className='py-4 border-2 border-t-0 border-black px-7'
+          >
             <Link href='/about'>
-              <a className='flex items-center justify-between w-full md:w-auto md:gap-[6px] text-3xl font-primary text-border-thin md:font-secondary md:text-md'>
+              <a className='flex items-center justify-center w-full text-2xl font-secondary text-border-thin '>
                 About
               </a>
             </Link>
           </li>
-          <li className='relative py-4 border-2 border-black px-7'>
+          <li className='relative py-4 border-2 border-t-0 border-b-2 border-black px-7'>
             <button
               onClick={toggleShowEvents}
-              className='flex items-center justify-between w-full md:w-auto md:gap-[6px] text-3xl font-primary text-border-thin md:font-secondary md:text-md'
+              className='flex gap-2 items-center justify-center w-full text-2xl font-secondary text-border-thin  '
             >
               Events{" "}
               <FaAngleDown
                 className={`mt-1 ${
                   showEvents ? "rotate-180" : "rotate-0"
-                } transition duration-150 text-3xl md:text-lg`}
+                } transition duration-150 text-2xl `}
               />
             </button>
           </li>
@@ -187,11 +201,10 @@ const Navbar = () => {
                 toggleShowEvents();
                 toggleShowNav();
               }}
-              className='flex h-10 gap-5 bg-white border-2 border-black px-7'
+              className='flex h-10 gap-5  border-black px-7'
             >
-              <Link href='/nlc'>
-                <a className='inline-block w-full text-2xl text-black font-primary'>
-                  <div className='inline-block w-5 h-5 rounded-full bg-nlc'></div>{" "}
+              <Link href='/'>
+                <a className='inline-block flex items-center justify-center w-full text-xl  font-secondary'>
                   Pre Event
                 </a>
               </Link>
@@ -201,11 +214,10 @@ const Navbar = () => {
                 toggleShowEvents();
                 toggleShowNav();
               }}
-              className='flex h-10 gap-5 bg-white border-2 border-black px-7'
+              className='flex h-10 gap-5  border-b-2 border-t-2 border-black px-7'
             >
-              <Link href='/npc'>
-                <a className='inline-block w-full text-2xl text-black font-primary'>
-                  <div className='inline-block w-5 h-5 rounded-full bg-npc'></div>{" "}
+              <Link href='/'>
+                <a className='inline-block flex items-center justify-center w-full text-xl  font-secondary'>
                   Main Event
                 </a>
               </Link>
@@ -215,11 +227,10 @@ const Navbar = () => {
                 toggleShowEvents();
                 toggleShowNav();
               }}
-              className='flex h-10 gap-5 bg-white border-2 border-black px-7'
+              className='flex h-10 gap-5 border-black px-7'
             >
-              <Link href='/nst'>
-                <a className='inline-block w-full text-2xl text-black font-primary'>
-                  <div className='inline-block w-5 h-5 rounded-full bg-nst'></div>{" "}
+              <Link href='/'>
+                <a className='inline-block flex items-center  justify-center w-full text-xl  font-secondary'>
                   Closing
                 </a>
               </Link>
@@ -227,26 +238,52 @@ const Navbar = () => {
           </div>
           <li
             onClick={toggleShowNav}
-            className='py-4 border-2 border-black px-7'
+            className={`py-4 border-2 ${
+              showEvents ? "border-t-2" : "border-t-0"
+            } border-black px-7`}
           >
-            <Link href='/about'>
-              <a className='flex items-center justify-between w-full md:w-auto md:gap-[6px] text-3xl font-primary text-border-thin md:font-secondary md:text-md'>
+            <Link href='/'>
+              <a className='flex items-center justify-center w-full  text-2xl font-secondary text-border-thin  md:font-secondary '>
                 Merchandise
               </a>
             </Link>
           </li>
           <li
             onClick={toggleShowNav}
-            className='py-4 bg-white border-2 border-black px-7'
+            className='absolute bottom-52 translate-x-1/2 right-1/2'
           >
-            <Link href='/login'>
-              <a className='flex items-center justify-center w-full md:w-auto md:gap-[6px] text-3xl font-primary text-black md:font-secondary md:text-md'>
-                Open Recruitment Staff
+            <Link href='#'>
+              <a className='oprec-button flex items-center justify-center w-full h-12 mx-auto text-xl font-secondary font-medium rounded-lg px-6 py-2'>
+                Oprec Staff
+              </a>
+            </Link>
+          </li>
+          <li
+            onClick={toggleShowNav}
+            className='absolute bottom-32 right-1/2 translate-x-1/2 mt-4 flex gap-8 justify-center items-center'
+          >
+            <Link href={"#"}>
+              <a>
+                <img src='/instagram.svg' alt='' />
+              </a>
+            </Link>
+            <Link href={"#"}>
+              <a>
+                <img src='/youtube.svg' alt='' />
+              </a>
+            </Link>
+            <Link href={"#"}>
+              <a>
+                <img src='/tiktok.svg' alt='' />
+              </a>
+            </Link>
+            <Link href={"#"}>
+              <a>
+                <img src='/line.svg' alt='' />
               </a>
             </Link>
           </li>
         </ul>
-        {/* )} */}
       </nav>
     </div>
   );
