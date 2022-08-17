@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
 
       <Layout showNav={showNav} setShowNav={setShowNav}>
-        <main className={`${showNav ? "touch-non" : ""} overflow-x-hidden`}>
+        <main className={`${showNav ? "touch-none" : ""} overflow-x-hidden`}>
           <section
             id='hero'
             className='w-full min-h-screen hero overflow-hidden'
