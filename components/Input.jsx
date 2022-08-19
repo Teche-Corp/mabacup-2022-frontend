@@ -1,7 +1,6 @@
 import { useFormContext } from 'react-hook-form';
 import { HiExclamationCircle } from 'react-icons/hi';
-import { useState } from 'react';
-import { useEffect } from 'react';
+
 export default function Input({
   type,
   label,
