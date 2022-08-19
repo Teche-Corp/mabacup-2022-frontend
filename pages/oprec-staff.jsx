@@ -12,15 +12,12 @@ export default function InformasiPribadi() {
   const [page, setPage] = useState(1);
   const methods = useForm();
   const { handleSubmit } = methods;
-  const daftar = (data) => {
-      toast.promise(
-        axios.post("128.199.198.56:8081/api/create_staff",data)
-      ), {
-        pending: 'Loading...',
-        success: 'Success!',
-        error: 'Error!'
-    }
-
+  const daftar = async (data) => {
+    axios.post("http://128.199.198.56:8081/api/create_staff",data).then((res) => {
+      if (res.status === 200){
+        setPage(4);
+      }
+    })
   }
   function nextPage(){
     if (page < 3){
@@ -91,7 +88,24 @@ export default function InformasiPribadi() {
                   <Input
                     type='text'
                     disabled={false}
-                    id='nomor_wa'
+                    id='email'
+                    label="Email"
+                    placeholder="Masukkan Email"
+                    classNameL="font-secondary font-semibold text-[11px] md:text-[16px]"
+                    classNameI="font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]"
+                    validation={{
+                      required: 'Email tidak boleh kosong',
+                      pattern: {
+                        value:
+                          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                        message: 'Email tidak valid',
+                      },
+                    }}
+                  />
+                  <Input
+                    type='text'
+                    disabled={false}
+                    id='no_telp'
                     label="Whatsapp(+62) / ID Line"
                     placeholder="Nomor Telepon diawali +62"
                     classNameL="font-secondary font-semibold text-[11px] md:text-[16px]"
@@ -108,7 +122,7 @@ export default function InformasiPribadi() {
                   <Input
                     type='text'
                     disabled={false}
-                    id='faculty'
+                    id='fakultas'
                     label="Fakultas"
                     placeholder="Jawaban Anda"
                     classNameL="font-secondary font-semibold text-[11px] md:text-[16px]"
@@ -120,7 +134,7 @@ export default function InformasiPribadi() {
                   <Input
                     type='text'
                     disabled={false}
-                    id='department'
+                    id='departemen'
                     label="Departemen"
                     placeholder="Jawaban Anda"
                     classNameL="font-secondary font-semibold text-[11px] md:text-[16px]"
@@ -134,6 +148,17 @@ export default function InformasiPribadi() {
                   <TextArea 
                     id='pertanyaan' 
                     label='Apa yang kamu ketahui tentang MABA CUP?'
+                    classNameL="font-semibold text-[11px] md:text-[16px] mt-4"
+                    classNameT="font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]"
+                    placeholder="Jawaban anda"
+                    validate={{
+                      required: 'Jawaban tidak boleh kosong',
+                    }}
+
+                  />
+                  <TextArea 
+                    id='motivasi' 
+                    label='Motivasi mendaftar menjadi staff Maba Cup 2022 '
                     classNameL="font-semibold text-[11px] md:text-[16px] mt-4"
                     classNameT="font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]"
                     placeholder="Jawaban anda"
@@ -179,10 +204,17 @@ export default function InformasiPribadi() {
                     classNameT="font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]"
                     placeholder="Jawaban anda"
                   />
+                  <TextArea 
+                    id='kesibukan' 
+                    label='Kesibukan Saat Ini '
+                    classNameL="font-semibold text-[11px] md:text-[16px]"
+                    classNameT="font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]"
+                    placeholder="Jawaban anda"
+                  />
               
                 </div>
                 <div className={page === 3 ? 'block' : 'hidden'}>
-                <Input
+                  <Input
                     type='text'
                     disabled={false}
                     id='link_bukti'
@@ -224,8 +256,8 @@ export default function InformasiPribadi() {
                    <Input
                     type='text'
                     disabled={false}
-                    id='department'
-                    label="Departemen"
+                    id='link_krsm'
+                    label="Link KRSM"
                     placeholder="Jawaban Anda"
                     classNameL="font-secondary font-semibold text-[11px] md:text-[16px]"
                     classNameI="font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]"
@@ -233,11 +265,12 @@ export default function InformasiPribadi() {
                       required: true,
                     }}
                   />
+                  <div>
                    <Input
                     type='text'
                     disabled={false}
-                    id='department'
-                    label="Departemen"
+                    id='sponsor'
+                    label="Apakah memiliki kenalan sponsorship?"
                     placeholder="Jawaban Anda"
                     classNameL="font-secondary font-semibold text-[11px] md:text-[16px]"
                     classNameI="font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]"
@@ -245,6 +278,16 @@ export default function InformasiPribadi() {
                       required: true,
                     }}
                   />
+                    <p className="font-secondary text-xs mt-2"><span className="text-red-500">* Catatan </span>: Dikhususkan untuk pendaftar yang mendaftar divisi Desain, Dokum, dan Publikasi</p>
+                    </div>
+                </div>
+                <div className={page === 4 ? 'block' : 'hidden'}>
+                  <div className="text-center">
+                    <h2>Form Pendaftaran MABACUP 2022 Berhasil Diisi!</h2>
+                    <p>
+                    Terimakasih Telah Berpartisipasi bersama dengan MABACUP, jangan lupa untuk pantengin terus instagram @MABACUP2022 untuk mendapatkan info selanjutnya!
+                    </p>
+                  </div>
                 </div>
                 <div className="flex justify-end gap-x-3">
                   <div className={page === 1 ? 'hidden' : ''}>
