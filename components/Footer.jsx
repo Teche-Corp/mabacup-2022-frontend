@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className='bg-[#262626] px-5 md:px-16 xl:px-[132px] py-[30px] select-none relative z-50'>
+    <footer className='bg-[#262626] px-5 md:px-16 xl:px-[132px] py-[30px] select-none relative z-20'>
       <div className='flex flex-col gap-8 sm:flex-row justify-between items-center'>
         {/* Logo */}
         <img src='/mabacup-white.png' alt='Mabacup' />
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
         <p className='text-white mt-8 sm:hidden block'>© MABACUP 2020</p>
       </div>
-      <div className='flex justify-between mt-2 sm:mt-8 items-center border-t-2 pt-2'>
+      <div className='flex justify-center sm:justify-between mt-2 sm:mt-8 items-center border-t-2 pt-2'>
         <p className='text-white sm:block hidden'>© MABACUP 2020</p>
         <img src='/footer/logos.png' alt='Mabacup 2022' />
       </div>

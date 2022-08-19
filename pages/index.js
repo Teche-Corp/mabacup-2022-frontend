@@ -4,10 +4,24 @@ import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
 import { Transition } from "@headlessui/react";
 import Layout from "../components/Layout";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+const notify = () => toast("Coming Soon !");
 
 export default function Home() {
   const [showNav, setShowNav] = useState(false);
+  const [domLoaded, setDomLoaded] = useState(false);
+
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
   return (
     <>
       <Head>
@@ -17,14 +31,14 @@ export default function Home() {
       </Head>
 
       <Layout showNav={showNav} setShowNav={setShowNav}>
-        <main className={`${showNav ? "touch-none" : ""} overflow-x-hidden`}>
+        <main className={` overflow-x-hidden`}>
           <section
             id='hero'
             className='w-full min-h-screen hero overflow-hidden'
           >
             <div className="w-full h-screen relative bg-[url('/hero/light-mobile.png')] sm:bg-[url('/hero/light.png')] bg-cover">
               <Parallax
-                className='block mx-auto lg:ml-24 pt-[12rem] sm:pt-[18rem] lg:pt-[20rem] 2xl:pt-[14rem] w-fit h-fit'
+                className='block mx-auto lg:ml-24 pt-[12rem] sm:pt-[18rem] lg:pt-[20rem] 2xl:pt-[14rem] w-fit h-fit relative z-[10]'
                 speed={20}
               >
                 <div className='flex flex-col items-center lg:block w-4/5 sm:w-full mx-auto'>
@@ -37,7 +51,7 @@ export default function Home() {
                   <div className='inline-block hover:scale-105 transition duration-200 ease-in-out'>
                     <a
                       href='#about'
-                      className='relative z-[9] dive-button font-secondary font-medium text-base text-white rounded-[2.5rem] px-6 py-3 cursor-pointer '
+                      className='relative z-[11] dive-button font-secondary font-medium text-base text-white rounded-[2.5rem] px-6 py-3 cursor-pointer '
                     >
                       Dive Deeper
                     </a>
@@ -60,7 +74,7 @@ export default function Home() {
 
               {/* seaweed image */}
               <Parallax
-                className='hidden w-24 xl:w-36 absolute -bottom-[5.5rem] lg:-bottom-6 xl:bottom-4 2xl:bottom-10 right-[19rem] lg:right-[17rem] xl:right-[19rem] z-[1]'
+                className='hidden sm:block w-24 xl:w-36 absolute -bottom-[5.5rem] lg:-bottom-6 xl:bottom-4 2xl:bottom-10 right-[19rem] lg:right-[17rem] xl:right-[19rem] z-[1]'
                 speed={-10}
                 scale={[0.9, 1.2]}
               >
@@ -105,7 +119,7 @@ export default function Home() {
 
               {/* ikan primary image */}
               <Parallax
-                className='w-32 sm:w-60 lg:w-64 xl:w-72 absolute top-96 sm:top-80 lg:top-52 xl:top-40 2xl:top-32 right-52 lg:right-44 2xl:right-52 z-10'
+                className='w-32 sm:w-60 lg:w-64 xl:w-72 absolute top-96 sm:top-80 lg:top-52 xl:top-40 2xl:top-32 right-52 lg:right-44 2xl:right-52 z-[8]'
                 translateX={["0px", "100px"]}
               >
                 <img
@@ -186,18 +200,18 @@ export default function Home() {
                 />
               </Parallax>
             </section>
-            <section className='w-full h-[75vh] lg:h-[calc(100vh-200px)] xl:h-[70vh] 2xl:min-h-[calc(100vh-150px)] relative'>
+            <section className='w-full sm:h-screen md:h-[70vh] lg:h-[calc(100vh-200px)] xl:h-[70vh] 2xl:min-h-[calc(100vh-150px)] relative'>
               <div className='w-10/12 mx-auto pt-24'>
                 <h1 className=' font-primary text-center text-xl sm:text-5xl text-white'>
                   Timeline Maba Cup 2022
                 </h1>
                 <div className='w-full mt-12 sm:mt-16 sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
-                  <div className='bg-white mx-auto h-96 sm:h-96 lg:h-1  w-[2px] sm:w-1 lg:w-3/4 flex flex-col lg:flex-row justify-between rounded-lg'>
+                  <div className='bg-white mx-auto h-96 lg:h-1  w-[2px] sm:w-1 lg:w-3/4 flex flex-col lg:flex-row justify-between rounded-lg'>
                     <div className='h-3 sm:h-5 w-3 sm:w-5 bg-[#FFA4B3] rounded-full -translate-y-[40%] -translate-x-[5px] sm:-translate-x-2 lg:-translate-x-1 hover:scale-110 transition duration-300 border-2 border-[#4571B4] border-solid hover:border-none'>
                       <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
                         Agustus 2022
                       </p>
-                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-32 sm:-translate-x-[40%] text-center'>
+                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-44 -translate-x-[40%] lg:-translate-y-[10%] text-center'>
                         Open Recruitment
                         <br />
                         Staff
@@ -212,75 +226,63 @@ export default function Home() {
                       </p>
                     </div>
                     <div className='h-3 sm:h-5 w-3 sm:w-5 bg-[#FFA4B3] rounded-full -translate-y-[40%] -translate-x-[5px] sm:-translate-x-2 lg:-translate-x-0 hover:scale-110 transition duration-300 border-2 border-[#4571B4] border-solid hover:border-none'>
-                      <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
-                        Agustus 2022
+                      <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -top-12 w-44 -translate-x-[40%] text-center'>
+                        September 2022
                       </p>
-                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-32 -translate-x-[40%] text-center'>
+                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-48 -translate-x-[40%] lg:-translate-y-[10%] text-center'>
                         Open Recruitment
                         <br />
-                        Staff
+                        Brand Ambassador
                       </p>
                       <p className='block lg:hidden font-secondary text-base sm:text-lg font-semibold absolute text-white text-center -translate-x-[115%] -translate-y-1 w-max'>
-                        Agustus 2022
+                        September 2022
                       </p>
-                      <p className='block lg:hidden font-secondary text-base sm:text-lg font-medium absolute text-white translate-x-6 -translate-y-1 w-max'>
+                      <p className='block lg:hidden font-secondary text-base sm:text-lg font-medium absolute text-white translate-x-6 sm:translate-x-10 -translate-y-1 w-max'>
                         Open Recruitment
                         <br />
-                        Staff
+                        Brand Ambassador
                       </p>
                     </div>
                     <div className='h-3 sm:h-5 w-3 sm:w-5 bg-[#FFA4B3] rounded-full -translate-y-[40%] -translate-x-[5px] sm:-translate-x-2 lg:-translate-x-0 hover:scale-110 transition duration-300 border-2 border-[#4571B4] border-solid hover:border-none'>
                       <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
-                        Agustus 2022
+                        September 2022
                       </p>
-                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-32 -translate-x-[40%] text-center'>
-                        Open Recruitment
-                        <br />
-                        Staff
+                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-32 -translate-x-[40%] -translate-y-full text-center'>
+                        Pre Event
                       </p>
                       <p className='block lg:hidden font-secondary text-base sm:text-lg font-semibold absolute text-white text-center -translate-x-[115%] -translate-y-1 w-max'>
-                        Agustus 2022
+                        September 2022
                       </p>
-                      <p className='block lg:hidden font-secondary text-base sm:text-lg font-medium absolute text-white translate-x-6 -translate-y-1 w-max'>
-                        Open Recruitment
-                        <br />
-                        Staff
+                      <p className='block lg:hidden font-secondary text-base sm:text-lg font-medium absolute text-white translate-x-6 sm:translate-x-10 -translate-y-1 w-max'>
+                        Pre Event
                       </p>
                     </div>
                     <div className='h-3 sm:h-5 w-3 sm:w-5 bg-[#FFA4B3] rounded-full -translate-y-[40%] -translate-x-[5px] sm:-translate-x-2 lg:-translate-x-0 hover:scale-110 transition duration-300 border-2 border-[#4571B4] border-solid hover:border-none'>
                       <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
-                        Agustus 2022
+                        September 2022
                       </p>
-                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-32 -translate-x-[40%] text-center'>
-                        Open Recruitment
-                        <br />
-                        Staff
+                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-32 -translate-x-[40%] -translate-y-full text-center'>
+                        Main Event
                       </p>
                       <p className='block lg:hidden font-secondary text-base sm:text-lg font-semibold absolute text-white text-center -translate-x-[115%] -translate-y-1 w-max'>
-                        Agustus 2022
+                        September 2022
                       </p>
-                      <p className='block lg:hidden font-secondary text-base sm:text-lg font-medium absolute text-white translate-x-6 -translate-y-1 w-max'>
-                        Open Recruitment
-                        <br />
-                        Staff
+                      <p className='block lg:hidden font-secondary text-base sm:text-lg font-medium absolute text-white translate-x-6 sm:translate-x-10 -translate-y-1 w-max'>
+                        Main Event
                       </p>
                     </div>
                     <div className='h-3 sm:h-5 w-3 sm:w-5 bg-[#FFA4B3] rounded-full lg:-translate-y-[40%] -translate-x-[5px] sm:-translate-x-2 lg:-translate-x-0 hover:scale-110 transition duration-300 border-2 border-[#4571B4] border-solid hover:border-none'>
                       <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -top-12 w-36 -translate-x-[40%] text-center'>
-                        Agustus 2022
+                        Nopember 2022
                       </p>
-                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-32 -translate-x-[40%] text-center'>
-                        Open Recruitment
-                        <br />
-                        Staff
+                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white -bottom-20 w-32 -translate-x-[40%] -translate-y-full text-center'>
+                        Closing
                       </p>
                       <p className='block lg:hidden font-secondary text-base sm:text-lg font-semibold absolute text-white text-center -translate-x-[115%] -translate-y-1 w-max'>
-                        Agustus 2022
+                        Nopember 2022
                       </p>
-                      <p className='block lg:hidden font-secondary text-base sm:text-lg font-medium absolute text-white translate-x-6 -translate-y-1 w-max'>
-                        Open Recruitment
-                        <br />
-                        Staff
+                      <p className='block lg:hidden font-secondary text-base sm:text-lg font-medium absolute text-white translate-x-6 sm:translate-x-10 -translate-y-1 w-max'>
+                        Closing
                       </p>
                     </div>
                   </div>
@@ -300,16 +302,16 @@ export default function Home() {
             </section>
             <section className='w-full h-max lg:h-[calc(100vh-200px)] 2xl:min-h-[calc(100vh-100px)] pb-24 lg:pb-0'>
               <div className='w-11/12 sm:w-1/2 lg:w-11/12 xl:w-10/12 pt-20 flex flex-col lg:flex-row gap-8 lg:gap-4 xl:gap-8 justify-between items-center mx-auto relative z-10'>
-                <div className='event-card border sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
-                  <div className='w-full p-6'>
+                <div className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
+                  <div className='w-full h-72 p-6'>
                     <h1 className='font-primary text-white text-2xl sm:text-[2rem]'>
                       Pre Event
                     </h1>
-                    <p className='mt-4 font-secondary text-white text-base xl:text-lg font-normal'>
-                      Egestas viverra vel viverra amet amet tempor nunc quis
-                      ultricies. Nisl hendrerit sed aliquam interdum vel tortor,
-                      eget bibendum. Id diam mattis eget nisl pretium. Vitae ut
-                      euismod facilisi a fusce.
+                    <p className='mt-4 font-secondary text-white text-base xl:text-lg font-normal h-max'>
+                      Pre-event Maba Cup 2022 merupakan kegiatan kompetisi di
+                      bidang desain maskot yang dimulai sebelum event utama.
+                      Kegiatan ini merupakan bentuk representasi motto Maba Cup
+                      2022.
                     </p>
                   </div>
 
@@ -319,16 +321,14 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div className='event-card border sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
-                  <div className='w-full p-6'>
+                <div className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
+                  <div className='w-full h-72 p-6'>
                     <h1 className='font-primary text-white text-2xl sm:text-[2rem]'>
-                      Pre Event
+                      Main Event
                     </h1>
-                    <p className='mt-4 font-secondary text-white text-base xl:text-lg font-normal'>
-                      Egestas viverra vel viverra amet amet tempor nunc quis
-                      ultricies. Nisl hendrerit sed aliquam interdum vel tortor,
-                      eget bibendum. Id diam mattis eget nisl pretium. Vitae ut
-                      euismod facilisi a fusce.
+                    <p className='mt-4 font-secondary text-white text-base xl:text-lg font-normal block'>
+                      Main Event Maba Cup 2022 merupakan kegiatan utama dari
+                      Maba Cup 2022 meliputi 6 kategori lomba.
                     </p>
                   </div>
 
@@ -338,16 +338,15 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div className='event-card border sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
-                  <div className='w-full p-6'>
+                <div className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
+                  <div className='w-full h-72 p-6'>
                     <h1 className='font-primary text-white text-2xl sm:text-[2rem]'>
-                      Pre Event
+                      Closing
                     </h1>
                     <p className='mt-4 font-secondary text-white text-base xl:text-lg font-normal'>
-                      Egestas viverra vel viverra amet amet tempor nunc quis
-                      ultricies. Nisl hendrerit sed aliquam interdum vel tortor,
-                      eget bibendum. Id diam mattis eget nisl pretium. Vitae ut
-                      euismod facilisi a fusce.
+                      Closing Maba Cup 2022 merupakan kegiatan penutup dari
+                      seluruh rangkaian kegiatan kompetisi sebagai bentuk
+                      apresiasi terhadap mahasiswa baru.
                     </p>
                   </div>
 
@@ -360,7 +359,7 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='w-full h-[55vh] lg:h-[calc(100vh-200px)] 2xl:min-h-[calc(100vh-100px)]'>
+            <section className='w-full h-[55vh] sm:h-[65vh] lg:h-[calc(100vh-200px)] 2xl:min-h-[calc(100vh-100px)]'>
               <div className='oprec w-11/12 xl:w-4/5 h-[18rem] sm:h-[19rem] lg:h-[18rem] xl:h-[22rem] bg-red-200 mx-auto mt-8 rounded-2xl p-6 sm:p-8 xl:p-10 relative overflow-hidden'>
                 <div className='w-full sm:w-3/5 relative z-[1] '>
                   <h1 className='font-secondary text-white text-lg sm:text-[1.5rem] xl:text-[2.25rem] 2xl:text-[2.5rem] font-semibold tracking-wide sm:tracking-[-2.2%] leading-normal sm:leading-tight'>
@@ -372,7 +371,10 @@ export default function Home() {
                   </p>
 
                   <Link href={"#"}>
-                    <a className='mt-8 absolute w-max right-1/2 sm:left-0 translate-x-1/2 sm:translate-x-0 inline-block px-3 sm:px-5 py-2 sm:py-3 border-2 border-solid border-white bg-white text-[#2C7994] text-sm sm:text-lg rounded-lg font-medium'>
+                    <a
+                      onClick={notify}
+                      className='mt-8 absolute w-max right-1/2 sm:left-0 translate-x-1/2 sm:translate-x-0 inline-block px-3 sm:px-5 py-2 sm:py-3 border-2 border-solid border-white bg-white hover:bg-[#2C7994] text-[#2C7994] hover:text-white text-sm sm:text-lg rounded-lg font-medium'
+                    >
                       Daftar Sekarang
                     </a>
                   </Link>
@@ -417,7 +419,71 @@ export default function Home() {
                 alt='terumbu kiri'
               />
             </div>
-            <section className='retro w-full min-h-[40vh] sm:min-h-[50vh] lg:min-h-[calc(100vh-350px)] relative z-[1]'></section>
+            <section className='retro w-full min-h-[30vh] sm:min-h-[50vh] lg:min-h-[50vh] relative z-[1]'>
+              <div className='mx-auto p-4 pt-3 sm:pt-8 md:pt-16 lg:pt-16 xl:pt-8 h-[90%] w-[90%] sm:w-[95%] sm:h-[90%]'>
+                {domLoaded && (
+                  <Swiper
+                    pagination={{
+                      clickable: true,
+                    }}
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }}
+                    loop={true}
+                    loopFillGroupWithBlank={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    breakpoints={{
+                      300: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                      },
+                      640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                      },
+                      768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                      },
+                      1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                      },
+                    }}
+                    className='mySwiper'
+                  >
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-1.png' alt='' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-2.png' alt='' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-3.png' alt='' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-1.png' alt='' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-2.png' alt='' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-3.png' alt='' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-1.png' alt='' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-2.png' alt='' />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <img src='/retrospeksi/image-3.png' alt='' />
+                    </SwiperSlide>
+                  </Swiper>
+                )}
+              </div>
+            </section>
           </div>
         </main>
       </Layout>
