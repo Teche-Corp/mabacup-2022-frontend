@@ -83,6 +83,7 @@ body {
 }
 
 .event-card {
+  box-shadow: inset 0 0 0 1px white;
   background: linear-gradient(
     139.65deg,
     rgba(255, 255, 255, 0.05) 1.24%,
@@ -91,7 +92,31 @@ body {
   backdrop-filter: blur(15px);
 }
 
-.event-button {
+.event-card::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: white;
+  z-index: 10;
+  transition: 0.5s ease-in-out;
+}
+
+.event-card:hover::before {
+  content: "Coming Soon";
+  font-size: 1.5rem;
+  font-family: "Titania";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.event .event-button {
   background: linear-gradient(180deg, #d8328e 0%, #3f205c 100%);
 }
 
