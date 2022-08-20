@@ -157,3 +157,12 @@ body {
     );
   }
 }
+
+.form-staff {
+  background: linear-gradient(
+    151.76deg,
+    #b5dae2 -27.79%,
+    #5189c4 65.96%,
+    #5189c4 96.08%
+  );
+}
