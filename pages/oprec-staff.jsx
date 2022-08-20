@@ -74,7 +74,7 @@ export default function InformasiPribadi() {
             <div className='flex justify-between h-[2px] w-[65%] bg-[#3959A5] items-center my-9'>
               {/* Steps */}
               <div
-                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 ${
+                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 select-none ${
                   page <= 1 ? "bg-[#D3E0FF]" : "bg-[#3959A5]"
                 } border-[#3959A5] relative`}
               >
@@ -92,7 +92,7 @@ export default function InformasiPribadi() {
                 </p>
               </div>
               <div
-                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 ${
+                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 select-none ${
                   page <= 2 ? "bg-[#D3E0FF]" : "bg-[#3959A5]"
                 } border-[#3959A5] relative`}
               >
@@ -102,7 +102,7 @@ export default function InformasiPribadi() {
                   <FaCheck className='text-white' />
                 )}
                 <p
-                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 ${
+                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 select-none ${
                     page === 2 ? "" : "text-[#616161]"
                   }`}
                 >
@@ -110,7 +110,7 @@ export default function InformasiPribadi() {
                 </p>
               </div>
               <div
-                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 ${
+                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 select-none ${
                   page <= 3 ? "bg-[#D3E0FF]" : "bg-[#3959A5]"
                 } border-[#3959A5] relative`}
               >
@@ -375,7 +375,7 @@ export default function InformasiPribadi() {
                 >
                   <div className={page === 1 ? "hidden" : ""}>
                     <p
-                      className='font-secondary text-[#5189C4] border border-[#5189C4] bg-white px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer'
+                      className='font-secondary text-[#5189C4] border-2 border-[#5189C4] bg-white px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-white hover:bg-[#5189C4] hover:border-2 hover:border-solid hover:border-white'
                       onClick={() => prevPage()}
                     >
                       Kembali{" "}
@@ -383,7 +383,7 @@ export default function InformasiPribadi() {
                   </div>
                   <div className={page === 3 ? "hidden" : ""}>
                     <p
-                      className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer'
+                      className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-[#5189C4] hover:bg-white border-2 border-solid border-[#5189C4]'
                       onClick={() => nextPage()}
                     >
                       Berikutnya{" "}
@@ -391,7 +391,7 @@ export default function InformasiPribadi() {
                   </div>
                   <div className={page === 3 ? "" : "hidden"}>
                     <button
-                      className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer'
+                      className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-[#5189C4] hover:bg-white border-2 border-solid border-[#5189C4] '
                       type='submit'
                     >
                       Daftar{" "}
@@ -401,7 +401,7 @@ export default function InformasiPribadi() {
                 {page === 4 && (
                   <div>
                     <Link href={"/"}>
-                      <a className='my-8 px-4 py-2 rounded-lg font-secondary text-white w-fit inline-block flex justify-center mx-auto bg-blue-400'>
+                      <a className='my-8 px-4 py-2 rounded-lg font-secondary text-white text-[16px] w-fit inline-block flex justify-center mx-auto bg-[#5189C4] hover:text-[#5189C4] hover:bg-white border-2 border-solid border-[#5189C4]'>
                         Kembali Ke Beranda
                       </a>
                     </Link>

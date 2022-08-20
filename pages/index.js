@@ -177,7 +177,7 @@ export default function Home() {
                     “Dari maba, oleh maba, dan untuk maba”, event ini terdiri
                     dari pelatihan manajerial dan berbagai perlombaan.{" "}
                   </p>
-                  <button className='bg-[#5189C4] mt-6 w-fit h-fit px-4 py-2 rounded-lg mx-auto text-white'>
+                  <button className='bg-[#5189C4] mt-6 w-fit h-fit px-4 py-2 rounded-lg mx-auto text-white hover:drop-shadow-2xl hover:bg-transparent hover:border-2 hover:border-white hover:cursor-not-allowed'>
                     Selengkapnya
                   </button>
                 </div>

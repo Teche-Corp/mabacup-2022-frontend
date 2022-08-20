@@ -38,10 +38,10 @@ const Footer = () => {
             <p className='text-white font-base '>@899jpfck</p>
           </div>
         </div>
-        <p className='text-white mt-8 sm:hidden block'>© MABACUP 2020</p>
+        <p className='text-white mt-8 sm:hidden block'>© MABACUP 2022</p>
       </div>
       <div className='flex justify-center sm:justify-between mt-2 sm:mt-8 items-center border-t-2 pt-2'>
-        <p className='text-white sm:block hidden'>© MABACUP 2020</p>
+        <p className='text-white sm:block hidden'>© MABACUP 2022</p>
         <img src='/footer/logos.png' alt='Mabacup 2022' />
       </div>
     </footer>
