@@ -1,10 +1,18 @@
 import { AiOutlineInstagram } from "react-icons/ai";
 import { FaLine, FaInstagram } from "react-icons/fa";
 import Link from "next/link";
+import Head from "next/head";
 
 export default function UnderMaintenance() {
   return (
     <>
+      <Head>
+        <title>Under Maintenance</title>
+        <meta name='description' content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.' />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="google-site-verification" content="NwW-YP_XvE9FoX0hDVTkQescB9ExbBnbA5wjDySEu3U" />
+        <link rel='icon' href='/mabacup-logo.svg' />
+      </Head>
       <section className="bg-[url('/UnderMaintenance.png')] w-screen h-screen bg-cover bg-center">
         <div className='pt-20 lg:p-16 xl:p-32 flex flex-col items-center lg:items-start justify-center'>
           <h1 className='text-2xl lg:text-5xl font-bold text-white font-secondary'>

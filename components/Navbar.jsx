@@ -133,7 +133,7 @@ const Navbar = ({ showNav, setShowNav }) => {
                     <div onClick={(toggleShowEvents, notify)}>
                       <Link href=''>
                         <a className='text-slate-900'>
-                          <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100'>
+                          <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100 '>
                             <h2>Pre Event</h2>
                           </div>
                         </a>
@@ -152,7 +152,7 @@ const Navbar = ({ showNav, setShowNav }) => {
                     <div onClick={(toggleShowEvents, notify)}>
                       <Link href='/'>
                         <a className='text-slate-900'>
-                          <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100'>
+                          <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100 '>
                             <h2>Closing</h2>
                           </div>
                         </a>
@@ -171,7 +171,7 @@ const Navbar = ({ showNav, setShowNav }) => {
 
           <button
             onClick={notify}
-            className='oprec-button hidden md:block w-32  h-[2.5rem] font-medium rounded-lg text-white'
+            className='oprec-button hidden md:block w-32  h-[2.5rem] font-medium rounded-lg text-white '
           >
             Oprec Staff
           </button>
@@ -189,7 +189,7 @@ const Navbar = ({ showNav, setShowNav }) => {
               </Link>
             </li>
             <li onClick={toggleShowNav} className='py-4  px-7'>
-              <Link href='#about'>
+              <Link href='#'>
                 <a className='flex items-center justify-center w-full text-2xl font-secondary text-border-thin '>
                   About
                 </a>
@@ -218,7 +218,7 @@ const Navbar = ({ showNav, setShowNav }) => {
                 }}
                 className='flex h-10 gap-5  px-7'
               >
-                <Link href='/'>
+                <Link href='/comingSoon'>
                   <a className='inline-block flex items-center justify-center w-full text-xl  font-secondary'>
                     Pre Event
                   </a>

@@ -1,9 +1,18 @@
 import Link from "next/link"
 import { FaInstagram, FaTiktok, FaYoutube} from "react-icons/fa";
 import {BsLine} from "react-icons/bs";
+import Head from "next/head";
+
 export default function comingSoon() {
   return (
     <>
+      <Head>
+        <title>Coming Soon | Mabacup 2022</title>
+        <meta name='description' content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.' />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="google-site-verification" content="NwW-YP_XvE9FoX0hDVTkQescB9ExbBnbA5wjDySEu3U" />
+        <link rel='icon' href='/mabacup-logo.svg' />
+      </Head>
       <div className="bg-[url('/comingSoon.png')] bg-cover bg-center h-screen w-screen">
         <div className="flex flex-col justify-center items-center h-full">
           <h1 className="text-center font-primary font-bold text-white text-8xl">Coming Soon</h1>
