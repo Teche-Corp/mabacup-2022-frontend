@@ -420,7 +420,10 @@ export default function Home() {
               />
             </div>
             <section className='retro w-full min-h-[30vh] sm:min-h-[50vh] lg:min-h-[50vh] relative z-[1]'>
-              <div className='mx-auto p-4 pt-3 sm:pt-8 md:pt-16 lg:pt-16 xl:pt-8 h-[90%] w-[90%] sm:w-[95%] sm:h-[90%]'>
+            <h1 className="text-center font-primary text-white text-xl sm:text-5xl pt-5 pb-3 md:pb-10">
+              Retrospeksi
+            </h1>
+              <div className='mx-auto p-4 pt-3 sm:pt-8 md:pt-16 lg:pt-16 xl:pt-8 h-[90%] w-[90%] sm:w-[95%] sm:h-[90%] pb-16 md:pb-32'>
                 {domLoaded && (
                   <Swiper
                     pagination={{
