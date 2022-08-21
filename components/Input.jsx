@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { HiExclamationCircle } from 'react-icons/hi';
 
@@ -10,11 +11,19 @@ export default function Input({
   disabled = false,
   classNameI = '',
   placeholder = '',
+  setPage = '',
+  page = ''
 }) {
   const {
     register,
     formState: { errors },
   } = useFormContext();
+
+  useEffect(() => {
+    if (errors[id]) {
+      setPage(page);
+    }
+  }, [errors[id]])
   return (
     <>
       <div className='flex flex-col justify-start w-full mt-5'>
