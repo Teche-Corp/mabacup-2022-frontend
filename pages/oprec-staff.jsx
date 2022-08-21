@@ -1,4 +1,5 @@
 import Input from "../components/Input";
+import { Toaster } from 'react-hot-toast';
 import { useForm, FormProvider } from "react-hook-form";
 import { useEffect, useState } from "react";
 import TextArea from "../components/TextArea";
@@ -6,24 +7,31 @@ import SelectInput from "../components/SelectInput";
 import { DEVISI } from "../lib/constant";
 import { FaCheck } from "react-icons/fa";
 import axios from "axios";
-import { toast } from "react-toastify";
 import Link from "next/link";
 import Head from "next/head";
+import { toast } from "react-hot-toast";
+import SubmitButton from "../components/SubmitButton";
 
 export default function InformasiPribadi() {
   const [page, setPage] = useState(1);
   const methods = useForm();
   const { handleSubmit } = methods;
-  const daftar = async (data) => {
-    axios
-      .post("http://128.199.198.56:8081/api/create_staff", data)
-      .then((res) => {
-        console.log(res);
-        if (res.status === 200) {
+  const daftar = (data) => {
+    toast.promise(
+      axios.post('https://mabacup-its.com:8081/api/create_staff', data).then(
+        (res) => {
           setPage(4);
+        }), {
+          success: "Selamat Anda telah terdaftar",
+          error: ((err) => {
+            return (err.response.data.message);
+            }),
+          loading: "Loading...",
         }
-      });
-  };
+    )
+  }
+
+  
   function nextPage() {
     if (page < 3) {
       setPage(page + 1);
@@ -36,6 +44,16 @@ export default function InformasiPribadi() {
   }
   return (
     <>
+      <Toaster
+          reverseOrder={false}
+          toastOptions={{
+            style: {
+              borderRadius: '8px',
+              background: '#333',
+              color: '#fff',
+            },
+          }}
+        />
       <Head>
         <title>Daftar Staff | Mabacup 2022</title>
         <meta name='description' content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.' />
@@ -58,17 +76,17 @@ export default function InformasiPribadi() {
               ketentuan yang ada.
             </p>
             <img
-              className='absolute w-48 top-12 right-8'
+              className='absolute md:w-48 w-24 top-12 right-8'
               src='/form-staff/ikan-form-staff.png'
               alt=''
             />
             <img
-              className='absolute w-32 bottom-0 right-72'
+              className='absolute md:w-32 w-16 bottom-0 right-72'
               src='/form-staff/ikan-secondary-form-staff.png'
               alt=''
             />
             <img
-              className='absolute bottom-0 right-0 w-64'
+              className='absolute bottom-0 right-0 md:w-64 w-32'
               src='/form-staff/building-form-staff.png'
               alt=''
             />
@@ -79,7 +97,7 @@ export default function InformasiPribadi() {
             alt=''
           /> */}
           <div className='flex justify-center w-full mt-4 items-center'>
-            <div className='flex justify-between h-[2px] w-[65%] bg-[#3959A5] items-center my-9'>
+            <div className='flex justify-between h-[2px] md:w-[65%] w-[70%] bg-[#3959A5] items-center my-9'>
               {/* Steps */}
               <div
                 className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 select-none ${
@@ -92,7 +110,7 @@ export default function InformasiPribadi() {
                   <FaCheck className='text-white' />
                 )}
                 <p
-                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 ${
+                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 sm:text-xs ${
                     page === 1 ? "" : "text-[#616161]"
                   }`}
                 >
@@ -110,7 +128,7 @@ export default function InformasiPribadi() {
                   <FaCheck className='text-white' />
                 )}
                 <p
-                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 select-none ${
+                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 select-none sm:text-xs ${
                     page === 2 ? "" : "text-[#616161]"
                   }`}
                 >
@@ -128,7 +146,7 @@ export default function InformasiPribadi() {
                   <FaCheck className='text-white' />
                 )}
                 <p
-                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 ${
+                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 sm:text-xs ${
                     page === 3 ? "" : "text-[#616161]"
                   }`}
                 >
@@ -152,6 +170,8 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Nama tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={1}
                   />
                   <Input
                     type='text'
@@ -168,9 +188,11 @@ export default function InformasiPribadi() {
                         message: "Harus berupa angka",
                       },
                     }}
+                    setPage={setPage}
+                    page={1}
                   />
                   <Input
-                    type='text'
+                    type='email'
                     disabled={false}
                     id='email'
                     label='Email'
@@ -185,6 +207,8 @@ export default function InformasiPribadi() {
                         message: "Email tidak valid",
                       },
                     }}
+                    setPage={setPage}
+                    page={1}
                   />
                   <Input
                     type='text'
@@ -202,6 +226,8 @@ export default function InformasiPribadi() {
                           "Nomor Telepon harus diawali +62 dan memiliki panjang 12-16 karakter",
                       },
                     }}
+                    setPage={setPage}
+                    page={1}
                   />
                   <Input
                     type='text'
@@ -214,6 +240,8 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Fakultas tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={1}
                   />
                   <Input
                     type='text'
@@ -226,6 +254,8 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Departemen tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={1}
                   />
                 </div>
                 <div className={page === 2 ? "block" : "hidden"}>
@@ -238,6 +268,8 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={2}
                   />
                   <TextArea
                     id='motivasi'
@@ -248,6 +280,8 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={2}
                   />
                   <SelectInput
                     id='divisi_1'
@@ -259,6 +293,8 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Divisi tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={2}
                   />
                   <TextArea
                     id='alasan_1'
@@ -269,6 +305,8 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={2}
                   />
                   <SelectInput
                     id='divisi_2'
@@ -277,6 +315,10 @@ export default function InformasiPribadi() {
                     classNameL='font-semibold text-[11px] md:text-[16px] font-secondary'
                     classNameS='font-normal border-2 mt-1 px-3 py-3 text-black rounded-lg w-full text-[11px] md:text-[16px] bg-white '
                     options={DEVISI}
+                    validate={{
+                      required: "Jawaban tidak boleh kosong",
+                    }}
+
                   />
                   <TextArea
                     id='alasan_2'
@@ -284,6 +326,11 @@ export default function InformasiPribadi() {
                     classNameL='font-semibold text-[11px] md:text-[16px]'
                     classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     placeholder='Jawaban anda'
+                    validate={{
+                      required: "Jawaban tidak boleh kosong",
+                    }}
+                    setPage={setPage}
+                    page={2}
                   />
                   <TextArea
                     id='kesibukan'
@@ -291,6 +338,11 @@ export default function InformasiPribadi() {
                     classNameL='font-semibold text-[11px] md:text-[16px]'
                     classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     placeholder='Jawaban anda'
+                    validate={{
+                      required: "Jawaban tidak boleh kosong",
+                    }}
+                    setPage={setPage}
+                    page={2}
                   />
                 </div>
                 <div className={page === 3 ? "block" : "hidden"}>
@@ -303,8 +355,10 @@ export default function InformasiPribadi() {
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px] mt-4'
                     classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
-                      required: true,
+                      required: "Jawaban tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={3}
                   />
                   <Input
                     type='text'
@@ -315,8 +369,10 @@ export default function InformasiPribadi() {
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                     classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
-                      required: true,
+                      required: "Jawaban tidak boleh kosong",
                     }}
+                    setPage={setPage}
+                    page={3}
                   />
                   <div>
                     <Input
@@ -328,8 +384,10 @@ export default function InformasiPribadi() {
                       classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                       classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                       validate={{
-                        required: true,
+                        required: "Jawaban tidak boleh kosong",
                       }}
+                      setPage={setPage}
+                      page={3}
                     />
                     <p className='font-secondary text-xs mt-2'>
                       <span className='text-red-500'>* Catatan </span>:
@@ -337,18 +395,21 @@ export default function InformasiPribadi() {
                       Dokum, dan Publikasi
                     </p>
                   </div>
-                  <Input
-                    type='text'
-                    disabled={false}
-                    id='link_krsm'
-                    label='Link KRSM'
-                    placeholder='Jawaban Anda'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    validate={{
-                      required: true,
-                    }}
-                  />
+                    <Input
+                      type='text'
+                      disabled={false}
+                      id='link_krsm'
+                      label='Link KRSM'
+                      placeholder='Jawaban Anda'
+                      classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
+                      classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                      validate={{
+                        required: "Jawaban tidak boleh kosong",
+                      }}
+                      setPage={setPage}
+                    page={3}
+                      
+                    />
                   <div>
                     <Input
                       type='text'
@@ -359,9 +420,15 @@ export default function InformasiPribadi() {
                       classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                       classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                       validate={{
-                        required: true,
+                        required: "Jawaban tidak boleh kosong",
                       }}
+                      setPage={setPage}
+                    page={3}
                     />
+                    <p className='font-secondary text-xs mt-2'>
+                      <span className='text-red-500'>* Catatan </span>:
+                      Jika “Ya” bisa disebutkan nama perusahaannya beserta kontak yang dapat dihubungi
+                    </p>
                   </div>
                 </div>
                 <div className={page === 4 ? "block" : "hidden"}>
@@ -398,12 +465,7 @@ export default function InformasiPribadi() {
                     </p>
                   </div>
                   <div className={page === 3 ? "" : "hidden"}>
-                    <button
-                      className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-[#5189C4] hover:bg-white border-2 border-solid border-[#5189C4] '
-                      type='submit'
-                    >
-                      Daftar{" "}
-                    </button>
+                    <SubmitButton />
                   </div>
                 </div>
                 {page === 4 && (

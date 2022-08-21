@@ -1,4 +1,5 @@
 import { useFormContext } from 'react-hook-form';
+import { useEffect } from 'react';
 import { HiExclamationCircle } from 'react-icons/hi';
 
 export default function SelectInput({
@@ -8,7 +9,9 @@ export default function SelectInput({
     classNameL,
     classNameS,
     defops,
-    validate = ','
+    validate = '',
+		setPage = '',
+  	page = ''
     })
 {
     const {
@@ -16,24 +19,28 @@ export default function SelectInput({
         formState: { errors },
       } = useFormContext();
 
+			useEffect(() => {
+				if (errors[id]) {
+					setPage(page);
+				}
+			} , [errors[id]])
     return (
         
         <div className="flex flex-col font-secondary mt-5">
-            <label
-                className={classNameL}
-            >{label}</label>
-            <select
-                id={id}
-                name={id}
-                className={classNameS}
-                {...register(id, validate)}
-                >
-                <option>{defops}</option>
-                {options.map((data, index) => 
-                    
-									<option key={index} value={data.value}>{data.name}</option>                    
-                )}
-            </select>
+					<label
+						className={classNameL}
+					>{label}</label>
+					<select
+						id={id}
+						name={id}
+						className={classNameS}
+						{...register(id, validate)}
+						>
+						<option>{defops}</option>
+						{options.map((data, index) => 
+							<option key={index} value={data.value}>{data.name}</option>                    
+						)}
+					</select>
 						{errors[id] && (
           	<div className='flex flex-row mt-1'>
             	<HiExclamationCircle className='text-xl text-red-500' />
