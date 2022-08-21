@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <Head>
         <title>Mabacup 2022</title>
-        <meta name='description' content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat & Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.' />
+        <meta name='description' content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.' />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="google-site-verification" content="NwW-YP_XvE9FoX0hDVTkQescB9ExbBnbA5wjDySEu3U" />
         <link rel='icon' href='/mabacup-logo.svg' />
@@ -188,13 +188,15 @@ export default function Home() {
                 <div className='md:px-12 lg:px-16 xl:px-20 mt-0 sm:mt-6 flex flex-col items-center'>
                   <p className='font-secondary text-base sm:text-lg lg:text-xl leading-7 sm:leading-8 text-white font-semibold text-center'>
                     Maba Cup merupakan event tahunan yang diselenggarakan oleh
-                    Departemen Event Lembaga Minat & Bakat ITS. Memiliki motto
+                    Departemen Event Lembaga Minat Bakat ITS. Memiliki motto
                     “Dari maba, oleh maba, dan untuk maba”, event ini terdiri
                     dari pelatihan manajerial dan berbagai perlombaan.{" "}
                   </p>
-                  <button className='bg-[#5189C4] mt-6 w-fit h-fit px-4 py-2 rounded-lg mx-auto text-white'>
-                    Selengkapnya
-                  </button>
+                  <Link href="/comingSoon">                  
+                    <button className='bg-[#5189C4] mt-6 w-fit h-fit px-4 py-2 rounded-lg mx-auto text-white hover:drop-shadow-2xl hover:bg-transparent hover:border-2 hover:border-white hover:cursor-not-allowed'>
+                      Selengkapnya
+                    </button>
+                  </Link>
                 </div>
                 <img
                   className='hidden sm:block w-28 absolute -bottom-8 -right-8'
@@ -396,7 +398,7 @@ export default function Home() {
                     Mari Bergabung Menjadi Bagian dari Staff Maba Cup ITS 2022
                   </h1>
                   <p className='text-white font-secondary text-sm sm:text-base xl:text-xl 2xl:text-[1.3rem] leading-5 lg:leading-6 xl:leading-8 tracking-[-0.06%] w-full sm:w-4/5 lg:w-2/3 xl:w-[60%] 2xl:w-1/2 mt-4'>
-                    Gabung sekarang menjadi staff dan dapatkan banyak
+                    Gabung menjadi staff sekarang dan dapatkan banyak
                     Benefitnya!
                   </p>
 
@@ -455,7 +457,10 @@ export default function Home() {
               data-aos-easing="ease-in-out"
               data-aos-offset="200"
             >
-              <div className='mx-auto p-4 pt-3 sm:pt-8 md:pt-16 lg:pt-16 xl:pt-8 h-[90%] w-[90%] sm:w-[95%] sm:h-[90%]'>
+              <h1 className="text-center font-primary text-white text-xl sm:text-5xl pt-5 pb-3 md:pb-10">
+              Retrospeksi
+              </h1>
+              <div className='mx-auto p-4 pt-3 sm:pt-8 md:pt-16 lg:pt-16 xl:pt-8 h-[90%] w-[90%] sm:w-[95%] sm:h-[90%] pb-16 md:pb-32'>
                 {domLoaded && (
                   <Swiper
                     pagination={{
