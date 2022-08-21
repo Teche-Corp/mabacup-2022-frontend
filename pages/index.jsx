@@ -8,11 +8,9 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {  toast } from "react-toastify";
-import AOS from 'aos';
-import 'aos/dist/aos.css'
-
-
+import { toast } from "react-toastify";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import "react-toastify/dist/ReactToastify.css";
 const notify = () => toast("Coming Soon !");
@@ -24,10 +22,9 @@ export default function Home() {
   useEffect(() => {
     setDomLoaded(true);
     AOS.init({
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 50,
-      delay: 100,
+      easing: "ease-out-cubic",
+      once: false,
+      delay: 200,
     });
   }, []);
 
@@ -35,9 +32,15 @@ export default function Home() {
     <>
       <Head>
         <title>Mabacup 2022</title>
-        <meta name='description' content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat & Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.' />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="google-site-verification" content="NwW-YP_XvE9FoX0hDVTkQescB9ExbBnbA5wjDySEu3U" />
+        <meta
+          name='description'
+          content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.'
+        />
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+        <meta
+          name='google-site-verification'
+          content='NwW-YP_XvE9FoX0hDVTkQescB9ExbBnbA5wjDySEu3U'
+        />
         <link rel='icon' href='/mabacup-logo.svg' />
       </Head>
 
@@ -47,13 +50,18 @@ export default function Home() {
             id='hero'
             className='w-full min-h-screen hero overflow-hidden'
           >
-            <div className="w-full h-screen relative bg-[url('/hero/light-mobile.png')] sm:bg-[url('/hero/light.png')] bg-cover" >
+            <div className="w-full h-screen relative bg-[url('/hero/light-mobile.png')] sm:bg-[url('/hero/light.png')] bg-cover">
               <Parallax
                 className='block mx-auto lg:ml-24 pt-[12rem] sm:pt-[18rem] lg:pt-[20rem] 2xl:pt-[14rem] w-fit h-fit relative z-[10]'
                 speed={20}
               >
-                <div className='flex flex-col items-center lg:block w-4/5 sm:w-full mx-auto' data-aos="fade-right">
-                  <h1 className='font-secondary text-white text-xl sm:text-3xl lg:text-xl xl:text-3xl tracking-widest' >
+                <div
+                  className='flex flex-col items-center lg:block w-4/5 sm:w-full mx-auto'
+                  data-aos='fade-right'
+                  data-aos-duration='500'
+                  data-aos-easing='ease-in-out'
+                >
+                  <h1 className='font-secondary text-white text-xl sm:text-3xl lg:text-xl xl:text-3xl tracking-widest'>
                     MABA CUP 2022
                   </h1>
                   <h1 className='font-primary text-white text-center text-4xl sm:text-5xl lg:text-5xl xl:text-7xl mt-3 mb-8'>
@@ -80,6 +88,10 @@ export default function Home() {
                   className='w-64'
                   src='/hero/terumbu-kiri.png'
                   alt='terumbu kiri'
+                  data-aos='fade-right'
+                  data-aos-duration='500'
+                  data-aos-easing='ease-in-out'
+                  data-aos-delay='500'
                 />
               </Parallax>
 
@@ -99,6 +111,9 @@ export default function Home() {
                 scale={[0.9, 1.2]}
               >
                 <img
+                  data-aos='fade-left'
+                  data-aos-duration='500'
+                  data-aos-easing='ease-in-out'
                   className='hidden sm:block'
                   src='/hero/building-primary.png'
                   alt='building primary'
@@ -120,6 +135,10 @@ export default function Home() {
                   className='hidden lg:block'
                   src='/hero/building-secondary.png'
                   alt='building secondary'
+                  data-aos='fade-up'
+                  data-aos-duration='500'
+                  data-aos-easing='ease-in-out'
+                  data-aos-delay='300'
                 />
                 <img
                   className='block lg:hidden sm:opacity-80 w-full'
@@ -171,12 +190,13 @@ export default function Home() {
             <section
               id='about'
               className='w-full min-h-[70vh] lg:min-h-[calc(100vh-50px)] pt-72 lg:pt-64 2xl:pt-56'
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out"
-              data-aos-offset="200"
             >
-              <div className='about-mabacup w-11/12 sm:w-3/4 h-max pb-4 sm:pb-0 sm:h-80 lg:h-72 mx-auto rounded-xl px-8 sm:px-0 sm:rounded-3xl relative z-[1] border'>
+              <div
+                className='about-mabacup w-11/12 sm:w-3/4 h-max pb-4 sm:pb-0 sm:h-80 lg:h-72 mx-auto rounded-xl px-8 sm:px-0 sm:rounded-3xl relative z-[1] border'
+                data-aos='fade-up'
+                data-aos-duration='500'
+                data-aos-easing='ease-in-out'
+              >
                 <img
                   className='hidden sm:block w-28 absolute -top-8 -left-8 -rotate-12'
                   src='/about/mutiara.png'
@@ -188,7 +208,7 @@ export default function Home() {
                 <div className='md:px-12 lg:px-16 xl:px-20 mt-0 sm:mt-6 flex flex-col items-center'>
                   <p className='font-secondary text-base sm:text-lg lg:text-xl leading-7 sm:leading-8 text-white font-semibold text-center'>
                     Maba Cup merupakan event tahunan yang diselenggarakan oleh
-                    Departemen Event Lembaga Minat & Bakat ITS. Memiliki motto
+                    Departemen Event Lembaga Minat Bakat ITS. Memiliki motto
                     “Dari maba, oleh maba, dan untuk maba”, event ini terdiri
                     dari pelatihan manajerial dan berbagai perlombaan.{" "}
                   </p>
@@ -215,11 +235,11 @@ export default function Home() {
                 />
               </Parallax>
             </section>
-            <section className='w-full sm:h-screen md:h-[70vh] lg:h-[calc(100vh-200px)] xl:h-[70vh] 2xl:min-h-[calc(100vh-150px)] relative'
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out"
-              data-aos-offset="200"
+            <section
+              className='w-full sm:h-screen md:h-[70vh] lg:h-[calc(100vh-200px)] xl:h-[70vh] 2xl:min-h-[calc(100vh-150px)] relative'
+              data-aos='fade-up'
+              data-aos-duration='500'
+              data-aos-easing='ease-in-out'
             >
               <div className='w-10/12 mx-auto pt-24'>
                 <h1 className=' font-primary text-center text-xl sm:text-5xl text-white'>
@@ -320,14 +340,15 @@ export default function Home() {
                 />
               </Parallax>
             </section>
-            <section className='w-full h-max lg:h-[calc(100vh-200px)] 2xl:min-h-[calc(100vh-100px)] pb-24 lg:pb-0'
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out"
-              data-aos-offset="200"
-            >
+            <section className='w-full h-max lg:h-[calc(100vh-200px)] 2xl:min-h-[calc(100vh-100px)] pb-24 lg:pb-0'>
               <div className='w-11/12 sm:w-1/2 lg:w-11/12 xl:w-10/12 pt-20 flex flex-col lg:flex-row gap-8 lg:gap-4 xl:gap-8 justify-between items-center mx-auto relative z-10'>
-                <div className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
+                <div
+                  className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'
+                  data-aos='fade-up'
+                  data-aos-duration='500'
+                  data-aos-easing='ease-in-out'
+                  data-aos-delay='100'
+                >
                   <div className='w-full h-72 p-6'>
                     <h1 className='font-primary text-white text-2xl sm:text-[2rem]'>
                       Pre Event
@@ -346,7 +367,13 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
+                <div
+                  className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'
+                  data-aos='fade-up'
+                  data-aos-duration='500'
+                  data-aos-easing='ease-in-out'
+                  data-aos-delay='300'
+                >
                   <div className='w-full h-72 p-6'>
                     <h1 className='font-primary text-white text-2xl sm:text-[2rem]'>
                       Main Event
@@ -363,7 +390,13 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'>
+                <div
+                  className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'
+                  data-aos='fade-up'
+                  data-aos-duration='500'
+                  data-aos-easing='ease-in-out'
+                  data-aos-delay='500'
+                >
                   <div className='w-full h-72 p-6'>
                     <h1 className='font-primary text-white text-2xl sm:text-[2rem]'>
                       Closing
@@ -384,11 +417,11 @@ export default function Home() {
               </div>
             </section>
 
-            <section className='w-full h-[55vh] sm:h-[65vh] lg:h-[calc(100vh-200px)] 2xl:min-h-[calc(100vh-100px)]'
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out"
-              data-aos-offset="200"
+            <section
+              className='w-full h-[55vh] sm:h-[65vh] lg:h-[calc(100vh-200px)] 2xl:min-h-[calc(100vh-100px)]'
+              data-aos='fade-up'
+              data-aos-duration='500'
+              data-aos-easing='ease-in-out'
             >
               <div className='oprec w-11/12 xl:w-4/5 h-[18rem] sm:h-[19rem] lg:h-[18rem] xl:h-[22rem] bg-red-200 mx-auto mt-8 rounded-2xl p-6 sm:p-8 xl:p-10 relative overflow-hidden'>
                 <div className='w-full sm:w-3/5 relative z-[1] '>
@@ -449,12 +482,7 @@ export default function Home() {
                 alt='terumbu kiri'
               />
             </div>
-            <section className='retro w-full min-h-[30vh] sm:min-h-[50vh] lg:min-h-[50vh] relative z-[1]'
-              data-aos="fade-up"
-              data-aos-duration="500"
-              data-aos-easing="ease-in-out"
-              data-aos-offset="200"
-            >
+            <section className='retro w-full min-h-[30vh] sm:min-h-[50vh] lg:min-h-[50vh] relative z-[1]'>
               <div className='mx-auto p-4 pt-3 sm:pt-8 md:pt-16 lg:pt-16 xl:pt-8 h-[90%] w-[90%] sm:w-[95%] sm:h-[90%]'>
                 {domLoaded && (
                   <Swiper
