@@ -42,5 +42,9 @@ export const DEVISI = [
     {
       name : 'Perlengkapan',
       value : 'perlengkapan'
+    },
+    {
+      name : 'Medical',
+      value : 'medical'
     }
   ]
