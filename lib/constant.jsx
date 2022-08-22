@@ -52,222 +52,221 @@ export const DEVISI = [
       value : 'dekorasi'
     }
   ]
-
   export const DEPARTMENT = [
-  {
-    name : 'Fisika',
-    value : 'fisika'
-  },
-  {
-    name : 'Matematika',
-    value : 'matematika'
-  }, 
-  {
-    name : 'Statistika',
-    value : 'Statistika'
-  }, 
-  {
-    name : 'Kimia',
-    value : 'kimia'
-  }, 
-  {
-    name : 'Biologi',
-    value : 'biologi'
-  }, 
-  {
-    name : 'Aktuaria',
-    value : 'aktuaria'
-  },
-  {
-    name : 'Teknik Mesin',
-    value : 'teknik-mesin'
-  },
-  {
-    name : 'Teknik Kimia',
-    value : 'teknik-kimia'
-  }, 
-  {
-    name : 'Teknik Fisika',
-    value : 'teknik-fisika'
-  }, 
-  {
-    name : 'Teknik Sistem dan Industri',
-    value : 'teknik-sistem-industri'
-  }, 
-  {
-    name : 'Teknik Material',
-    value : 'teknik-material'
-  },
+    {
+      name : 'Fisika',
+      value : 'Fisika'
+    },
+    {
+      name : 'Matematika',
+      value : 'Matematika'
+    }, 
+    {
+      name : 'Statistika',
+      value : 'Statistika'
+    }, 
+    {
+      name : 'Kimia',
+      value : 'Kimia'
+    }, 
+    {
+      name : 'Biologi',
+      value : 'Biologi'
+    }, 
+    {
+      name : 'Aktuaria',
+      value : 'Aktuaria'
+    },
+    {
+      name : 'Teknik Mesin',
+      value : 'Teknik Mesin'
+    },
+    {
+      name : 'Teknik Kimia',
+      value : 'Teknik Kimia'
+    }, 
+    {
+      name : 'Teknik Fisika',
+      value : 'Teknik Fisika'
+    }, 
+    {
+      name : 'Teknik Sistem dan Industri',
+      value : 'Teknik Sistem dan Industri'
+    }, 
+    {
+      name : 'Teknik Material',
+      value : 'Teknik Material'
+    },
+    
+    /*
+      Teknik Sipil
+      Arsitektur
+      Teknik Lingkungan
+      Perencanaan Wilayah dan Kota
+      Teknik Geomatika
+      Teknik Geofisika
+    */
+   {
+      name : 'Teknik Sipil',
+      value : 'Teknik Sipil'
+   }, 
+    {
+      name : 'Arsitektur',
+      value : 'Arsitektur'
+    },
+    {
+      name : 'Teknik Lingkungan',
+      value : 'Teknik Lingkungan'
+    },
+    {
+      name : 'Perencanaan Wilayah dan Kota',
+      value : 'Perencanaan Wilayah dan Kota'
+    },
+    {
+      name : 'Teknik Geomatika',
+      value : 'Teknik Geomatika'
+    },
+    {
+      name : 'Teknik Geofisika',
+      value : 'Teknik Geofisika'
+    }
+    /*
   
-  /*
-    Teknik Sipil
-    Arsitektur
-    Teknik Lingkungan
-    Perencanaan Wilayah dan Kota
-    Teknik Geomatika
-    Teknik Geofisika
-  */
- {
-    name : 'Teknik Sipil',
-    value : 'teknik-sipil'
- }, 
-  {
-    name : 'Arsitektur',
-    value : 'arsitektur'
-  },
-  {
-    name : 'Teknik Lingkungan',
-    value : 'teknik-lingkungan'
-  },
-  {
-    name : 'Perencanaan Wilayah dan Kota',
-    value : 'perencanaan-wilayah-kota'
-  },
-  {
-    name : 'Teknik Geomatika',
-    value : 'teknik-geomatika'
-  },
-  {
-    name : 'Teknik Geofisika',
-    value : 'teknik-geofisika'
-  }
-  /*
-
-    Teknik Infrastruktur Sipil
-    Teknik Mesin Industri
-    Teknik Elektro Otomasi
-    Teknik Kimia Industri
-    Teknik Instrumentasi
-    Statistika Bisnis
-  */
-  ,
-  {
-    name : 'Teknik Infrastruktur Sipil',
-    value : 'teknik-infrastruktur-sipil'
-  },
-  {
-    name : 'Teknik Mesin Industri',
-    value : 'teknik-mesin-industri'
-  },
-  {
-    name : 'Teknik Elektro Otomasi',
-    value : 'teknik-elektro-otomasi'
-  },
-  {
-    name : 'Teknik Kimia Industri',
-    value : 'teknik-kimia-industri'
-  },
-  {
-    name : 'Teknik Instrumentasi',
-    value : 'teknik-instrumentasi'
-  },
-  {
-    name : 'Statistika Bisnis',
-    value : 'statistika-bisnis'
-  }
-
-  /*
-
-    Teknik Perkapalan
-    Teknik Sistem Perkapalan
-    Teknik Kelautan
-    Teknik Transportasi Laut
-  */
-  ,
-  {
-    name : 'Teknik Perkapalan',
-    value : 'teknik-perkapalan'
-  },
-  {
-    name : 'Teknik Sistem Perkapalan',
-    value : 'teknik-sistem-perkapalan'
-  },
-  {
-    name : 'Teknik Kelautan',
-    value : 'teknik-kelautan'
-  },
-  {
-    name : 'Teknik Transportasi Laut',
-    value : 'teknik-transportasi-laut'
-  }
-  /*
-    Teknik Elektro
-    Teknik Biomedik
-    Teknik Komputer
-    Teknik Informatika
-    Sistem Informasi
-    Teknologi Informasi
-  */
-  ,
-  {
-    name : 'Teknik Elektro',
-    value : 'teknik-elektro'
-  },
-  {
-    name : 'Teknik Biomedik',
-    value : 'teknik-biomedik'
-  },
-  {
-    name : 'Teknik Komputer',
-    value : 'teknik-komputer'
-  },
-  {
-    name : 'Teknik Informatika',
-    value : 'teknik-informatika'
-  },
-  {
-    name : 'Sistem Informasi',
-    value : 'sistem-informasi'
-  },
-  {
-    name : 'Teknologi Informasi',
-    value : 'teknologi-informasi'
-  }
-  /*
-    Desain Produk Industri
-    Desain Interior
-    Desain Komunikasi Visual
-    Manajemen Bisnis
-    Studi Pembangunan
-    Manajemen Teknologi
-  */
-  ,
-  {
-    name : 'Desain Produk Industri',
-    value : 'desain-produk-industri'
-  },
-  {
-    name : 'Desain Interior',
-    value : 'desain-interior'
-  },
-  {
-    name : 'Desain Komunikasi Visual',
-    value : 'desain-komunikasi-visual'
-  },
-  {
-    name : 'Manajemen Bisnis',
-    value : 'manajemen-bisnis'
-  },
-  {
-    name : 'Studi Pembangunan',
-    value : 'studi-pembangunan'
-  },
-  {
-    name : 'Manajemen Teknologi',
-    value : 'manajemen-teknologi'
-  }
-  // Departemen Baru
-  ,
-  {
-    name : 'Teknologi Kedokteran',
-    value : 'teknologi-kedokteran'
-  }
-  , {
-    name : 'Teknik Telekomunikasi',
-    value: 'teknik-telekomunikasi'
-  }
-  ]
-
+      Teknik Infrastruktur Sipil
+      Teknik Mesin Industri
+      Teknik Elektro Otomasi
+      Teknik Kimia Industri
+      Teknik Instrumentasi
+      Statistika Bisnis
+    */
+    ,
+    {
+      name : 'Teknik Infrastruktur Sipil',
+      value : 'Teknik Infrastruktur Sipil'
+    },
+    {
+      name : 'Teknik Mesin Industri',
+      value : 'Teknik Mesin Industri'
+    },
+    {
+      name : 'Teknik Elektro Otomasi',
+      value : 'Teknik Elektro Otomasi'
+    },
+    {
+      name : 'Teknik Kimia Industri',
+      value : 'Teknik Kimia Industri'
+    },
+    {
+      name : 'Teknik Instrumentasi',
+      value : 'Teknik Instrumentasi'
+    },
+    {
+      name : 'Statistika Bisnis',
+      value : 'Statistika Bisnis'
+    }
+  
+    /*
+  
+      Teknik Perkapalan
+      Teknik Sistem Perkapalan
+      Teknik Kelautan
+      Teknik Transportasi Laut
+    */
+    ,
+    {
+      name : 'Teknik Perkapalan',
+      value : 'Teknik Perkapalan'
+    },
+    {
+      name : 'Teknik Sistem Perkapalan',
+      value : 'Teknik Sistem Perkapalan'
+    },
+    {
+      name : 'Teknik Kelautan',
+      value : 'Teknik Kelautan'
+    },
+    {
+      name : 'Teknik Transportasi Laut',
+      value : 'Teknik Transportasi Laut'
+    }
+    /*
+      Teknik Elektro
+      Teknik Biomedik
+      Teknik Komputer
+      Teknik Informatika
+      Sistem Informasi
+      Teknologi Informasi
+    */
+    ,
+    {
+      name : 'Teknik Elektro',
+      value : 'Teknik Elektro'
+    },
+    {
+      name : 'Teknik Biomedik',
+      value : 'Teknik Biomedik'
+    },
+    {
+      name : 'Teknik Komputer',
+      value : 'Teknik Komputer'
+    },
+    {
+      name : 'Teknik Informatika',
+      value : 'Teknik Informatika'
+    },
+    {
+      name : 'Sistem Informasi',
+      value : 'Sistem Informasi'
+    },
+    {
+      name : 'Teknologi Informasi',
+      value : 'Teknologi Informasi'
+    }
+    /*
+      Desain Produk Industri
+      Desain Interior
+      Desain Komunikasi Visual
+      Manajemen Bisnis
+      Studi Pembangunan
+      Manajemen Teknologi
+    */
+    ,
+    {
+      name : 'Desain Produk Industri',
+      value : 'Desain Produk Industri'
+    },
+    {
+      name : 'Desain Interior',
+      value : 'Desain Interior'
+    },
+    {
+      name : 'Desain Komunikasi Visual',
+      value : 'Desain Komunikasi Visual'
+    },
+    {
+      name : 'Manajemen Bisnis',
+      value : 'Manajemen Bisnis'
+    },
+    {
+      name : 'Studi Pembangunan',
+      value : 'Studi Pembangunan'
+    },
+    {
+      name : 'Manajemen Teknologi',
+      value : 'Manajemen Teknologi'
+    }
+    // Departemen Baru
+    ,
+    {
+      name : 'Teknologi Kedokteran',
+      value : 'Teknologi Kedokteran'
+    }
+    , {
+      name : 'Teknik Telekomunikasi',
+      value: 'Teknik Telekomunikasi'
+    }
+    ]
+  
   export const FAKULTAS = [
     {
       name: 'FAKULTAS SAINS DAN ANALITIKA DATA (SCIENTICS)',

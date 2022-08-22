@@ -266,6 +266,10 @@ export default function InformasiPribadi() {
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
+                      maxLength: {
+                        value: 1500,
+                        message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
+                      }
                     }}
                     setPage={setPage}
                     page={2}
@@ -278,6 +282,10 @@ export default function InformasiPribadi() {
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
+                      maxLength: {
+                        value: 1500,
+                        message: 'Jawaban Motivasi maksimal memiliki 1500 karakter '
+                      }
                     }}
                     setPage={setPage}
                     page={2}
@@ -303,6 +311,10 @@ export default function InformasiPribadi() {
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
+                      maxLength: {
+                        value: 1500,
+                        message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
+                      }
                     }}
                     setPage={setPage}
                     page={2}
@@ -327,6 +339,11 @@ export default function InformasiPribadi() {
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
+                      maxLength: {
+                        value: 1500,
+                        message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
+                      }
+                      
                     }}
                     setPage={setPage}
                     page={2}
@@ -339,6 +356,10 @@ export default function InformasiPribadi() {
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
+                      maxLength: {
+                        value: 1500,
+                        message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
+                      }
                     }}
                     setPage={setPage}
                     page={2}
