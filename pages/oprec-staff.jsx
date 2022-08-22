@@ -4,7 +4,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import { useEffect, useState } from "react";
 import TextArea from "../components/TextArea";
 import SelectInput from "../components/SelectInput";
-import { DEVISI } from "../lib/constant";
+import { DEPARTMENT, DEVISI, FAKULTAS } from "../lib/constant";
 import { FaCheck } from "react-icons/fa";
 import axios from "axios";
 import Link from "next/link";
@@ -229,34 +229,33 @@ export default function InformasiPribadi() {
                     setPage={setPage}
                     page={1}
                   />
-                  <Input
-                    type='text'
-                    disabled={false}
+                  <SelectInput
                     id='fakultas'
                     label='Fakultas'
-                    placeholder='Jawaban Anda'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    defops='Pilih Fakultas'
+                    classNameL='font-semibold text-[11px] md:text-[16px] font-secondary'
+                    classNameS='font-normal border-2 mt-1 px-3 py-3 text-black rounded-lg w-full text-[11px] md:text-[16px] bg-white '
+                    options={FAKULTAS}
                     validate={{
-                      required: "Fakultas tidak boleh kosong",
+                      required: "Jawaban tidak boleh kosong",
                     }}
                     setPage={setPage}
                     page={1}
                   />
-                  <Input
-                    type='text'
-                    disabled={false}
+                  <SelectInput
                     id='departemen'
                     label='Departemen'
-                    placeholder='Jawaban Anda'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    defops='Pilih Departemen'
+                    classNameL='font-semibold text-[11px] md:text-[16px] font-secondary'
+                    classNameS='font-normal border-2 mt-1 px-3 py-3 text-black rounded-lg w-full text-[11px] md:text-[16px] bg-white '
+                    options={DEPARTMENT}
                     validate={{
-                      required: "Departemen tidak boleh kosong",
+                      required: "Jawaban tidak boleh kosong",
                     }}
                     setPage={setPage}
                     page={1}
                   />
+                 
                 </div>
                 <div className={page === 2 ? "block" : "hidden"}>
                   <TextArea
