@@ -38,7 +38,7 @@ export default function SelectInput({
 						>
 						<option>{defops}</option>
 						{options.map((data, index) => 
-							<option key={index} value={data.value}>{data.name}</option>                    
+							<option key={index} value={data.name}>{data.name}</option>                    
 						)}
 					</select>
 						{errors[id] && (
