@@ -531,22 +531,22 @@ export default function Home() {
                       <img src='/retrospeksi/image-3.png' alt='' />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-1.png' alt='' />
+                      <img src='/retrospeksi/image-4.png' alt='' />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-2.png' alt='' />
+                      <img src='/retrospeksi/image-5.png' alt='' />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-3.png' alt='' />
+                      <img src='/retrospeksi/image-6.png' alt='' />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-1.png' alt='' />
+                      <img src='/retrospeksi/image-7.png' alt='' />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-2.png' alt='' />
+                      <img src='/retrospeksi/image-4.png' alt='' />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-3.png' alt='' />
+                      <img src='/retrospeksi/image-5.png' alt='' />
                     </SwiperSlide>
                   </Swiper>
                 )}
