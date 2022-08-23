@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Parallax } from "react-scroll-parallax";
 import Link from "next/link";
 import Layout from "../components/Layout";
@@ -13,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import "react-toastify/dist/ReactToastify.css";
+import Header from "../components/Header";
 const notify = () => toast("Coming Soon !");
 
 export default function Home() {
@@ -30,19 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <Head>
-        <title>Mabacup 2022</title>
-        <meta
-          name='description'
-          content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.'
-        />
-        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-        <meta
-          name='google-site-verification'
-          content='NwW-YP_XvE9FoX0hDVTkQescB9ExbBnbA5wjDySEu3U'
-        />
-        <link rel='icon' href='/mabacup-logo.svg' />
-      </Head>
+      <Header title="Mabacup ITS 2022" />
 
       <Layout showNav={showNav} setShowNav={setShowNav}>
         <main className={` overflow-x-hidden`}>

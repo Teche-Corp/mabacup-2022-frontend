@@ -11,6 +11,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { toast } from "react-hot-toast";
 import SubmitButton from "../components/SubmitButton";
+import Header from "../components/Header";
 
 export default function InformasiPribadi() {
   const [page, setPage] = useState(1);
@@ -54,13 +55,7 @@ export default function InformasiPribadi() {
             },
           }}
         />
-      <Head>
-        <title>Daftar Staff | Mabacup 2022</title>
-        <meta name='description' content='Maba Cup merupakan event tahunan yang diselenggarakan oleh Departemen Event Lembaga Minat Bakat ITS. Memiliki motto “Dari maba, oleh maba, dan untuk maba”, event ini terdiri dari pelatihan manajerial dan berbagai perlombaan.' />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <meta name="google-site-verification" content="NwW-YP_XvE9FoX0hDVTkQescB9ExbBnbA5wjDySEu3U" />
-        <link rel='icon' href='/mabacup-logo.svg' />
-      </Head>
+      <Header title="Daftar Staff | Mabacup ITS 2022" />
       <section className='bg-[#B8D1EB] w-full min-h-screen flex jusify-center items-center '>
         <div className='mt-10 mb-10 w-11/12 md:w-3/4 lg:w-3/5 bg-white rounded-2xl sm:rounded-3xl mx-auto overflow-hidden'>
           <div className='form-staff w-full h-72 p-6 relative'>
