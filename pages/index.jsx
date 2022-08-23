@@ -52,7 +52,7 @@ export default function Home() {
           >
             <div className="w-full h-screen relative bg-[url('/hero/light-mobile.png')] sm:bg-[url('/hero/light.png')] bg-cover">
               <Parallax
-                className='block mx-auto lg:ml-24 pt-[12rem] sm:pt-[18rem] lg:pt-[20rem] 2xl:pt-[14rem] w-fit h-fit relative z-[10]'
+                className='block mx-auto lg:ml-24 pt-[12rem] sm:pt-[18rem] lg:pt-[36vh] 2xl:pt-[34vh] w-fit h-fit relative z-[10]'
                 speed={20}
               >
                 <div
