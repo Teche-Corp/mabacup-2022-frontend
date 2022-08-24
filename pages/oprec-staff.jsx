@@ -321,9 +321,7 @@ export default function InformasiPribadi() {
                     classNameL='font-semibold text-[11px] md:text-[16px] font-secondary'
                     classNameS='font-normal border-2 mt-1 px-3 py-3 text-black rounded-lg w-full text-[11px] md:text-[16px] bg-white '
                     options={DEVISI}
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                    }}
+                    
 
                   />
                   <TextArea
@@ -333,7 +331,6 @@ export default function InformasiPribadi() {
                     classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     placeholder='Jawaban anda'
                     validate={{
-                      required: "Jawaban tidak boleh kosong",
                       maxLength: {
                         value: 1500,
                         message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
@@ -398,9 +395,7 @@ export default function InformasiPribadi() {
                       placeholder='Jawaban Anda'
                       classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                       classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                      validate={{
-                        required: "Jawaban tidak boleh kosong",
-                      }}
+                      
                       setPage={setPage}
                       page={3}
                     />
