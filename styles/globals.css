@@ -166,3 +166,16 @@ body {
     #5189c4 96.08%
   );
 }
+
+.about-us-hero {
+  background: linear-gradient(180deg, #FFFFFF 0%, #5DCBE4 21.15%, #00868D 77.6%, #00B18C 96.15%);
+}
+.about-us-card {
+  background: linear-gradient(93.43deg, rgba(255, 255, 255, 0.05) 2.55%, rgba(255, 255, 255, 0.3) 94.75%);
+}
+.about-us-content {
+  background: linear-gradient(180deg, #FFFFFF 0.87%, #5DCBE4 8.64%, #24A1B9 40.98%, #54B3E4 87.59%, #003146 103.84%, #6B97D9 103.85%);
+}
+.about-us-card-content {
+  background: linear-gradient(93.43deg, rgba(255, 255, 255, 0.05) 2.55%, rgba(255, 255, 255, 0.3) 94.75%);
+}

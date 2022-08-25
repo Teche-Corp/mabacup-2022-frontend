@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FaAngleDown, FaTimes } from "react-icons/fa";
-import { MdOutlineMonitor } from "react-icons/md";
-import { BiBrain } from "react-icons/bi";
-import { HiSpeakerphone } from "react-icons/hi";
-import { BsStars } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
-const Navbar = ({ showNav, setShowNav }) => {
+const Navbar = ({ showNav, setShowNav,from }) => {
   const [showEvents, setShowEvents] = useState(false);
   const [hideEvents, setHideEvents] = useState(true);
   const [colorChange, setColorchange] = useState(false);
@@ -65,8 +61,8 @@ const Navbar = ({ showNav, setShowNav }) => {
         <nav
           className={`${
             colorChange
-              ? "bg-[#27378E] duration-300 ease-in-out"
-              : "duration-300 ease-in-out"
+              ? "bg-[#27378E] duration-300 ease-in-out text-white "
+              : `duration-300 ease-in-out ${from === 'about-us'? 'text-black' : 'text-white'}`
           } h-20 relative z-50 select-none w-screen font-secondary flex justify-between items-center px-5 md:px-16 lg:px-24`}
         >
           {/* header logo */}
@@ -98,7 +94,7 @@ const Navbar = ({ showNav, setShowNav }) => {
               />
             )}
           </div>
-          <ul className='md:flex hidden text-white md:gap-5 lg:gap-10 xl:gap-[67px]'>
+          <ul className={`md:flex hidden  md:gap-5 lg:gap-10 xl:gap-[67px] `}>
             <li>
               <Link href='#hero'>
                 <a>Home</a>
