@@ -73,17 +73,16 @@ body {
 }
 
 .about-mabacup {
+  border: 1px solid rgba(255, 255, 255, 0.18);
   background: linear-gradient(
     93.43deg,
     rgba(255, 255, 255, 0.05) 2.55%,
     rgba(255, 255, 255, 0.3) 94.75%
   );
-  stroke: red;
-  stroke-width: 4px;
 }
 
 .event-card {
-  box-shadow: inset 0 0 0 1px white;
+  box-shadow: inset 0 0 0 1px rgb(255, 255, 255, 0.18);
   background: linear-gradient(
     139.65deg,
     rgba(255, 255, 255, 0.05) 1.24%,
@@ -133,6 +132,78 @@ body {
   background: linear-gradient(180deg, #273580 0%, #272d51 100%);
 }
 
+.form-staff {
+  background: linear-gradient(
+    151.76deg,
+    #b5dae2 -27.79%,
+    #5189c4 65.96%,
+    #5189c4 96.08%
+  );
+}
+
+.page-staff {
+  background: linear-gradient(
+    151.76deg,
+    #b5dae2 -27.79%,
+    #5189c4 65.96%,
+    #5189c4 96.08%
+  );
+}
+
+.page-oprec-staff {
+  background: linear-gradient(
+    180deg,
+    #b5dae2 0%,
+    #5189c4 36.43%,
+    #27378e 71.96%,
+    #131e5a 96.07%
+  );
+}
+
+.timeline-staff {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    93.43deg,
+    rgba(255, 255, 255, 0.05) 2.55%,
+    rgba(255, 255, 255, 0.3) 94.75%
+  );
+}
+
+.accordion-text {
+  background: linear-gradient(
+    93.43deg,
+    rgba(255, 255, 255, 0.05) 2.55%,
+    rgba(255, 255, 255, 0.3) 94.75%
+  );
+}
+
+.narasi {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    93.43deg,
+    rgba(255, 255, 255, 0.05) 2.55%,
+    rgba(255, 255, 255, 0.3) 94.75%
+  );
+}
+
+.persyaratan-staff {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.button-form {
+  background: linear-gradient(
+    261.31deg,
+    #e73776 -2.11%,
+    #bc2788 48.56%,
+    #951898 96.99%
+  );
+}
+
+.MuiPaper-root {
+  background: none;
+}
+
 @media only screen and (max-width: 500px) {
   .hero {
     background: linear-gradient(
@@ -156,13 +227,4 @@ body {
       #2368b1 100%
     );
   }
-}
-
-.form-staff {
-  background: linear-gradient(
-    151.76deg,
-    #b5dae2 -27.79%,
-    #5189c4 65.96%,
-    #5189c4 96.08%
-  );
 }
