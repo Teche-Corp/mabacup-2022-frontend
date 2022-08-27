@@ -174,7 +174,7 @@ body {
     93.43deg,
     rgba(255, 255, 255, 0.05) 2.55%,
     rgba(255, 255, 255, 0.3) 94.75%
-  );
+  ) !important;
 }
 
 .narasi {
@@ -283,4 +283,8 @@ body {
     #30447e 70.39%,
     #273168 96.19%
   );
+}
+
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root{
+  background: none !important;
 }

@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Link from "next/link";
 
 export default function pageOprecStaff() {
-  const [domLoaded, setDomLoaded] = useState(false);
+  // const [domLoaded, setDomLoaded] = useState(false);
 
-  useEffect(() => {
-    setDomLoaded(true);
-  }, []);
+  // useEffect(() => {
+  //   setDomLoaded(true);
+  // }, []);
   return (
     <main className='page-oprec-staff'>
       <section className='w-full h-screen sm:h-[32rem] bg-red-300'>
@@ -301,18 +301,18 @@ export default function pageOprecStaff() {
             Pilihan Divisi &amp; Subdivisi Maba Cup 2022
           </h1>
 
-          {domLoaded && (
+          
             <div>
-              <Accordion>
+              <Accordion >
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954] '
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
                 >
                   <Typography className='text-white'>Acara</Typography>
                 </AccordionSummary>
-                <AccordionDetails className='accordion-text '>
+                <AccordionDetails className='accordion-text z-10'>
                   <Typography className='text-white text-sm md:text-base'>
                     Dijuluki sebagai Konseptor, Divisi Acara bertanggung jawab
                     merancang, menyusun, dan mengembangkan konsep maupun susunan
@@ -323,7 +323,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -341,7 +341,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -358,7 +358,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -376,7 +376,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -395,7 +395,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -412,7 +412,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -429,7 +429,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -446,7 +446,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -463,7 +463,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -480,7 +480,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -498,7 +498,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954]'
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -514,7 +514,7 @@ export default function pageOprecStaff() {
               </Accordion>
               <Accordion>
                 <AccordionSummary
-                  className='bg-[#0E1954]'
+                  className='!bg-[#0E1954] '
                   expandIcon={<ExpandMoreIcon className='text-white' />}
                   aria-controls='panel2a-content'
                   id='panel2a-header'
@@ -529,7 +529,6 @@ export default function pageOprecStaff() {
                 </AccordionDetails>
               </Accordion>
             </div>
-          )}
         </div>
       </section>
       <section className='w-full h-fit relative'>
