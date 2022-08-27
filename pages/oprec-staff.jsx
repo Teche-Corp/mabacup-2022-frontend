@@ -391,7 +391,7 @@ export default function InformasiPribadi() {
                       type='text'
                       disabled={false}
                       id='link_portfolio'
-                      label='Link Portofolio'
+                      label='Link Portofolio / Subdivisi'
                       placeholder='Jawaban Anda'
                       classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                       classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
@@ -403,6 +403,10 @@ export default function InformasiPribadi() {
                       <span className='text-red-500'>* Catatan </span>:
                       Dikhususkan untuk pendaftar yang mendaftar divisi Desain,
                       Dokum, dan Publikasi
+                    </p>
+                    <p className='font-secondary text-xs'>
+                      <span className='text-red-500'>* Catatan </span>:
+                      Untuk pendaftar Divisi Acara, silakan isi Sub Divisi Event / Kompetisi
                     </p>
                   </div>
                     <Input
