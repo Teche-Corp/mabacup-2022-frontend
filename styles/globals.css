@@ -228,3 +228,49 @@ body {
     );
   }
 }
+
+.form-staff {
+  background: linear-gradient(
+    151.76deg,
+    #b5dae2 -27.79%,
+    #5189c4 65.96%,
+    #5189c4 96.08%
+  );
+}
+
+.about-us-hero {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #5dcbe4 21.15%,
+    #00868d 77.6%,
+    #00b18c 96.15%
+  );
+}
+.about-us-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(
+    93.43deg,
+    rgba(255, 255, 255, 0.05) 2.55%,
+    rgba(255, 255, 255, 0.3) 94.75%
+  );
+}
+.about-us-content {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0.87%,
+    #5dcbe4 8.64%,
+    #24a1b9 40.98%,
+    #54b3e4 87.59%,
+    #003146 103.84%,
+    #6b97d9 103.85%
+  );
+}
+.about-us-card-content {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: linear-gradient(
+    93.43deg,
+    rgba(255, 255, 255, 0.05) 2.55%,
+    rgba(255, 255, 255, 0.3) 94.75%
+  );
+}

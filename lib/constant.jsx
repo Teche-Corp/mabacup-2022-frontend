@@ -261,9 +261,14 @@ export const DEVISI = [
       name : 'Teknologi Kedokteran',
       value : 'Teknologi Kedokteran'
     }
-    , {
+    , 
+    {
       name : 'Teknik Telekomunikasi',
       value: 'Teknik Telekomunikasi'
+    },
+    {
+      name : 'Teknik Pangan',
+      value : 'Teknik Pangan'
     }
     ]
   
