@@ -1,497 +1,547 @@
-import Input from "../components/Input";
-import { Toaster } from 'react-hot-toast';
-import { useForm, FormProvider } from "react-hook-form";
-import { useEffect, useState } from "react";
-import TextArea from "../components/TextArea";
-import SelectInput from "../components/SelectInput";
-import { DEPARTMENT, DEVISI, FAKULTAS } from "../lib/constant";
-import { FaCheck } from "react-icons/fa";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Link from "next/link";
-import Head from "next/head";
-import { toast } from "react-hot-toast";
-import SubmitButton from "../components/SubmitButton";
-import Header from "../components/Header";
 
-export default function InformasiPribadi() {
-  const [page, setPage] = useState(1);
-  const methods = useForm();
-  const { handleSubmit } = methods;
-  const daftar = (data) => {
-    toast.promise(
-      axios.post('https://mabacup-its.com:8081/api/create_staff', data).then(
-        (res) => {
-          setPage(4);
-        }), {
-          success: "Selamat Anda telah terdaftar",
-          error: ((err) => {
-            return (err.response.data.message);
-            }),
-          loading: "Loading...",
-        }
-    )
-  }
+export default function pageOprecStaff() {
+  const [domLoaded, setDomLoaded] = useState(false);
 
-  
-  function nextPage() {
-    if (page < 3) {
-      setPage(page + 1);
-    }
-  }
-  function prevPage() {
-    if (page > 1) {
-      setPage(page - 1);
-    }
-  }
+  useEffect(() => {
+    setDomLoaded(true);
+  }, []);
   return (
-    <>
-      <Toaster
-          reverseOrder={false}
-          toastOptions={{
-            style: {
-              borderRadius: '8px',
-              background: '#333',
-              color: '#fff',
-            },
-          }}
-        />
-      <Header title="Daftar Staff | Mabacup ITS 2022" />
-      <section className='bg-[#B8D1EB] w-full min-h-screen flex jusify-center items-center '>
-        <div className='mt-10 mb-10 w-11/12 md:w-3/4 lg:w-3/5 bg-white rounded-2xl sm:rounded-3xl mx-auto overflow-hidden'>
-          <div className='form-staff w-full h-72 p-6 relative'>
-            <img className='w-12 md:w-16' src='mabacup-white.png' alt='' />
-            <h1 className='mt-4 font-secondary text-white font-semibold text-lg md:text-2xl relative z-10'>
-              Form Pendaftaran <br />
-              Open Recruitment Staff
-            </h1>
-            <p className='mt-4 text-white text-sm md:text-base w-full md:w-3/4 leading-5 relative z-10'>
-              Halo Pendaftar MABACUP 2022!
-              <br /> Sebelum melanjutkan pendaftaran dibawah, harap telah
-              membaca ketentuan yang berlaku dan mengisikan form sesuai dengan
-              ketentuan yang ada.
-            </p>
-            <img
-              className='absolute md:w-48 w-24 top-12 right-8'
-              src='/form-staff/ikan-form-staff.png'
-              alt=''
-            />
-            <img
-              className='absolute md:w-32 w-16 bottom-0 right-72'
-              src='/form-staff/ikan-secondary-form-staff.png'
-              alt=''
-            />
-            <img
-              className='absolute bottom-0 right-0 md:w-64 w-32'
-              src='/form-staff/building-form-staff.png'
-              alt=''
-            />
-          </div>
-          {/* <img
-            className='flex justify-center items-center w-full'
-            src='/form/heroForm.png'
+    <main className='page-oprec-staff'>
+      <section className='w-full h-screen sm:h-[32rem] bg-red-300'>
+        <div className='page-staff w-full h-full p-16 relative flex flex-col items-center md:items-start'>
+          <img
+            className='w-16 md:w-24 mx-auto sm:mx-0'
+            src='mabacup1.svg'
             alt=''
-          /> */}
-          <div className='flex justify-center w-full mt-4 items-center'>
-            <div className='flex justify-between h-[2px] md:w-[65%] w-[70%] bg-[#3959A5] items-center my-9'>
-              {/* Steps */}
-              <div
-                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 select-none ${
-                  page <= 1 ? "bg-[#D3E0FF]" : "bg-[#3959A5]"
-                } border-[#3959A5] relative`}
-              >
-                {page <= 1 ? (
-                  <p className='font-secondary text-[#3959A5]'>1</p>
-                ) : (
-                  <FaCheck className='text-white' />
-                )}
-                <p
-                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 sm:text-xs ${
-                    page === 1 ? "" : "text-[#616161]"
-                  }`}
-                >
-                  Informasi Pribadi
-                </p>
-              </div>
-              <div
-                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 select-none ${
-                  page <= 2 ? "bg-[#D3E0FF]" : "bg-[#3959A5]"
-                } border-[#3959A5] relative`}
-              >
-                {page <= 2 ? (
-                  <p className='font-secondary text-[#3959A5]'>2</p>
-                ) : (
-                  <FaCheck className='text-white' />
-                )}
-                <p
-                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 select-none sm:text-xs ${
-                    page === 2 ? "" : "text-[#616161]"
-                  }`}
-                >
-                  Pertanyaan
-                </p>
-              </div>
-              <div
-                className={`h-8 w-8  rounded-full bg flex items-center justify-center border-2 select-none ${
-                  page <= 3 ? "bg-[#D3E0FF]" : "bg-[#3959A5]"
-                } border-[#3959A5] relative`}
-              >
-                {page <= 3 ? (
-                  <p className='font-secondary text-[#3959A5]'>3</p>
-                ) : (
-                  <FaCheck className='text-white' />
-                )}
-                <p
-                  className={`absolute -bottom-8 font-secondary text-center text-sm w-40 sm:text-xs ${
-                    page === 3 ? "" : "text-[#616161]"
-                  }`}
-                >
-                  Informasi Pribadi
+          />
+          <h1 className='mt-16 font-secondary text-white font-semibold text-2xl md:text-4xl lg:text-5xl xl:text-[64px] text-center sm:text-left relative z-10'>
+            Open Recruitment Staff
+          </h1>
+          <h1 className='lg:mt-4 xl:mt-8 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center sm:text-left relative z-10'>
+            Maba Cup 2022
+          </h1>
+          <img
+            className='absolute w-36 md:w-52 lg:w-64 xl:w-72 top-80 md:top-24 right-6 md:right-12 lg:right-16'
+            src='/form-staff/ikan-form-staff.png'
+            alt=''
+          />
+          <img
+            className='absolute w-32 md:w-32 lg:w-48 xl:w-64  bottom-0 right-[80%] md:right-[35%]'
+            src='/page-staff/ikan.png'
+            alt=''
+          />
+          <img
+            className='hidden md:block absolute bottom-0 right-0 md:w-72 lg:w-80 xl:w-[26rem] '
+            src='/page-staff/building.png'
+            alt=''
+          />
+          <img
+            className='block md:hidden absolute bottom-0 right-0 w-52 opacity-30 '
+            src='/page-staff/building-mobile.png'
+            alt=''
+          />
+
+          <Link href={"/form-staff"}>
+            <button className='px-6 py-3 w-fit absolute bottom-16 sm:mt-12 bg-[#27508E] text-white rounded '>
+              Form Pendaftaran
+            </button>
+          </Link>
+        </div>
+      </section>
+
+      <section className='w-full min-h-[39rem] md:min-h-[48rem] lg:min-h-[34rem] xl:min-h-[40rem] 2xl:min-h-screen relative'>
+        <img
+          className='absolute right-0 top-12 w-10 md:w-20 lg:w-24 xl:w-28 2xl:w-36'
+          src='/page-staff/terumbu-1.png'
+          alt=''
+        />
+        <img
+          className='hidden md:block absolute left-0 top-36 md:w-12 lg:w-16 xl:w-24 2xl:w-28'
+          src='/page-staff/ikan-1.png'
+          alt=''
+        />
+        <img
+          className='absolute left-0 bottom-32 md:-bottom-8 w-10 md:w-20 lg:w-24 xl:w-40 2xl:w-48'
+          src='/page-staff/terumbu-2.png'
+          alt=''
+        />
+        <div className='w-full sm:w-10/12 mx-auto '>
+          <h1 className='font-secondary text-white text-2xl lg:text-3xl xl:text-4xl font-semibold pt-12 sm:pt-24 text-center sm:text-left'>
+            Hi, Adventure Seekers!
+          </h1>
+          <div className='flex lg:flex-row flex-col-reverse w-11/12 md:w-5/6 lg:w-full mx-auto gap-12 lg:gap-2 2xl:gap-4 mt-8 xl:mt-0 justify-center items-center'>
+            <div className=' w-1/2 lg:w-[40%] xl:w-[45%] 2xl:w-1/2 lg:p-16 xl:p-24'>
+              <img className='' src='/page-staff/diver.png' alt='' />
+            </div>
+            <div className='lg:w-[60%] xl:w-[55%] 2xl:w-1/2 flex items-center justify-center '>
+              <div className='bg-red-200 p-6 rounded-2xl narasi h-fit'>
+                <p className='font-secondary font-medium sm:font-semibold text-white text-base md:text-xl lg:text-base xl:text-[20px] lg:leading-8 xl:leading-[34px] text-justify'>
+                  Its been a while since you take a part at PSB, IPITS, Gerigi,
+                  and OK2BK. Kepada mahasiswa 2022 kami ucapkan Selamat
+                  mengarungi birunya laut di KM ITS. Jangan lengah dan tetaplah
+                  berproses karena “nahkoda hebat tidak dilahirkan di lautan
+                  yang tenang”. Persiapkan mental, pengalaman, dan keyakinan
+                  karena langkah kalian sebagai “The Adventure Seeker” telah
+                  dimulai.{" "}
                 </p>
               </div>
             </div>
           </div>
-          <div className='bg-white w-[80%] md:w-[70%] mx-auto '>
-            <FormProvider {...methods}>
-              <form onSubmit={handleSubmit(daftar)}>
-                <div className={page === 1 ? "block" : "hidden"}>
-                  <Input
-                    type='text'
-                    disabled={false}
-                    id='nama'
-                    label='Nama'
-                    placeholder='Masukkan nama anda'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px] mt-4'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px] '
-                    validate={{
-                      required: "Nama tidak boleh kosong",
-                    }}
-                    setPage={setPage}
-                    page={1}
-                  />
-                  <Input
-                    type='text'
-                    disabled={false}
-                    id='nrp'
-                    label='NRP'
-                    placeholder='Masukkan NRP'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    validate={{
-                      required: "NRP tidak boleh kosong",
-                      pattern: {
-                        value: /^[0-9]*$/,
-                        message: "Harus berupa angka",
-                      },
-                    }}
-                    setPage={setPage}
-                    page={1}
-                  />
-                  <Input
-                    type='email'
-                    disabled={false}
-                    id='email'
-                    label='Email'
-                    placeholder='Masukkan Email'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    validation={{
-                      required: "Email tidak boleh kosong",
-                      pattern: {
-                        value:
-                          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-                        message: "Email tidak valid",
-                      },
-                    }}
-                    setPage={setPage}
-                    page={1}
-                  />
-                  <Input
-                    type='text'
-                    disabled={false}
-                    id='no_telp'
-                    label='Whatsapp(+62) / ID Line'
-                    placeholder='Nomor Telepon diawali +62'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    validate={{
-                      required: "Nomor Telepon tidak boleh kosong",
-                      pattern: {
-                        value: /^\+628[1-9][0-9]{7,11}$/,
-                        message:
-                          "Nomor Telepon harus diawali +62 dan memiliki panjang 12-16 karakter",
-                      },
-                    }}
-                    setPage={setPage}
-                    page={1}
-                  />
-                  <SelectInput
-                    id='fakultas'
-                    label='Fakultas'
-                    defops='Pilih Fakultas'
-                    classNameL='font-semibold text-[11px] md:text-[16px] font-secondary'
-                    classNameS='font-normal border-2 mt-1 px-3 py-3 text-black rounded-lg w-full text-[11px] md:text-[16px] bg-white '
-                    options={FAKULTAS}
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                    }}
-                    setPage={setPage}
-                    page={1}
-                  />
-                  <SelectInput
-                    id='departemen'
-                    label='Departemen'
-                    defops='Pilih Departemen'
-                    classNameL='font-semibold text-[11px] md:text-[16px] font-secondary'
-                    classNameS='font-normal border-2 mt-1 px-3 py-3 text-black rounded-lg w-full text-[11px] md:text-[16px] bg-white '
-                    options={DEPARTMENT}
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                    }}
-                    setPage={setPage}
-                    page={1}
-                  />
-                 
-                </div>
-                <div className={page === 2 ? "block" : "hidden"}>
-                  <TextArea
-                    id='pertanyaan'
-                    label='Apa yang kamu ketahui tentang MABA CUP?'
-                    classNameL='font-semibold text-[11px] md:text-[16px] mt-4'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    placeholder='Jawaban anda'
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                      maxLength: {
-                        value: 1500,
-                        message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
-                      }
-                    }}
-                    setPage={setPage}
-                    page={2}
-                  />
-                  <TextArea
-                    id='motivasi'
-                    label='Motivasi mendaftar menjadi staff Maba Cup 2022 '
-                    classNameL='font-semibold text-[11px] md:text-[16px] mt-4'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    placeholder='Jawaban anda'
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                      maxLength: {
-                        value: 1500,
-                        message: 'Jawaban Motivasi maksimal memiliki 1500 karakter '
-                      }
-                    }}
-                    setPage={setPage}
-                    page={2}
-                  />
-                  <SelectInput
-                    id='divisi_1'
-                    label='Divisi Pilihan 1'
-                    defops='Pilih Divisi'
-                    classNameL='font-semibold text-[11px] md:text-[16px] font-secondary'
-                    classNameS='font-normal border-2 mt-1 px-3 py-3 text-black rounded-lg w-full text-[11px] md:text-[16px] bg-white'
-                    options={DEVISI}
-                    validate={{
-                      required: "Divisi tidak boleh kosong",
-                    }}
-                    setPage={setPage}
-                    page={2}
-                  />
-                  <TextArea
-                    id='alasan_1'
-                    label='Alasan memilih pilihan 1'
-                    classNameL='font-semibold text-[11px] md:text-[16px]'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    placeholder='Jawaban anda'
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                      maxLength: {
-                        value: 1500,
-                        message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
-                      }
-                    }}
-                    setPage={setPage}
-                    page={2}
-                  />
-                  <SelectInput
-                    id='divisi_2'
-                    label='Divisi Pilihan 2'
-                    defops='Pilih Divisi'
-                    classNameL='font-semibold text-[11px] md:text-[16px] font-secondary'
-                    classNameS='font-normal border-2 mt-1 px-3 py-3 text-black rounded-lg w-full text-[11px] md:text-[16px] bg-white '
-                    options={DEVISI}
-                    
+        </div>
+        <img
+          className='absolute w-16 md:w-20 lg:w-24 xl:w-32 right-0 -bottom-16 md:-bottom-32'
+          src='/page-staff/ikan-2.png'
+          alt=''
+        />
+      </section>
+      <section className='w-full min-h-[36rem] md:min-h-[40rem] lg:min-h-[24rem] 2xl:min-h-[60vh]'>
+        <div className='mt-16 timeline-staff w-[90%] sm:w-10/12 h-fit mx-auto rounded-xl pb-16'>
+          <div className='px-4 sm:px-8 py-4 bg-white w-fit font-secondary text-[#6297C9] text-sm sm:text-3xl font-semibold rounded-2xl lg:translate-x-8 mx-auto lg:mx-0 -translate-y-8'>
+            Timeline Open Recruitment Staff
+          </div>
+          <div className='w-full sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
+            <div className='bg-white mx-auto h-96 lg:h-1  w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg'>
+              <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
+                <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
+                  29-31 Agustus 2022
+                </p>
+                <img
+                  className='relative w-8 md:w-16 lg:w-16 xl:w-20'
+                  src='/page-staff/mutiara.png'
+                  alt=''
+                />
 
-                  />
-                  <TextArea
-                    id='alasan_2'
-                    label='Alasan memilih pilihan 2'
-                    classNameL='font-semibold text-[11px] md:text-[16px]'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    placeholder='Jawaban anda'
-                    validate={{
-                      maxLength: {
-                        value: 1500,
-                        message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
-                      }
-                      
-                    }}
-                    setPage={setPage}
-                    page={2}
-                  />
-                  <TextArea
-                    id='kesibukan'
-                    label='Kesibukan Saat Ini '
-                    classNameL='font-semibold text-[11px] md:text-[16px]'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    placeholder='Jawaban anda'
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                      maxLength: {
-                        value: 1500,
-                        message: 'Jawaban Pertanyaan maksimal memiliki 1500 karakter '
-                      }
-                    }}
-                    setPage={setPage}
-                    page={2}
-                  />
-                </div>
-                <div className={page === 3 ? "block" : "hidden"}>
-                  <Input
-                    type='text'
-                    disabled={false}
-                    id='link_bukti'
-                    label='Link Gdrive Upload Twibbon, Share Poster MABA CUP,  Follow Instagram &amp; Tiktok'
-                    placeholder='Jawaban Anda'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px] mt-4'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                    }}
-                    setPage={setPage}
-                    page={3}
-                  />
-                  <Input
-                    type='text'
-                    disabled={false}
-                    id='link_cv'
-                    label='Link CV ATS / Kreatif'
-                    placeholder='Jawaban Anda'
-                    classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    validate={{
-                      required: "Jawaban tidak boleh kosong",
-                    }}
-                    setPage={setPage}
-                    page={3}
-                  />
-                  <div>
-                    <Input
-                      type='text'
-                      disabled={false}
-                      id='link_portfolio'
-                      label='Link Portofolio'
-                      placeholder='Jawaban Anda'
-                      classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                      classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                      
-                      setPage={setPage}
-                      page={3}
-                    />
-                    <p className='font-secondary text-xs mt-2'>
-                      <span className='text-red-500'>* Catatan </span>:
-                      Dikhususkan untuk pendaftar yang mendaftar divisi Desain,
-                      Dokum, dan Publikasi
-                    </p>
-                  </div>
-                    <Input
-                      type='text'
-                      disabled={false}
-                      id='link_krsm'
-                      label='Link KRSM'
-                      placeholder='Jawaban Anda'
-                      classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                      classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                      validate={{
-                        required: "Jawaban tidak boleh kosong",
-                      }}
-                      setPage={setPage}
-                    page={3}
-                      
-                    />
-                  <div>
-                    <Input
-                      type='text'
-                      disabled={false}
-                      id='sponsor'
-                      label='Apakah memiliki kenalan sponsorship?'
-                      placeholder='Jawaban Anda'
-                      classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                      classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                      validate={{
-                        required: "Jawaban tidak boleh kosong",
-                      }}
-                      setPage={setPage}
-                    page={3}
-                    />
-                    <p className='font-secondary text-xs mt-2'>
-                      <span className='text-red-500'>* Catatan </span>:
-                      Jika “Ya” bisa disebutkan nama perusahaannya beserta kontak yang dapat dihubungi
-                    </p>
-                  </div>
-                </div>
-                <div className={page === 4 ? "block" : "hidden"}>
-                  <div className='text-center'>
-                    <h2 className='mt-8 font-secondary text-2xl sm:text-3xl font-bold'>
-                      Form Pendaftaran MABACUP 2022 Berhasil Diisi!
-                    </h2>
-                    <p className='mt-4 font-secondary text-base sm:text-lg text-[#404040]'>
-                      Terimakasih Telah Berpartisipasi bersama dengan MABACUP,
-                      jangan lupa untuk pantengin terus instagram @MABACUP2022
-                      untuk mendapatkan info selanjutnya!
-                    </p>
-                  </div>
-                </div>
-                <div
-                  className={`flex justify-end gap-x-3 ${
-                    page === 4 ? "hidden" : ""
-                  }`}
-                >
-                  <div className={page === 1 ? "hidden" : ""}>
-                    <p
-                      className='font-secondary text-[#5189C4] border-2 border-[#5189C4] bg-white px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-white hover:bg-[#5189C4] hover:border-2 hover:border-solid hover:border-white'
-                      onClick={() => prevPage()}
-                    >
-                      Kembali{" "}
-                    </p>
-                  </div>
-                  <div className={page === 3 ? "hidden" : ""}>
-                    <p
-                      className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-[#5189C4] hover:bg-white border-2 border-solid border-[#5189C4]'
-                      onClick={() => nextPage()}
-                    >
-                      Berikutnya{" "}
-                    </p>
-                  </div>
-                  <div className={page === 3 ? "" : "hidden"}>
-                    <SubmitButton />
-                  </div>
-                </div>
-                {page === 4 && (
-                  <div>
-                    <Link href={"/"}>
-                      <a className='my-8 px-4 py-2 rounded-lg font-secondary text-white text-[16px] w-fit inline-block flex justify-center mx-auto bg-[#5189C4] hover:text-[#5189C4] hover:bg-white border-2 border-solid border-[#5189C4]'>
-                        Kembali Ke Beranda
-                      </a>
-                    </Link>
-                  </div>
-                )}
-              </form>
-            </FormProvider>
+                <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
+                  Pendaftaran
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[110%] w-max'>
+                  29-31 Agustus 2022
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
+                  Pendaftaran
+                </p>
+              </div>
+              <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
+                <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
+                  3 September 2022
+                </p>
+                <img
+                  className='relative w-8 md:w-16 lg:w-16 xl:w-20'
+                  src='/page-staff/mutiara.png'
+                  alt=''
+                />
+
+                <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[120%] w-48 text-center'>
+                  Pengumuman
+                  <br />
+                  Lolos Berkas
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[110%] w-max'>
+                  3 September 2022
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
+                  Pengumuman
+                  <br />
+                  Lolos Berkas
+                </p>
+              </div>
+              <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
+                <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
+                  5-8 September 2022
+                </p>
+                <img
+                  className='relative w-8 md:w-16 lg:w-16 xl:w-20'
+                  src='/page-staff/mutiara.png'
+                  alt=''
+                />
+
+                <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
+                  Screening
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[110%] w-max'>
+                  5-8 September 2022
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
+                  Screening
+                </p>
+              </div>
+              <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
+                <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
+                  11 September 2022
+                </p>
+                <img
+                  className='relative w-8 md:w-16 lg:w-16 xl:w-20'
+                  src='/page-staff/mutiara.png'
+                  alt=''
+                />
+
+                <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[120%] w-48 text-center'>
+                  Pengumuman
+                  <br />
+                  Lolos Staff
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[110%] w-max'>
+                  11 September 2022
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
+                  Pengumuman
+                  <br />
+                  Lolos Staff
+                </p>
+              </div>
+              <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:translate-x-1 w-16'>
+                <p className='hidden lg:block font-secondary text-lg font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
+                  16 September 2022
+                </p>
+                <img
+                  className='relative w-8 md:w-16 lg:w-16 xl:w-20'
+                  src='/page-staff/mutiara.png'
+                  alt=''
+                />
+
+                <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[120%] w-48 text-center'>
+                  Welcome Party
+                  <br />
+                  Staff
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[110%] w-max'>
+                  16 September 2022
+                </p>
+                <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
+                  Welcome Party
+                  <br />
+                  Staff
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-    </>
+      <section className='w-full min-h-[34rem] md:h-[28rem] xl:h-[40rem] 2xl:min-h-[90vh] relative'>
+        <img
+          className='absolute w-16 lg:w-24 xl:w-32 left-0 -top-24 md:top-0'
+          src='/page-staff/ikan-3.png'
+          alt=''
+        />
+        <div className='w-full sm:w-10/12 mx-auto lg:pt-16 xl:pt-20'>
+          <div className='flex lg:flex-row flex-col-reverse w-11/12 sm:w-5/6 lg:w-full mx-auto gap-12 lg:gap-2 2xl:gap-4 mt-8 xl:mt-0 justify-center items-center'>
+            <div className='lg:w-[55%] 2xl:w-1/2 items-center justify-center '>
+              <div className='bg-red-200 p-6 rounded-2xl narasi'>
+                <p className='font-secondary font-medium sm:font-semibold text-white text-base md:text-xl lg:text-base xl:text-[20px] lg:leading-8 xl:leading-[34px] text-justify'>
+                  Secara filosofis mungkin biru menggambarkan ketenangan, tetapi
+                  hal tersebut tidak terpancar di dalam Laut ITS. Apalagi
+                  baru-baru ini Dewa mengumumkan salah satu event terbesar yang
+                  akan dilaksanakan yaitu Maba Cup 2022. Warga bawah laut sangat
+                  senang mendengar kabar tersebut sehingga mereka berusaha
+                  mempersiapkan kegiatan dengan baik dan matang. Sebagai “The
+                  Adventure Seeker” Apakah Maba Cup 2022 adalah pijakan kalian
+                  dalam berpetualang?
+                </p>
+              </div>
+            </div>
+
+            <div className='w-1/2 lg:w-[45%] 2xl:w-1/2 lg:p-16 xl:p-24 my-auto'>
+              <img className='' src='/page-staff/whale.png' alt='' />
+            </div>
+            <img
+              className='absolute w-10 md:w-16 lg:w-16 xl:w-20 2xl:w-24 right-0 top-4 md:top-auto md:bottom-0'
+              src='/page-staff/seaweed.png'
+              alt=''
+            />
+          </div>
+        </div>
+      </section>
+      <section className='w-full xl:h-[36rem] 2xl:min-h-[20vh] pt-24 relative '>
+        <img
+          className='absolute w-10 md:w-16 lg:w-16 xl:w-20 2xl:w-24 top-0 left-0'
+          src='/page-staff/terumbu-3.png'
+          alt=''
+        />
+        <div className='w-11/12 md:w-10/12 mx-auto persyaratan-staff rounded-xl pb-8'>
+          <div className='px-4 md:px-8 py-4 bg-white w-fit font-secondary text-[#3A5CA6] text-sm md:text-3xl font-semibold rounded-2xl md:translate-x-8 -translate-y-8 mx-auto md:mx-0'>
+            Persyaratan Umum
+          </div>
+          <div className='font-secondary text-sm md:text-lg xl:text-xl font-medium text-white px-8 leading-7 md:leading-9 -translate-y-1 h-fit'>
+            1. Mahasiswa ITS angkatan 2022 (dibuktikan dengan KRSM)
+            <br />
+            2. Follow akun Instagram dan Tiktok Maba Cup 2022
+            <br />
+            3. Share poster Maba Cup 2022 yang dapat diakses pada URL di akun
+            utama Instagram pribadi
+            <br />
+            4. Upload twibbon dengan hashtag (nunggu publikasi) dan tag 5 orang
+            teman dan Instagram Maba Cup
+            <br />
+            5. Twibbon dan ketentuan upload dapat diakses pada URL
+            <br />
+            6. CV yang memuat biodata, pengalaman, kelebihan kekurangan, dll
+            (dibebaskan menggunakan format ATS friendly atau Creative)
+            <br />
+            7. Portofolio (diperuntukkan bagi divisi desain, dokumentasi, dan
+            publikasi)
+            <br />
+          </div>
+        </div>
+      </section>
+      <section className='w-full min-h-screen pt-24 relative'>
+        <img
+          className='absolute w-16 lg:w-20 xl:w-28 2xl:w-32 top-0 right-0'
+          src='/page-staff/ubur.png'
+          alt=''
+        />
+        <div className='w-10/12 mx-auto '>
+          <h1 className='font-secondary text-white text-xl md:text-3xl mb-8 text-center md:text-left'>
+            Pilihan Divisi &amp; Subdivisi Maba Cup 2022
+          </h1>
+
+          <div>
+            <Accordion className=''>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Acara</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Dijuluki sebagai Konseptor, Divisi Acara bertanggung jawab
+                  merancang, menyusun, dan mengembangkan konsep maupun susunan
+                  acara Maba Cup 2022. Divisi ini menaungi 2 subdivisi yaitu
+                  Event dan Kompetisi.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Desain</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Subdivisi Desain bertanggung jawab dengan segala kebutuhan
+                  desain grafis dalam seluruh kegiatan Maba Cup 2022. Subdivisi
+                  ini memegang kendali atas feeds instagram @mabacupits.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Dokumentasi</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Subdivisi ini dikenal sebagai Tukang jepret aib dikala kamu
+                  sedang lelah. Selain itu, bertanggung jawab dalam konten video
+                  dan kebutuhan editing lainnya.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Dekorasi</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Gacuma brainstorming, divisi ini juga merealisasikan ide
+                  mereka melalui instalasi visual yang keren lohh. Terampil dan
+                  kreatif. Boleh banget buat modal isi portofolio kaliann!!
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Fundraising</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Fundraising atau bahasa kunonya adalah Danus yang sering
+                  terbesit pasti ialah jualan keliling. Tapi tenang aja,
+                  Fundraising Maba Cup 2022 ini beda lho. Mereka membantu
+                  mencukupi kebutuhan Maba Cup dengan berbagai inovasi
+                  jualannya.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Sponsorship</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Cuan, cuan, dan cuan adalah motivasi Subdivisi Sponsorship
+                  dalam menarik pihak sponsor. Divisi ini juga dijuluki sebagai
+                  negosiator handal.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Eksternal</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Divisi anti ghosting yang selalu setia menghubungi dan menjaga
+                  hubungan dengan para stakeholder untuk keberlangsungan
+                  kegiatan Maba Cup 2022.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Publikasi</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Garda terdepan dalam penyebaran informasi seputar kegiatan
+                  Maba Cup 2022, selain itu Divisi Publikasi juga berperan dalam
+                  meningkatkan branding melalui Social Media.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Kamzin</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Divisi Kamzin merupakan garda terdepan dalam peminjaman,
+                  perizinan, dan keamanan dalam kegiatan Maba Cup 2022. Divisi
+                  ini deket banget sama Biro Sarpras loh...
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Kestari</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Selain berperan dalam mengelola data dan merekap administrasi,
+                  divisi ini juga deket banget lo sama Microsoft Excel dan
+                  teman-temannya.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Konsumsi</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Dijuluki sebagai Divisi Ibu Kedua, karena divisi ini care
+                  banget sama panitia mulai dari memperhatikan jam makan dan
+                  urusan konsumsi lainnya. Divisi konsumsi juga bertanggung
+                  jawab dalam konsumsi juri.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Perlengkapan</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Divisi yang selalu ada dan memenuhi seluruh kebutuhan kegiatan
+                  Maba Cup 2022 terutama dalam hal prasarana.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+            <Accordion>
+              <AccordionSummary
+                className='bg-[#0E1954]'
+                expandIcon={<ExpandMoreIcon className='text-white' />}
+                aria-controls='panel2a-content'
+                id='panel2a-header'
+              >
+                <Typography className='text-white'>Medical</Typography>
+              </AccordionSummary>
+              <AccordionDetails className='accordion-text '>
+                <Typography className='text-white text-sm md:text-base'>
+                  Bertanggung jawab terhadap kesehatan peserta dan kebutuhan
+                  obat-obatan ringan selama kegiatan MABA CUP 2022.
+                </Typography>
+              </AccordionDetails>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+      <section className='w-full h-fit relative'>
+        <img className='w-full' src='/page-staff/siluets.png' alt='' />
+        <div className='w-full h-[28rem] bg-[#000A40] flex flex-col justify-center items-center'>
+          <h1 className='font-secondary text-white font-semibold text-3xl md:text-5xl text-center px-8 md:px-0'>
+            What are you waiting for ?
+          </h1>
+          <p className='font-secondary text-white text-xl mt-4 text-center px-6 md:px-0'>
+            Join the adventure and explore yourself !
+          </p>
+          <button className=' px-6 py-3 mt-12 button-form text-white rounded'>
+            Form Pendaftaran
+          </button>
+        </div>
+      </section>
+    </main>
   );
 }

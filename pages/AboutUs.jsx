@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import Loading from "./Loading";
 
 export default function AboutUs() {
   const [domLoaded, setDomLoaded] = useState(false);
@@ -15,6 +16,8 @@ export default function AboutUs() {
   useEffect(() => {
     setDomLoaded(true);
   }, []);
+
+  if (!domLoaded) return <Loading />;
   return (
     <>
       <Header title='About Us | Mabacup ITS 2022' />

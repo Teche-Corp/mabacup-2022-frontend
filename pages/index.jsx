@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import { toast } from "react-toastify";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Loading from "./Loading";
 
 import "react-toastify/dist/ReactToastify.css";
 import Header from "../components/Header";
@@ -21,17 +22,18 @@ export default function Home() {
 
   useEffect(() => {
     setDomLoaded(true);
+  }, []);
+
+  domLoaded &&
     AOS.init({
       easing: "ease-out-cubic",
       once: false,
       delay: 200,
     });
-  }, []);
 
   return (
     <>
       <Header title='Mabacup ITS 2022' />
-
       <Layout showNav={showNav} setShowNav={setShowNav}>
         <main className={` overflow-x-hidden`}>
           <section
@@ -93,6 +95,7 @@ export default function Home() {
               </Parallax>
 
               {/* building primary image */}
+
               <Parallax
                 className='absolute w-[15rem] sm:w-[33rem] lg:w-[30rem] xl:w-[34rem] -right-1 sm:-right-40 lg:-right-36 xl:-right-40 -bottom-24 sm:-bottom-[8.5rem] lg:-bottom-28 xl:-bottom-24 2xl:-bottom-[5rem] z-[1]'
                 speed={-15}
@@ -423,11 +426,8 @@ export default function Home() {
                     Benefitnya!
                   </p>
 
-                  <Link href={"#"}>
-                    <a
-                      onClick={notify}
-                      className='mt-8 absolute w-max right-1/2 sm:left-0 translate-x-1/2 sm:translate-x-0 inline-block px-3 sm:px-5 py-2 sm:py-3 border-2 border-solid border-white bg-white hover:bg-[#2C7994] text-[#2C7994] hover:text-white text-sm sm:text-lg rounded-lg font-medium'
-                    >
+                  <Link href={"/oprec-staff"}>
+                    <a className='mt-8 absolute w-max right-1/2 sm:left-0 translate-x-1/2 sm:translate-x-0 inline-block px-3 sm:px-5 py-2 sm:py-3 border-2 border-solid border-white bg-white hover:bg-[#2C7994] text-[#2C7994] hover:text-white text-sm sm:text-lg rounded-lg font-medium'>
                       Daftar Sekarang
                     </a>
                   </Link>

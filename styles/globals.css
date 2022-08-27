@@ -274,3 +274,13 @@ body {
     rgba(255, 255, 255, 0.3) 94.75%
   );
 }
+
+.loading-page {
+  background: linear-gradient(
+    180deg,
+    #4979b9 0%,
+    #3e619e 31.57%,
+    #30447e 70.39%,
+    #273168 96.19%
+  );
+}

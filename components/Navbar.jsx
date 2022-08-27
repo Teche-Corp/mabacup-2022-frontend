@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
-const Navbar = ({ showNav, setShowNav,from }) => {
+const Navbar = ({ showNav, setShowNav, from }) => {
   const [showEvents, setShowEvents] = useState(false);
   const [hideEvents, setHideEvents] = useState(true);
   const [colorChange, setColorchange] = useState(false);
@@ -62,7 +62,9 @@ const Navbar = ({ showNav, setShowNav,from }) => {
           className={`${
             colorChange
               ? "bg-[#27378E] duration-300 ease-in-out text-white "
-              : `duration-300 ease-in-out ${from === 'about-us'? 'text-black' : 'text-white'}`
+              : `duration-300 ease-in-out ${
+                  from === "about-us" ? "text-black" : "text-white"
+                }`
           } h-20 relative z-50 select-none w-screen font-secondary flex justify-between items-center px-5 md:px-16 lg:px-24`}
         >
           {/* header logo */}
@@ -165,12 +167,11 @@ const Navbar = ({ showNav, setShowNav,from }) => {
             </li>
           </ul>
 
-          <button
-            onClick={notify}
-            className='oprec-button hidden md:block w-32  h-[2.5rem] font-medium rounded-lg text-white '
-          >
-            Oprec Staff
-          </button>
+          <Link href={"/oprec-staff"}>
+            <button className='oprec-button hidden md:block w-32  h-[2.5rem] font-medium rounded-lg text-white '>
+              Oprec Staff
+            </button>
+          </Link>
 
           <ul
             className={`flex md:hidden translate-y-full ${
@@ -258,10 +259,10 @@ const Navbar = ({ showNav, setShowNav,from }) => {
               onClick={toggleShowNav}
               className='absolute bottom-52 translate-x-1/2 right-1/2'
             >
-              <Link onClick={notify} href='#'>
-                <a className='oprec-button flex items-center justify-center w-full h-12 mx-auto text-xl font-secondary font-medium rounded-lg px-6 py-2'>
+              <Link href={"/oprec-staff"}>
+                <button className=' oprec-button flex items-center justify-center w-full h-12 mx-auto text-xl font-secondary font-medium rounded-lg px-6 py-2'>
                   Oprec Staff
-                </a>
+                </button>
               </Link>
             </li>
             <li
