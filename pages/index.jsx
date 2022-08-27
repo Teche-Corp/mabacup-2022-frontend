@@ -30,7 +30,7 @@ export default function Home() {
 
   return (
     <>
-      <Header title="Mabacup ITS 2022" />
+      <Header title='Mabacup ITS 2022' />
 
       <Layout showNav={showNav} setShowNav={setShowNav}>
         <main className={` overflow-x-hidden`}>
@@ -180,7 +180,7 @@ export default function Home() {
               className='w-full min-h-[70vh] lg:min-h-[calc(100vh-50px)] pt-72 lg:pt-64 2xl:pt-56'
             >
               <div
-                className='about-mabacup w-11/12 sm:w-3/4 h-max pb-4 sm:pb-0 sm:h-80 lg:h-72 mx-auto rounded-xl px-8 sm:px-0 sm:rounded-3xl relative z-[1] border'
+                className='about-mabacup w-11/12 sm:w-3/4 h-max pb-4 sm:pb-0 sm:h-80 lg:h-72 mx-auto rounded-xl px-8 sm:px-0 sm:rounded-3xl relative z-[1]'
                 data-aos='fade-up'
                 data-aos-duration='500'
                 data-aos-easing='ease-in-out'
@@ -200,8 +200,8 @@ export default function Home() {
                     “Dari maba, oleh maba, dan untuk maba”, event ini terdiri
                     dari pelatihan manajerial dan berbagai perlombaan.{" "}
                   </p>
-                  <Link href='/comingSoon'>
-                    <button className='bg-[#5189C4] mt-6 w-fit h-fit px-4 py-2 rounded-lg mx-auto text-white hover:drop-shadow-2xl hover:bg-transparent hover:border-2 hover:border-white hover:cursor-not-allowed'>
+                  <Link href='/AboutUs'>
+                    <button className='bg-[#5189C4] mt-6 w-fit h-fit px-4 py-2 rounded-lg mx-auto text-white hover:drop-shadow-2xl hover:bg-transparent hover:border-2 hover:border-white cursor-pointer'>
                       Selengkapnya
                     </button>
                   </Link>
