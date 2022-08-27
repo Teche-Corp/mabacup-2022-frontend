@@ -301,231 +301,235 @@ export default function pageOprecStaff() {
             Pilihan Divisi &amp; Subdivisi Maba Cup 2022
           </h1>
 
-          <div>
-            <Accordion className=''>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Acara</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Dijuluki sebagai Konseptor, Divisi Acara bertanggung jawab
-                  merancang, menyusun, dan mengembangkan konsep maupun susunan
-                  acara Maba Cup 2022. Divisi ini menaungi 2 subdivisi yaitu
-                  Event dan Kompetisi.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Desain</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Subdivisi Desain bertanggung jawab dengan segala kebutuhan
-                  desain grafis dalam seluruh kegiatan Maba Cup 2022. Subdivisi
-                  ini memegang kendali atas feeds instagram @mabacupits.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Dokumentasi</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Subdivisi ini dikenal sebagai Tukang jepret aib dikala kamu
-                  sedang lelah. Selain itu, bertanggung jawab dalam konten video
-                  dan kebutuhan editing lainnya.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Dekorasi</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Gacuma brainstorming, divisi ini juga merealisasikan ide
-                  mereka melalui instalasi visual yang keren lohh. Terampil dan
-                  kreatif. Boleh banget buat modal isi portofolio kaliann!!
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Fundraising</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Fundraising atau bahasa kunonya adalah Danus yang sering
-                  terbesit pasti ialah jualan keliling. Tapi tenang aja,
-                  Fundraising Maba Cup 2022 ini beda lho. Mereka membantu
-                  mencukupi kebutuhan Maba Cup dengan berbagai inovasi
-                  jualannya.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Sponsorship</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Cuan, cuan, dan cuan adalah motivasi Subdivisi Sponsorship
-                  dalam menarik pihak sponsor. Divisi ini juga dijuluki sebagai
-                  negosiator handal.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Eksternal</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Divisi anti ghosting yang selalu setia menghubungi dan menjaga
-                  hubungan dengan para stakeholder untuk keberlangsungan
-                  kegiatan Maba Cup 2022.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Publikasi</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Garda terdepan dalam penyebaran informasi seputar kegiatan
-                  Maba Cup 2022, selain itu Divisi Publikasi juga berperan dalam
-                  meningkatkan branding melalui Social Media.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Kamzin</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Divisi Kamzin merupakan garda terdepan dalam peminjaman,
-                  perizinan, dan keamanan dalam kegiatan Maba Cup 2022. Divisi
-                  ini deket banget sama Biro Sarpras loh...
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Kestari</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Selain berperan dalam mengelola data dan merekap administrasi,
-                  divisi ini juga deket banget lo sama Microsoft Excel dan
-                  teman-temannya.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Konsumsi</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Dijuluki sebagai Divisi Ibu Kedua, karena divisi ini care
-                  banget sama panitia mulai dari memperhatikan jam makan dan
-                  urusan konsumsi lainnya. Divisi konsumsi juga bertanggung
-                  jawab dalam konsumsi juri.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Perlengkapan</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Divisi yang selalu ada dan memenuhi seluruh kebutuhan kegiatan
-                  Maba Cup 2022 terutama dalam hal prasarana.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-            <Accordion>
-              <AccordionSummary
-                className='bg-[#0E1954]'
-                expandIcon={<ExpandMoreIcon className='text-white' />}
-                aria-controls='panel2a-content'
-                id='panel2a-header'
-              >
-                <Typography className='text-white'>Medical</Typography>
-              </AccordionSummary>
-              <AccordionDetails className='accordion-text '>
-                <Typography className='text-white text-sm md:text-base'>
-                  Bertanggung jawab terhadap kesehatan peserta dan kebutuhan
-                  obat-obatan ringan selama kegiatan MABA CUP 2022.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-          </div>
+          {domLoaded && (
+            <div>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Acara</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Dijuluki sebagai Konseptor, Divisi Acara bertanggung jawab
+                    merancang, menyusun, dan mengembangkan konsep maupun susunan
+                    acara Maba Cup 2022. Divisi ini menaungi 2 subdivisi yaitu
+                    Event dan Kompetisi.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Desain</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Subdivisi Desain bertanggung jawab dengan segala kebutuhan
+                    desain grafis dalam seluruh kegiatan Maba Cup 2022.
+                    Subdivisi ini memegang kendali atas feeds instagram
+                    @mabacupits.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Dokumentasi</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Subdivisi ini dikenal sebagai Tukang jepret aib dikala kamu
+                    sedang lelah. Selain itu, bertanggung jawab dalam konten
+                    video dan kebutuhan editing lainnya.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Dekorasi</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Gacuma brainstorming, divisi ini juga merealisasikan ide
+                    mereka melalui instalasi visual yang keren lohh. Terampil
+                    dan kreatif. Boleh banget buat modal isi portofolio
+                    kaliann!!
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Fundraising</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Fundraising atau bahasa kunonya adalah Danus yang sering
+                    terbesit pasti ialah jualan keliling. Tapi tenang aja,
+                    Fundraising Maba Cup 2022 ini beda lho. Mereka membantu
+                    mencukupi kebutuhan Maba Cup dengan berbagai inovasi
+                    jualannya.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Sponsorship</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Cuan, cuan, dan cuan adalah motivasi Subdivisi Sponsorship
+                    dalam menarik pihak sponsor. Divisi ini juga dijuluki
+                    sebagai negosiator handal.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Eksternal</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Divisi anti ghosting yang selalu setia menghubungi dan
+                    menjaga hubungan dengan para stakeholder untuk
+                    keberlangsungan kegiatan Maba Cup 2022.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Publikasi</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Garda terdepan dalam penyebaran informasi seputar kegiatan
+                    Maba Cup 2022, selain itu Divisi Publikasi juga berperan
+                    dalam meningkatkan branding melalui Social Media.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Kamzin</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Divisi Kamzin merupakan garda terdepan dalam peminjaman,
+                    perizinan, dan keamanan dalam kegiatan Maba Cup 2022. Divisi
+                    ini deket banget sama Biro Sarpras loh...
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Kestari</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Selain berperan dalam mengelola data dan merekap
+                    administrasi, divisi ini juga deket banget lo sama Microsoft
+                    Excel dan teman-temannya.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Konsumsi</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Dijuluki sebagai Divisi Ibu Kedua, karena divisi ini care
+                    banget sama panitia mulai dari memperhatikan jam makan dan
+                    urusan konsumsi lainnya. Divisi konsumsi juga bertanggung
+                    jawab dalam konsumsi juri.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Perlengkapan</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Divisi yang selalu ada dan memenuhi seluruh kebutuhan
+                    kegiatan Maba Cup 2022 terutama dalam hal prasarana.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion>
+                <AccordionSummary
+                  className='bg-[#0E1954]'
+                  expandIcon={<ExpandMoreIcon className='text-white' />}
+                  aria-controls='panel2a-content'
+                  id='panel2a-header'
+                >
+                  <Typography className='text-white'>Medical</Typography>
+                </AccordionSummary>
+                <AccordionDetails className='accordion-text '>
+                  <Typography className='text-white text-sm md:text-base'>
+                    Bertanggung jawab terhadap kesehatan peserta dan kebutuhan
+                    obat-obatan ringan selama kegiatan MABA CUP 2022.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          )}
         </div>
       </section>
       <section className='w-full h-fit relative'>
