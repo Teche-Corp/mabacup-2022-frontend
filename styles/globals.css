@@ -239,6 +239,7 @@ body {
 }
 
 .about-us-hero {
+<<<<<<< HEAD
   background: linear-gradient(
     178.44deg,
     #ffffff -22.13%,
@@ -246,6 +247,9 @@ body {
     #00868d 71.62%,
     #00b18c 94.02%
   );
+=======
+  background: linear-gradient(178.44deg, #FFFFFF -22.13%, #5DCBE4 3.42%, #00868D 71.62%, #00B18C 94.02%);
+>>>>>>> 08bd480a1a4a45530c9b311cbcb3c2f2fe56860f
 }
 .about-us-card {
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -256,15 +260,7 @@ body {
   );
 }
 .about-us-content {
-  background: linear-gradient(
-    180deg,
-    #ffffff 0.87%,
-    #5dcbe4 8.64%,
-    #24a1b9 40.98%,
-    #54b3e4 87.59%,
-    #003146 103.84%,
-    #6b97d9 103.85%
-  );
+  background: linear-gradient(178.44deg, #FFFFFF -22.13%, #5DCBE4 3.42%, #00868D 71.62%, #00B18C 94.02%);
 }
 .about-us-card-content {
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -289,7 +285,12 @@ body {
   background: none !important;
 }
 
+
 .swiper-slide {
   overflow: hidden !important;
   border-radius: 12px !important;
+}
+=======
+.css-67l5gl{
+  background: none !important;
 }

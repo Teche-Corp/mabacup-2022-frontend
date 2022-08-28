@@ -1,14 +1,15 @@
 import Link from "next/link"
 import { FaInstagram, FaTiktok, FaYoutube} from "react-icons/fa";
 import {BsLine} from "react-icons/bs";
-import Head from "next/head";
 import Header from "../components/Header";
 
+
 export default function comingsoon1() {
+  
   return (
     <>
       <Header title="Coming Soon | Mabacup ITS 2022" />
-      <section className="bg-[url('/comingsoon.png')] bg-cover bg-center h-screen w-screen">
+      <section className="bg-[url('/comingSoon.png')] bg-cover bg-center h-screen w-screen">
         <div className="h-1/3 md:h-1/2 flex items-end justify-center">
           <h1 className="font-primary text-white font-bold text-5xl md:text-8xl">Coming Soon</h1>
         </div>

@@ -21,7 +21,7 @@ export default function AboutUs() {
   return (
     <>
       <Header title='About Us | Mabacup ITS 2022' />
-      <Layout showNav={showNav} setShowNav={setShowNav} from='about-us'>
+      <Layout showNav={showNav} setShowNav={setShowNav} >
         <main className={`overflow-x-hidden`}>
           {/* Hero Section */}
           <div>
@@ -64,12 +64,12 @@ export default function AboutUs() {
             {/* Main Section */}
             <section
               id='sambutan-rektor'
-              className='w-full min-h-screen bg-[#022b4b] flex items-center justify-center md:px-24 px-2'
+              className='w-full min-h-screen bg-[#022b4b]  items-center justify-center md:px-24 px-2 hidden'
             >
               {/* Card */}
               <div className='px-2 py-10 md:py-14 md:px-10 about-us-card h-max flex justify-between items-start w-full gap-x-12 rounded-3xl'>
                 {/* Sambutan Rektor */}
-                <div className='text-white lg:w-1/2 w-full text-center md:text-start'>
+                {/* <div className='text-white lg:w-1/2 w-full text-center md:text-start'>
                   <h2 className='font-primary md:text-5xl text-3xl text-center lg:text-left'>
                     Sambutan Rektor
                   </h2>
@@ -90,15 +90,15 @@ export default function AboutUs() {
                     skrivtavla. Seren etnotris faligt så kir kvasimodern. Plal
                     pokåns ibel. Höligen soskap supranektiga. Selar lament.{" "}
                   </p>
-                </div>
+                </div> */}
                 {/* Rektor ITS Image */}
-                <div className='lg:block hidden self-center'>
+                {/* <div className='lg:block hidden self-center'>
                   <img
                     src='/about-us/rektor-its.png'
                     alt='Rekot ITS'
                     className='w-[25rem]'
                   ></img>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>
@@ -197,17 +197,18 @@ export default function AboutUs() {
                     className='mySwiper'
                   >
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-1.png' alt='' />
+                      <img src='/about-us/image-1.png' alt='' />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-2.png' alt='' />
+                      <img src='/about-us/image-2.png' alt='' />
                     </SwiperSlide>
                     <SwiperSlide>
-                      <img src='/retrospeksi/image-3.png' alt='' />
+                      <img src='/about-us/image-1.png' alt='' />
                     </SwiperSlide>
-                    <SwiperSlide>
-                      <img src='/retrospeksi/image-4.png' alt='' />
+                   <SwiperSlide>
+                      <img src='/about-us/image-2.png' alt='' />
                     </SwiperSlide>
+                     {/* 
                     <SwiperSlide>
                       <img src='/retrospeksi/image-5.png' alt='' />
                     </SwiperSlide>
@@ -222,7 +223,7 @@ export default function AboutUs() {
                     </SwiperSlide>
                     <SwiperSlide>
                       <img src='/retrospeksi/image-5.png' alt='' />
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                   </Swiper>
                 )}
               </div>

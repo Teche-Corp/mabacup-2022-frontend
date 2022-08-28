@@ -48,7 +48,7 @@ export default function pageOprecStaff() {
             alt=''
           />
 
-          <Link href={"/form-staff"}>
+          <Link href={"/comingSoon"}>
             <button className='px-6 py-3 w-fit absolute bottom-16 sm:mt-12 bg-[#27508E] text-white rounded '>
               Form Pendaftaran
             </button>

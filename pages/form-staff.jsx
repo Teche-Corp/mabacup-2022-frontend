@@ -171,7 +171,7 @@ export default function InformasiPribadi() {
                     label='Nama'
                     placeholder='Masukkan nama anda'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px] mt-4'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px] '
+                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px] '
                     validate={{
                       required: "Nama tidak boleh kosong",
                     }}
@@ -185,7 +185,7 @@ export default function InformasiPribadi() {
                     label='NRP'
                     placeholder='Masukkan NRP'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
                       required: "NRP tidak boleh kosong",
                       pattern: {
@@ -203,7 +203,7 @@ export default function InformasiPribadi() {
                     label='Email'
                     placeholder='Masukkan Email'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validation={{
                       required: "Email tidak boleh kosong",
                       pattern: {
@@ -222,7 +222,7 @@ export default function InformasiPribadi() {
                     label='Whatsapp(+62) / ID Line'
                     placeholder='Nomor Telepon diawali +62'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
                       required: "Nomor Telepon tidak boleh kosong",
                       pattern: {
@@ -266,7 +266,7 @@ export default function InformasiPribadi() {
                     id='pertanyaan'
                     label='Apa yang kamu ketahui tentang MABA CUP?'
                     classNameL='font-semibold text-[11px] md:text-[16px] mt-4'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameT='font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
@@ -283,7 +283,7 @@ export default function InformasiPribadi() {
                     id='motivasi'
                     label='Motivasi mendaftar menjadi staff Maba Cup 2022 '
                     classNameL='font-semibold text-[11px] md:text-[16px] mt-4'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameT='font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
@@ -313,7 +313,7 @@ export default function InformasiPribadi() {
                     id='alasan_1'
                     label='Alasan memilih pilihan 1'
                     classNameL='font-semibold text-[11px] md:text-[16px]'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameT='font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
@@ -338,7 +338,7 @@ export default function InformasiPribadi() {
                     id='alasan_2'
                     label='Alasan memilih pilihan 2'
                     classNameL='font-semibold text-[11px] md:text-[16px]'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameT='font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     placeholder='Jawaban anda'
                     validate={{
                       maxLength: {
@@ -354,7 +354,7 @@ export default function InformasiPribadi() {
                     id='kesibukan'
                     label='Kesibukan Saat Ini '
                     classNameL='font-semibold text-[11px] md:text-[16px]'
-                    classNameT='font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameT='font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     placeholder='Jawaban anda'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
@@ -376,7 +376,7 @@ export default function InformasiPribadi() {
                     label='Link Gdrive Upload Twibbon, Share Poster MABA CUP,  Follow Instagram &amp; Tiktok'
                     placeholder='Jawaban Anda'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px] mt-4'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                     }}
@@ -390,7 +390,7 @@ export default function InformasiPribadi() {
                     label='Link CV ATS / Kreatif'
                     placeholder='Jawaban Anda'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                     }}
@@ -402,10 +402,10 @@ export default function InformasiPribadi() {
                       type='text'
                       disabled={false}
                       id='link_portfolio'
-                      label='Link Portofolio'
+                      label='Link Portofolio / Pilihan Subdivisi'
                       placeholder='Jawaban Anda'
                       classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                      classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                      classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                       setPage={setPage}
                       page={3}
                     />
@@ -418,6 +418,11 @@ export default function InformasiPribadi() {
                       Dikhususkan untuk pendaftar yang mendaftar divisi Acara,
                       mohon mengisi subdivisi prioritas (event atau kompetisi)
                     </p>
+                    <p className='font-secondary text-xs'>
+                      <span className='text-red-500'>* Catatan </span>:
+                      Untuk pendaftar Divisi Acara, silakan isi Subdivisi yang diinginkan
+                      <br /> Contoh : Event
+                    </p>
                   </div>
                   <Input
                     type='text'
@@ -426,7 +431,7 @@ export default function InformasiPribadi() {
                     label='Link KRSM'
                     placeholder='Jawaban Anda'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                    classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                     }}
@@ -441,7 +446,7 @@ export default function InformasiPribadi() {
                       label='Apakah memiliki kenalan sponsorship?'
                       placeholder='Jawaban Anda'
                       classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
-                      classNameI='font-secondary font-normal border-2 mt-1 px-3 py-1 text-black rounded-lg w-full text-[11px] md:text-[16px]'
+                      classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                       validate={{
                         required: "Jawaban tidak boleh kosong",
                       }}
@@ -474,7 +479,7 @@ export default function InformasiPribadi() {
                 >
                   <div className={page === 1 ? "hidden" : ""}>
                     <p
-                      className='font-secondary text-[#5189C4] border-2 border-[#5189C4] bg-white px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-white hover:bg-[#5189C4] hover:border-2 hover:border-solid hover:border-white'
+                      className='font-secondary text-[#5189C4] border-2 border-[#5189C4] bg-white px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-white hover:bg-[#C5D8EB] hover:border-2 hover:border-solid hover:border-[#C5D8EB]'
                       onClick={() => prevPage()}
                     >
                       Kembali{" "}
@@ -482,7 +487,7 @@ export default function InformasiPribadi() {
                   </div>
                   <div className={page === 3 ? "hidden" : ""}>
                     <p
-                      className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:text-[#5189C4] hover:bg-white border-2 border-solid border-[#5189C4]'
+                      className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5 rounded-md mb-10 cursor-pointer hover:bg-[#C5D8EB] border-2 border-solid border-[#5189C4] hover:border-[#C5D8EB]'
                       onClick={() => nextPage()}
                     >
                       Berikutnya{" "}
