@@ -8,7 +8,7 @@ export default function SubmitButton() {
   return (
     <>
       <div
-				className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5  mb-10 cursor-pointer hover:text-[#5189C4] hover:bg-white border-2 border-solid border-[#5189C4] '
+				className='font-secondary text-white bg-[#5189C4] px-6 text-[11px] md:text-[16px] py-2 mt-5  mb-10 cursor-pointer hover:bg-[#C5D8EB] border-2 border-solid border-[#5189C4] hover:border-[#C5D8EB] rounded-lg'
 				onClick={() => setShowModal(true)}
       >
         Daftar
@@ -26,7 +26,7 @@ export default function SubmitButton() {
 										Konfirmasi Pendaftaran
                   </h3>
                   <span
-                    className='absolute right-5 top-1 text-xl font-bold cursor-pointer'
+                    className='absolute right-5 top-1 text-xl font-bold cursor-pointer hover:text-[#C5D8EB]'
                     onClick={() => setShowModal(false)}
                   >
                     x
