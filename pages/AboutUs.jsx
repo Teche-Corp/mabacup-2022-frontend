@@ -58,7 +58,7 @@ export default function AboutUs() {
               {/* Card */}
               <div className='px-2 py-10 md:py-14 md:px-10 about-us-card h-max flex justify-between items-start w-full gap-x-12 rounded-3xl'>
                 {/* Sambutan Rektor */}
-                <div className='text-white lg:w-1/2 w-full text-center md:text-start'>
+                {/* <div className='text-white lg:w-1/2 w-full text-center md:text-start'>
                   <h2 className='font-primary md:text-5xl text-3xl text-center lg:text-left'>
                     Sambutan Rektor
                   </h2>
@@ -79,15 +79,15 @@ export default function AboutUs() {
                     skrivtavla. Seren etnotris faligt så kir kvasimodern. Plal
                     pokåns ibel. Höligen soskap supranektiga. Selar lament.{" "}
                   </p>
-                </div>
+                </div> */}
                 {/* Rektor ITS Image */}
-                <div className='lg:block hidden self-center'>
+                {/* <div className='lg:block hidden self-center'>
                   <img
                     src='/about-us/rektor-its.png'
                     alt='Rekot ITS'
                     className='w-[25rem]'
                   ></img>
-                </div>
+                </div> */}
               </div>
             </section>
           </div>

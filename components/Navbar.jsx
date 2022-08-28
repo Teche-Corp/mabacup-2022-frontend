@@ -98,13 +98,13 @@ const Navbar = ({ showNav, setShowNav, from }) => {
           </div>
           <ul className={`md:flex hidden  md:gap-5 lg:gap-10 xl:gap-[67px] `}>
             <li>
-              <Link href='#hero'>
+              <Link href='/'>
                 <a>Home</a>
               </Link>
             </li>
 
             <li>
-              <Link href='#about'>
+              <Link href='/AboutUs'>
                 <a>About</a>
               </Link>
             </li>
