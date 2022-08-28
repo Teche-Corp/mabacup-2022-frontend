@@ -166,8 +166,8 @@ const Navbar = ({ showNav, setShowNav }) => {
           </ul>
 
           <Link href={"/oprec-staff"}>
-            <button className='oprec-button hidden md:block w-32  h-[2.5rem] font-medium rounded-lg text-white '>
-              Oprec Staff
+            <button className='oprec-button hidden md:block w-48 lg:w-52  h-[2.5rem] font-medium rounded-lg text-white '>
+              Open Recruitment Staff
             </button>
           </Link>
 

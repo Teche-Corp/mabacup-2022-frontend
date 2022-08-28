@@ -78,10 +78,6 @@ export default function Home() {
                   className='w-64'
                   src='/hero/terumbu-kiri.png'
                   alt='terumbu kiri'
-                  data-aos='fade-right'
-                  data-aos-duration='500'
-                  data-aos-easing='ease-in-out'
-                  data-aos-delay='500'
                 />
               </Parallax>
 
@@ -102,9 +98,6 @@ export default function Home() {
                 scale={[0.9, 1.2]}
               >
                 <img
-                  data-aos='fade-left'
-                  data-aos-duration='500'
-                  data-aos-easing='ease-in-out'
                   className='hidden sm:block'
                   src='/hero/building-primary.png'
                   alt='building primary'
@@ -126,10 +119,6 @@ export default function Home() {
                   className='hidden lg:block'
                   src='/hero/building-secondary.png'
                   alt='building secondary'
-                  data-aos='fade-up'
-                  data-aos-duration='500'
-                  data-aos-easing='ease-in-out'
-                  data-aos-delay='300'
                 />
                 <img
                   className='block lg:hidden sm:opacity-80 w-full'
