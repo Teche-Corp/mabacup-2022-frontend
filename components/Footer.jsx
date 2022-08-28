@@ -14,7 +14,7 @@ const Footer = () => {
     <footer className='bg-[#262626] px-5 md:px-16 xl:px-[132px] py-[30px] select-none relative z-20'>
       <div className='flex flex-col gap-8 sm:flex-row justify-between items-center'>
         {/* Logo */}
-        <img src='/mabacup-white.png' alt='Mabacup' />
+        <img className='h-40' src='/mabacup.svg' alt='Mabacup' />
         <div className='flex flex-col gap-y-4'>
           {/* Social Media Icon*/}
           {/* IG */}
@@ -42,7 +42,7 @@ const Footer = () => {
       </div>
       <div className='flex justify-center sm:justify-between mt-2 sm:mt-8 items-center border-t-2 pt-2'>
         <p className='text-white sm:block hidden'>© MABACUP 2022</p>
-        <img src='/footer/logos.png' alt='Mabacup 2022' />
+        <img src='/footer/logos.svg' alt='Mabacup 2022' />
       </div>
     </footer>
   );

@@ -201,7 +201,7 @@ body {
 }
 
 .MuiPaper-root {
-  background: none;
+  background: none !important;
 }
 
 @media only screen and (max-width: 500px) {
@@ -240,11 +240,11 @@ body {
 
 .about-us-hero {
   background: linear-gradient(
-    180deg,
-    #ffffff 0%,
-    #5dcbe4 21.15%,
-    #00868d 77.6%,
-    #00b18c 96.15%
+    178.44deg,
+    #ffffff -22.13%,
+    #5dcbe4 3.42%,
+    #00868d 71.62%,
+    #00b18c 94.02%
   );
 }
 .about-us-card {
@@ -285,6 +285,11 @@ body {
   );
 }
 
-.css-1elwnq4-MuiPaper-root-MuiAccordion-root{
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
   background: none !important;
+}
+
+.swiper-slide {
+  overflow: hidden !important;
+  border-radius: 12px !important;
 }

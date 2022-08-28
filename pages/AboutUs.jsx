@@ -29,12 +29,18 @@ export default function AboutUs() {
               id='hero'
               className='w-full min-h-screen about-us-hero overflow-hidden relative flex items-center justify-center'
             >
+              <img
+                className='absolute w-full top-28'
+                src='/about-us/dots.png'
+                alt=''
+              />
               {/* Ikan */}
               <img
                 src='/about-us/ikan.png'
                 alt='ikan'
                 className='absolute left-0 top-1/4 z-10 hidden md:block'
               ></img>
+
               <img
                 src='/about-us/ikan.png'
                 alt='ikan'
@@ -47,8 +53,13 @@ export default function AboutUs() {
               <img
                 src='/about-us/hero-image.png'
                 alt='Mabacup ITS 2022'
-                className='bg-cover bottom-0 absolute w-full'
+                className='hiden md:block bg-cover bottom-0 absolute w-full'
               ></img>
+              <img
+                className='block md:hidden bg-cover bottom-0 absolute w-full'
+                src='/about-us/hero-mobile.png'
+                alt=''
+              />
             </section>
             {/* Main Section */}
             <section
@@ -216,7 +227,12 @@ export default function AboutUs() {
                 )}
               </div>
               <img
-                className='absolute bottom-0 w-full'
+                className='block md:hidden absolute bottom-0 w-full'
+                src='/about-us/end-content-mobile.png'
+                alt=''
+              />
+              <img
+                className='hidden md:block absolute bottom-0 w-full'
                 src='/about-us/end-content.png'
                 alt='Mabacup ITS 2022'
               ></img>

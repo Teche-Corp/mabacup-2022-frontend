@@ -104,7 +104,7 @@ const Navbar = ({ showNav, setShowNav, from }) => {
             </li>
 
             <li>
-              <Link href='#about'>
+              <Link href='/AboutUs'>
                 <a>About</a>
               </Link>
             </li>

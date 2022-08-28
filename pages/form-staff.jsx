@@ -412,7 +412,11 @@ export default function InformasiPribadi() {
                     <p className='font-secondary text-xs mt-2'>
                       <span className='text-red-500'>* Catatan </span>:
                       Dikhususkan untuk pendaftar yang mendaftar divisi Desain,
-                      Dokum, dan Publikasi
+                      Dokum, dan Publikasi mohon mengisi link portofolio
+                      <br />
+                      <span className='text-red-500'>* Catatan </span>:
+                      Dikhususkan untuk pendaftar yang mendaftar divisi Acara,
+                      mohon mengisi subdivisi prioritas (event atau kompetisi)
                     </p>
                   </div>
                   <Input

@@ -197,7 +197,7 @@ export default function Home() {
                   About Maba Cup
                 </h1>
                 <div className='md:px-12 lg:px-16 xl:px-20 mt-0 sm:mt-6 flex flex-col items-center'>
-                  <p className='font-secondary text-base sm:text-lg lg:text-xl leading-7 sm:leading-8 text-white font-semibold text-center'>
+                  <p className='font-secondary text-base sm:text-lg lg:text-xl leading-7 sm:leading-8 text-white font-medium text-center'>
                     Maba Cup merupakan event tahunan yang diselenggarakan oleh
                     Departemen Event Lembaga Minat Bakat ITS. Memiliki motto
                     “Dari maba, oleh maba, dan untuk maba”, event ini terdiri
