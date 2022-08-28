@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 
-const Navbar = ({ showNav, setShowNav, from }) => {
+const Navbar = ({ showNav, setShowNav }) => {
   const [showEvents, setShowEvents] = useState(false);
   const [hideEvents, setHideEvents] = useState(true);
   const [colorChange, setColorchange] = useState(false);
@@ -61,11 +61,9 @@ const Navbar = ({ showNav, setShowNav, from }) => {
         <nav
           className={`${
             colorChange
-              ? "bg-[#27378E] duration-300 ease-in-out text-white "
-              : `duration-300 ease-in-out ${
-                  from === "about-us" ? "text-black" : "text-white"
-                }`
-          } h-20 relative z-50 select-none w-screen font-secondary flex justify-between items-center px-5 md:px-16 lg:px-24`}
+              ? "bg-[#27378E] duration-300 ease-in-out "
+              : `duration-300 ease-in-out `
+          } h-20 relative z-50 select-none w-screen font-secondary text-white  flex justify-between items-center px-5 md:px-16 lg:px-24`}
         >
           {/* header logo */}
           <Link href='/'>
@@ -161,8 +159,8 @@ const Navbar = ({ showNav, setShowNav, from }) => {
               )}
             </li>
             <li>
-              <Link href='/'>
-                <a onClick={notify}>Merchandise</a>
+              <Link href='/comingSoon'>
+                <a>Merchandise</a>
               </Link>
             </li>
           </ul>
@@ -186,7 +184,7 @@ const Navbar = ({ showNav, setShowNav, from }) => {
               </Link>
             </li>
             <li onClick={toggleShowNav} className='py-4  px-7'>
-              <Link href='#'>
+              <Link href='/AboutUs'>
                 <a className='flex items-center justify-center w-full text-2xl font-secondary text-border-thin '>
                   About
                 </a>
