@@ -281,6 +281,7 @@ export default function pageOprecStaff() {
             <br />
             5. Poster, Twibbon dan ketentuan upload dapat diakses{" "}
             <a
+              rel='noreferrer'
               className='underline'
               target='_blank'
               href='https://drive.google.com/drive/folders/1msFFOr7CW4vcFUIMCEMBYcLSZufdssex'
