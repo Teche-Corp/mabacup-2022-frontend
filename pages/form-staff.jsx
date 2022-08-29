@@ -229,6 +229,10 @@ export default function InformasiPribadi() {
                     setPage={setPage}
                     page={1}
                   />
+                  <p className='font-secondary text-xs mt-2'>
+                    <span className='text-red-500'>* Catatan </span>: Diharapkan
+                    hanya memilih salah satu (Whatsapp ATAU Line)
+                  </p>
                   <SelectInput
                     id='fakultas'
                     label='Fakultas'
