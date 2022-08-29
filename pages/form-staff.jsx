@@ -225,11 +225,6 @@ export default function InformasiPribadi() {
                     classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
                       required: "Nomor Telepon tidak boleh kosong",
-                      pattern: {
-                        value: /^\+628[1-9][0-9]{7,11}$/,
-                        message:
-                          "Nomor Telepon harus diawali +62 dan memiliki panjang 12-16 karakter",
-                      },
                     }}
                     setPage={setPage}
                     page={1}
