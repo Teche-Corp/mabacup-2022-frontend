@@ -418,11 +418,11 @@ export default function InformasiPribadi() {
                       Dikhususkan untuk pendaftar yang mendaftar divisi Acara,
                       mohon mengisi subdivisi prioritas (event atau kompetisi)
                     </p>
-                    <p className='font-secondary text-xs'>
+                    {/* <p className='font-secondary text-xs'>
                       <span className='text-red-500'>* Catatan </span>:
                       Untuk pendaftar Divisi Acara, silakan isi Subdivisi yang diinginkan
                       <br /> Contoh : Event
-                    </p>
+                    </p> */}
                   </div>
                   <Input
                     type='text'

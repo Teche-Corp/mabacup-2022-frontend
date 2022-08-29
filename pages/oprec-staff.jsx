@@ -48,7 +48,7 @@ export default function pageOprecStaff() {
             alt=''
           />
 
-          <Link href={"/comingSoon"}>
+          <Link href={"/form-staff"}>
             <button className='px-6 py-3 w-fit absolute bottom-16 sm:mt-12 bg-[#27508E] text-white rounded '>
               Form Pendaftaran
             </button>
@@ -546,9 +546,11 @@ export default function pageOprecStaff() {
           <p className='font-secondary text-white text-xl mt-4 text-center px-6 md:px-0'>
             Join the adventure and explore yourself !
           </p>
-          <button className=' px-6 py-3 mt-12 button-form text-white rounded'>
-            Form Pendaftaran
-          </button>
+          <Link href={"/form-staff"}>
+            <button className=' px-6 py-3 mt-12 button-form text-white rounded'>
+              Form Pendaftaran
+            </button>
+          </Link >
         </div>
       </section>
     </main>
