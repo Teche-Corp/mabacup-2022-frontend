@@ -204,7 +204,7 @@ export default function InformasiPribadi() {
                     placeholder='Masukkan Email'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                     classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    validation={{
+                    validate={{
                       required: "Email tidak boleh kosong",
                       maxLength: {
                         value: 32,
