@@ -206,6 +206,10 @@ export default function InformasiPribadi() {
                     classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validation={{
                       required: "Email tidak boleh kosong",
+                      maxLength: {
+                        value: 32,
+                        message: "Panjang email maksimal 32 karakter"
+                      },
                       pattern: {
                         value:
                           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -231,7 +235,7 @@ export default function InformasiPribadi() {
                   />
                   <p className='font-secondary text-xs mt-2'>
                     <span className='text-red-500'>* Catatan </span>: Diharapkan
-                    hanya memilih salah satu (Whatsapp ATAU Line)
+                    hanya memilih salah satu (Whatsapp atau Line)
                   </p>
                   <SelectInput
                     id='fakultas'
@@ -270,9 +274,9 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Pertanyaan maksimal memiliki 1500 karakter ",
+                          "Jawaban Pertanyaan maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -287,9 +291,9 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Motivasi maksimal memiliki 1500 karakter ",
+                          "Jawaban Motivasi maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -317,9 +321,9 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Pertanyaan maksimal memiliki 1500 karakter ",
+                          "Jawaban Pertanyaan maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -341,9 +345,9 @@ export default function InformasiPribadi() {
                     placeholder='Jawaban anda'
                     validate={{
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Pertanyaan maksimal memiliki 1500 karakter ",
+                          "Jawaban Pertanyaan maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -358,9 +362,9 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Pertanyaan maksimal memiliki 1500 karakter ",
+                          "Jawaban Pertanyaan maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
