@@ -224,7 +224,7 @@ export default function InformasiPribadi() {
                     disabled={false}
                     id='no_telp'
                     label='Whatsapp(+62) / ID Line'
-                    placeholder='Nomor Telepon diawali +62'
+                    placeholder='Jawaban anda'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                     classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
