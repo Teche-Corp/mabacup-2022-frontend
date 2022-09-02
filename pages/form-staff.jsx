@@ -17,7 +17,7 @@ import Header from "../components/Header";
 import Loading from "./Loading";
 
 export default function InformasiPribadi() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(5);
   const [domLoaded, setDomLoaded] = useState(false);
 
   const methods = useForm();
