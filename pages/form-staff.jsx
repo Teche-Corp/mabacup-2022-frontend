@@ -8,14 +8,16 @@ import { DEPARTMENT, DEVISI, FAKULTAS } from "../lib/constant";
 import { FaCheck } from "react-icons/fa";
 import axios from "axios";
 import Link from "next/link";
-import Head from "next/head";
+import { FaInstagram, FaTiktok, FaYoutube} from "react-icons/fa";
+import {BsLine} from "react-icons/bs";
+
 import { toast } from "react-hot-toast";
 import SubmitButton from "../components/SubmitButton";
 import Header from "../components/Header";
 import Loading from "./Loading";
 
 export default function InformasiPribadi() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(5);
   const [domLoaded, setDomLoaded] = useState(false);
 
   const methods = useForm();
@@ -66,6 +68,42 @@ export default function InformasiPribadi() {
         }}
       />
       <Header title='Daftar Staff | Mabacup ITS 2022' />
+      {page === 5 ? (
+        <section className="close-staff min-h-screen w-full relative flex items-center justify-center flex-col">
+          <img src="/close-staff.png" alt="" className="absolute bottom-0 right-0 w-[36%]"></img>
+          <div className="text-white text-center flex items-center flex-col">
+            <h1 className="font-primary md:text-6xl lg:text-8xl text-4xl">Registration Closed</h1>
+            <p className="font-secondary md:text-xl text-sm w-[66%] md:leading-10 leading-8 mt-9 space">Thankyou for your participation in the open recruitment staff Maba Cup 2022. For further information stay tune on our social media. </p>
+          </div>
+          <div className="flex justify-center">
+            <Link href="/">
+              <p className="dive-button inline-block text-center rounded-full px-6 py-3 hover:scale-105 text-white font-secondary font-medium mt-10 relative cursor-pointer">
+                Return to Home
+              </p>
+            </Link>
+          </div>
+          <div className="flex justify-center text-white pt-10 absolute bottom-10">
+            <div className="flex gap-4 md:gap-6 flex-col md:flex-row">
+              <div className="flex gap-1 items-center">
+                <FaInstagram className="text-white" size={28}/>
+                <p className="text-white font-secondary">@mabacupits</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <FaTiktok className="text-white" size={28}/>
+                <p className="text-white font-secondary">mabacupits</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <FaYoutube className="text-white" size={28}/>
+                <p className="text-white font-secondary">MABACUP ITS</p>
+              </div>
+              <div className="flex gap-2 items-center">
+                <BsLine className="text-white" size={28}/>
+                <p className="text-white font-secondary">@899jpfck</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      ): (
       <section className='bg-[#B8D1EB] w-full min-h-screen flex jusify-center items-center '>
         <div className='mt-10 mb-10 w-11/12 md:w-3/4 lg:w-3/5 bg-white rounded-2xl sm:rounded-3xl mx-auto overflow-hidden'>
           <div className='form-staff w-full h-72 p-6 relative'>
@@ -204,8 +242,12 @@ export default function InformasiPribadi() {
                     placeholder='Masukkan Email'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                     classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
-                    validation={{
+                    validate={{
                       required: "Email tidak boleh kosong",
+                      maxLength: {
+                        value: 32,
+                        message: "Panjang email maksimal 32 karakter"
+                      },
                       pattern: {
                         value:
                           /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -219,8 +261,8 @@ export default function InformasiPribadi() {
                     type='text'
                     disabled={false}
                     id='no_telp'
-                    label='Whatsapp(+62) / ID Line'
-                    placeholder='Nomor Telepon diawali +62'
+                    label='Whatsapp / ID Line'
+                    placeholder='Jawaban anda'
                     classNameL='font-secondary font-semibold text-[11px] md:text-[16px]'
                     classNameI='font-secondary font-normal border-2 mt-1 px-3 py-2 text-black rounded-lg w-full text-[11px] md:text-[16px]'
                     validate={{
@@ -229,6 +271,10 @@ export default function InformasiPribadi() {
                     setPage={setPage}
                     page={1}
                   />
+                  <p className='font-secondary text-xs mt-2'>
+                    <span className='text-red-500'>* Catatan </span>: Diharapkan
+                    hanya memilih salah satu (Whatsapp atau Line)
+                  </p>
                   <SelectInput
                     id='fakultas'
                     label='Fakultas'
@@ -266,9 +312,9 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Pertanyaan maksimal memiliki 1500 karakter ",
+                          "Jawaban Pertanyaan maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -283,9 +329,9 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Motivasi maksimal memiliki 1500 karakter ",
+                          "Jawaban Motivasi maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -313,9 +359,9 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Pertanyaan maksimal memiliki 1500 karakter ",
+                          "Jawaban Pertanyaan maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -337,9 +383,9 @@ export default function InformasiPribadi() {
                     placeholder='Jawaban anda'
                     validate={{
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Pertanyaan maksimal memiliki 1500 karakter ",
+                          "Jawaban Pertanyaan maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -354,9 +400,9 @@ export default function InformasiPribadi() {
                     validate={{
                       required: "Jawaban tidak boleh kosong",
                       maxLength: {
-                        value: 1500,
+                        value: 2000,
                         message:
-                          "Jawaban Pertanyaan maksimal memiliki 1500 karakter ",
+                          "Jawaban Pertanyaan maksimal memiliki 2000 karakter ",
                       },
                     }}
                     setPage={setPage}
@@ -506,6 +552,7 @@ export default function InformasiPribadi() {
           </div>
         </div>
       </section>
+      )}
     </>
   );
 }

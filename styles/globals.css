@@ -302,3 +302,7 @@ body {
 .css-67l5gl {
   background: none !important;
 }
+
+.close-staff {
+  background: linear-gradient(180deg, #4979B9 0%, #3E619E 31.57%, #30447E 70.39%, #273168 96.19%);
+}

@@ -289,8 +289,9 @@ export default function pageOprecStaff() {
               disini
             </a>
             <br />
-            6. CV yang memuat biodata, pengalaman, kelebihan kekurangan, dll
-            (dibebaskan menggunakan format ATS friendly atau Kreatif)
+            CV yang memuat biodata, pengalaman (diberikan penjelasan singkat
+            terkait pengalaman tersebut), kelebihan kekurangan, dll (dibebaskan
+            menggunakan format ATS friendly atau Kreatif)
             <br />
             7. Portofolio diperuntukkan bagi pendaftar pada divisi publikasi
             (opsional), desain, dan dokumentasi
