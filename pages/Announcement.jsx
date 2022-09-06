@@ -119,7 +119,7 @@ export default function Announcement() {
               </table>
               
             </div>
-            <p className="mt-4">Petualangan sesungguhnya telah dimulai! Kalian "The Adventure Seeker" adalah ratusan dari ribuan pendaftar yang berhasil. Sampai jumpa di Welcome Party Maba Cup 2022 dan kami tunggu kontribusi nyata kamu!
+            <p className="mt-4">Petualangan sesungguhnya telah dimulai! Kalian &apos;The Adventure Seeker&apos; adalah ratusan dari ribuan pendaftar yang berhasil. Sampai jumpa di Welcome Party Maba Cup 2022 dan kami tunggu kontribusi nyata kamu!
             <br />
             Untuk menambah euforia petualangan kamu mempunyai misi untuk menghubungi Kadiv atau Kasubdiv divisi masing-masing, jangan sampai salah divisi yaa!
             <br />
