@@ -1,9 +1,8 @@
 import axios from "axios";
-import { toast } from "react-hot-toast";
+import { toast } from "react-toastify";
 import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 import Link from "next/link";
-import Loading from "./Loading";
 
 export default function Announcement() {
   const [value, setValue] = useState("");
@@ -34,7 +33,6 @@ export default function Announcement() {
   const handleKembali = () => {
     setValue("");
     setPage(1);
-    setData({});
   };
 
   return (
@@ -189,7 +187,7 @@ export default function Announcement() {
           </div>
           <div className=' h-full p-10'>
             <h1 className='font-secondary text-3xl font-semibold'>
-              {data.nama}
+              {/* {data.nama} */}
             </h1>
             <div>
               <table className='table-auto border-spacing-4 p-4 mt-4'>
@@ -197,7 +195,9 @@ export default function Announcement() {
                   <td className='text-neutral-500'>NRP</td>
                   <td className='text-neutral-500'>
                     :{" "}
-                    <span className='text-black font-semibold'>{data.nrp}</span>
+                    <span className='text-black font-semibold'>
+                      {/* {data.nrp} */}
+                    </span>
                   </td>
                 </tr>
                 <tr>
@@ -207,7 +207,7 @@ export default function Announcement() {
                   <td className='text-neutral-500'>
                     :{" "}
                     <span className='text-black font-semibold'>
-                      {data.departemen}
+                      {/* {data.departemen} */}
                     </span>
                   </td>
                 </tr>
@@ -217,10 +217,11 @@ export default function Announcement() {
               Kamu hebat karena mau mencoba! Terimakasih telah tertarik dan
               menunjukkan performa terbaik di Maba Cup 2022. Kami tunggu
               kontribusi kamu di event Maba Cup selanjutnya..
+              <br />
             </p>
             <button
               onClick={handleKembali}
-              className='px-4 py-3 rounded-lg mt-8 bg-[#5189C4] text-white'
+              className='px-4 py-3 rounded-lg mt-28 md:mt-32 lg:mt-40 bg-[#5189C4] text-white border-2 border-[#5189C4] hover:text-[#5189C4] hover:bg-white'
             >
               Kembali ke laman pencarian
             </button>
