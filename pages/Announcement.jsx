@@ -7,7 +7,7 @@ import Loading from "./Loading";
 
 export default function Announcement() {
   const [value, setValue] = useState("");
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(3);
   const [data, setData] = useState({});
   const handleClick = () => {
     toast.promise(
@@ -176,7 +176,7 @@ export default function Announcement() {
             </p>
             <button
               onClick={handleKembali}
-              className='px-4 py-3 rounded-lg mt-8 bg-[#5189C4] text-white'
+              className='px-3 py-2 rounded-lg mt-8 bg-[#5189C4] text-white border-2 border-[#5189C4] hover:text-[#5189C4] hover:bg-white'
             >
               Kembali ke laman pencarian
             </button>
@@ -187,7 +187,7 @@ export default function Announcement() {
         <div
           className={`${
             page === 3 ? "block" : "hidden"
-          } w-3/4 h-3/5 mx-auto my-auto bg-white rounded-xl overflow-hidden`}
+          } w-4/5 h-[55%] mx-auto my-auto bg-white rounded-xl overflow-hidden`}
         >
           <div className='bg-[#FFCECB] h-20 px-6 py-6'>
             <h1 className='text-[#CB3A31] font-secondary text-2xl font-semibold '>
@@ -201,17 +201,17 @@ export default function Announcement() {
             <div>
               <table className='table-auto border-spacing-4 p-4 mt-4'>
                 <tr>
-                  <td className='text-neutral-400'>NRP</td>
-                  <td className='text-neutral-400'>
+                  <td className='text-neutral-500'>NRP</td>
+                  <td className='text-neutral-500'>
                     :{" "}
                     <span className='text-black font-semibold'>{data.nrp}</span>
                   </td>
                 </tr>
                 <tr>
-                  <td className='text-neutral-400'>
+                  <td className='text-neutral-500'>
                     Asal Departemen &nbsp; &nbsp;
                   </td>
-                  <td className='text-neutral-400'>
+                  <td className='text-neutral-500'>
                     :{" "}
                     <span className='text-black font-semibold'>
                       {data.departemen}
