@@ -7,35 +7,28 @@ import Loading from "./Loading";
 
 export default function Announcement() {
   const [value, setValue] = useState("");
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(1);
   const [data, setData] = useState({});
   const handleClick = () => {
-    toast.promise(
-      axios
-        .get(`https://mabacup-its.com:8081/api/pengumuman/${value}`)
-        .then((res) => {
-          console.log(res);
-          if (res.data.data.status === "accepted") {
-            setPage(2);
+    axios
+      .get(`https://mabacup-its.com:8081/api/pengumuman/${value}`)
+      .then((res) => {
+        if (res.data.data.status === "accepted") {
+          setPage(2);
 
-            setData(res?.data.data);
-          } else if (res.data.data.status === "rejected") {
-            setPage(3);
-            setData(res?.data.data);
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        }),
-      {
-        success: "Selamat Anda telah terdaftar",
-        error: (err) => {
-          console.log(err.response.data.message);
-          return err.response.data.message;
-        },
-        loading: "Loading...",
-      }
-    );
+          setData(res?.data.data);
+          toast.success("Selamat anda diterima");
+        } else if (res.data.data.status === "rejected") {
+          setPage(3);
+          setData(res?.data.data);
+          toast("Maaf anda tidak lolos", {
+            icon: "👏",
+          });
+        }
+      })
+      .catch((err) => {
+        toast.error(err.response.data.message);
+      });
   };
 
   const handleKembali = () => {
@@ -219,7 +212,6 @@ export default function Announcement() {
                   </td>
                 </tr>
               </table>
-              <br />
             </div>
             <p className='mt-4 text-base text-[#404040]'>
               Kamu hebat karena mau mencoba! Terimakasih telah tertarik dan
