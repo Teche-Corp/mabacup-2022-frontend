@@ -1,8 +1,9 @@
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 import Link from "next/link";
+import Loading from "./Loading";
 
 export default function Announcement() {
   const [value, setValue] = useState("");
@@ -13,13 +14,18 @@ export default function Announcement() {
       axios
         .get(`https://mabacup-its.com:8081/api/pengumuman/${value}`)
         .then((res) => {
-          if (res.status === 200) {
-            setPage(page + 1);
+          console.log(res);
+          if (res.data.data.status === "accepted") {
+            setPage(2);
 
             setData(res?.data.data);
-          } else if (res.status === 200) {
-            setPage(page + 2);
+          } else if (res.data.data.status === "rejected") {
+            setPage(3);
+            setData(res?.data.data);
           }
+        })
+        .catch((error) => {
+          console.log(error);
         }),
       {
         success: "Selamat Anda telah terdaftar",
@@ -35,6 +41,7 @@ export default function Announcement() {
   const handleKembali = () => {
     setValue("");
     setPage(1);
+    setData({});
   };
 
   return (
@@ -211,17 +218,20 @@ export default function Announcement() {
                     </span>
                   </td>
                 </tr>
-                <tr>
-                  <td className='text-neutral-400'>Divisi / Subdivisi</td>
-                  <td className='capitalize text-neutral-400'>
-                    :{" "}
-                    <span className='text-black font-semibold'>
-                      {data.divisi_diterima}
-                    </span>
-                  </td>
-                </tr>
               </table>
+              <br />
             </div>
+            <p className='mt-4 text-base text-[#404040]'>
+              Kamu hebat karena mau mencoba! Terimakasih telah tertarik dan
+              menunjukkan performa terbaik di Maba Cup 2022. Kami tunggu
+              kontribusi kamu di event Maba Cup selanjutnya..
+            </p>
+            <button
+              onClick={handleKembali}
+              className='px-4 py-3 rounded-lg mt-8 bg-[#5189C4] text-white'
+            >
+              Kembali ke laman pencarian
+            </button>
           </div>
         </div>
       </div>
