@@ -1,8 +1,9 @@
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 import Link from "next/link";
+import Header from "../components/Header";
 
 export default function Announcement() {
   const [value, setValue] = useState("");
@@ -37,6 +38,7 @@ export default function Announcement() {
 
   return (
     <>
+    <Header title='Pengumuman | Mabacup ITS 2022' />
       <Toaster
         reverseOrder={false}
         toastOptions={{
@@ -187,7 +189,7 @@ export default function Announcement() {
           </div>
           <div className=' h-full p-10'>
             <h1 className='font-secondary text-3xl font-semibold'>
-              {/* {data.nama} */}
+              {data.nama}
             </h1>
             <div>
               <table className='table-auto border-spacing-4 p-4 mt-4'>
@@ -196,7 +198,7 @@ export default function Announcement() {
                   <td className='text-neutral-500'>
                     :{" "}
                     <span className='text-black font-semibold'>
-                      {/* {data.nrp} */}
+                      {data.nrp}
                     </span>
                   </td>
                 </tr>
@@ -207,7 +209,7 @@ export default function Announcement() {
                   <td className='text-neutral-500'>
                     :{" "}
                     <span className='text-black font-semibold'>
-                      {/* {data.departemen} */}
+                      {data.departemen}
                     </span>
                   </td>
                 </tr>
