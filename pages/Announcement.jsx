@@ -6,30 +6,31 @@ import Link from "next/link";
 
 export default function Announcement() {
   const [value, setValue] = useState("");
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(1);
   const [data, setData] = useState({});
   const handleClick = () => {
-    toast.promise(
       axios
         .get(`https://mabacup-its.com:8081/api/pengumuman/${value}`)
         .then((res) => {
           if (res.status === 200) {
             setPage(page + 1);
             setData(res?.data.data);
-          } else {
-            setPage(page + 2);
-            setData(res?.data.data);
           }
-        }),
-      {
-        success: "Selamat Anda telah terdaftar",
-        error: (err) => {
-          console.log(err.response.data.message);
-          return err.response.data.message;
-        },
-        loading: "Loading...",
-      }
-    );
+        })
+        .catch((res) => {
+          setPage(page + 2);
+          console.log(res?.response.data);
+        })
+      // {
+      //   success: "Selamat Anda telah terdaftar",
+      //   error: (err) => {
+      //     // alert("Selamat Anda telah terdaftar")
+      //     // setPage(3);
+      //     return (() => console.log("Halo"))
+      //   },
+      //   loading: "Loading...",
+      // }
+
   };
 
   const handleKembali = () => {
@@ -192,7 +193,7 @@ export default function Announcement() {
           </div>
           <div className=' h-full p-10'>
             <h1 className='font-secondary text-3xl font-semibold'>
-              {data.nama}
+              {/* {data.nama} */}
             </h1>
             <div>
               <table className='table-auto border-spacing-4 p-4 mt-4'>
@@ -200,7 +201,9 @@ export default function Announcement() {
                   <td className='text-neutral-500'>NRP</td>
                   <td className='text-neutral-500'>
                     :{" "}
-                    <span className='text-black font-semibold'>{data.nrp}</span>
+                    <span className='text-black font-semibold'>
+                      {/* {data.nrp} */}
+                      </span>
                   </td>
                 </tr>
                 <tr>
@@ -210,7 +213,7 @@ export default function Announcement() {
                   <td className='text-neutral-500'>
                     :{" "}
                     <span className='text-black font-semibold'>
-                      {data.departemen}
+                      {/* {data.departemen} */}
                     </span>
                   </td>
                 </tr>
