@@ -79,14 +79,14 @@ export default function Announcement() {
             page === 1 ? "block" : "hidden"
           } w-10/12 lg:w-1/2 h-1/2 mx-auto my-auto bg-white rounded-xl overflow-hidden`}
         >
-          <div className='bg-[#C5D8EB] h-1/3 w-full '>
-            <div className='flex items-center h-full pl-6'>
+          <div className='bg-[#C5D8EB] h-max w-full '>
+            <div className='flex items-center h-full pl-6 py-4'>
               <h1 className='text-[#5189C4] font-secondary font-bold text-xl'>
                 Selamat datang, silakan cari NRP kamu disini !
               </h1>
             </div>
           </div>
-          <div className='px-12 py-6 flex flex-col gap-4'>
+          <div className='md:px-12 px-6 py-6 flex flex-col gap-4'>
             <h1 className='font-secondary font-medium'>Masukkan NRP Anda</h1>
             <input
               onChange={(e) => setValue(e.target.value)}
