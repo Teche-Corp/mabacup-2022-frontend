@@ -49,7 +49,7 @@ export default function Announcement() {
           },
         }}
       />
-      <div className='h-screen w-screen bg-[#E1EFF2] flex flex-col'>
+      <div className='min-h-screen w-screen bg-[#E1EFF2] flex flex-col'>
         {/*  */}
         <div className='form-staff w-full h-48 p-6 relative flex flex-row items-center gap-12 px-12'>
           <img className='w-28' src='/mabacup.svg' alt='Mabacup' />
@@ -106,15 +106,15 @@ export default function Announcement() {
         <div
           className={`${
             page === 2 ? "block" : "hidden"
-          } w-4/5 h-[65%] mx-auto my-auto bg-white rounded-xl overflow-hidden`}
+          } md:w-4/5 w-[90%] h-max mx-auto  bg-white rounded-xl overflow-hidden md:my-20 my-10 `}
         >
-          <div className='bg-[#C0DBCE] h-20 px-6 py-6'>
-            <h1 className='text-[#43936C] font-secondary text-2xl font-semibold '>
+          <div className='bg-[#C0DBCE] md:h-22 h-30 px-6 py-6'>
+            <h1 className='text-[#43936C] font-secondary md:text-2xl text-xl font-semibold '>
               Selamat! Kamu terpilih untuk menjadi staff Maba Cup 2022
             </h1>
           </div>
-          <div className=' h-full p-10'>
-            <h1 className='font-secondary text-3xl font-semibold'>
+          <div className=' h-full md:p-10 p-6'>
+            <h1 className='font-secondary md:text-3xl text-2xl font-semibold'>
               {data.nama}
             </h1>
             <div>
@@ -162,7 +162,7 @@ export default function Announcement() {
                 className='cursor-pointer'
                 href={"https://mabacup-its.com/KontakKadivKasubdiv"}
               >
-                <span className='font-semibold cursor-pointer underline text-[#276CB6]'>
+                <span className='font-semibold cursor-pointer underline text-[#276CB6] mt-2'>
                   https://mabacup-its.com/KontakKadivKasubdiv
                 </span>
               </Link>
@@ -180,19 +180,19 @@ export default function Announcement() {
         <div
           className={`${
             page === 3 ? "block" : "hidden"
-          } w-4/5 h-[55%] mx-auto my-auto bg-white rounded-xl overflow-hidden`}
+          } md:w-4/5 w-[90%] h-max mx-auto my-auto bg-white rounded-xl overflow-hidden `}
         >
-          <div className='bg-[#FFCECB] h-20 px-6 py-6'>
-            <h1 className='text-[#CB3A31] font-secondary text-2xl font-semibold '>
+          <div className='bg-[#FFCECB] md:h-20 h-30 px-6 py-6'>
+            <h1 className='text-[#CB3A31] font-secondary md:text-2xl text-xl font-semibold '>
               Tetap semangat dan jangan putus asa yaa!
             </h1>
           </div>
-          <div className=' h-full p-10'>
-            <h1 className='font-secondary text-3xl font-semibold'>
+          <div className=' h-full md:p-10 p-4'>
+            <h1 className='font-secondary md:text-3xl text-2xl font-semibold '>
               {data.nama}
             </h1>
             <div>
-              <table className='table-auto border-spacing-4 p-4 mt-4'>
+              <table className='table-auto border-spacing-4 md:p-4 p-2 mt-4'>
                 <tr>
                   <td className='text-neutral-500'>NRP</td>
                   <td className='text-neutral-500'>
@@ -221,12 +221,14 @@ export default function Announcement() {
               kontribusi kamu di event Maba Cup selanjutnya..
               <br />
             </p>
+
             <button
               onClick={handleKembali}
-              className='px-4 py-3 rounded-lg mt-28 md:mt-32 lg:mt-40 bg-[#5189C4] text-white border-2 border-[#5189C4] hover:text-[#5189C4] hover:bg-white'
+              className='px-4 py-3 rounded-lg mt-10 md:mt-8 lg:mt-10 bg-[#5189C4] text-white border-2 border-[#5189C4] hover:text-[#5189C4] hover:bg-white'
             >
               Kembali ke laman pencarian
             </button>
+            
           </div>
         </div>
       </div>
