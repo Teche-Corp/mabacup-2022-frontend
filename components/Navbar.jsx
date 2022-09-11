@@ -165,9 +165,9 @@ const Navbar = ({ showNav, setShowNav }) => {
             </li>
           </ul>
 
-          <Link href={"/oprec-staff"}>
-            <button className='oprec-button hidden md:block w-48 lg:w-52  h-[2.5rem] font-medium rounded-lg text-white '>
-              Open Recruitment Staff
+          <Link href={"https://mabacup-its.com/oprec-ambassador"}>
+            <button className='oprec-button hidden md:block w-48 lg:w-52  h-[2.5rem] font-medium rounded-lg text-white text-sm '>
+              Open Recruitment Ambassador
             </button>
           </Link>
 
@@ -257,9 +257,9 @@ const Navbar = ({ showNav, setShowNav }) => {
               onClick={toggleShowNav}
               className='absolute bottom-52 translate-x-1/2 right-1/2'
             >
-              <Link href={"/oprec-staff"}>
-                <button className=' oprec-button flex items-center justify-center w-full h-12 mx-auto text-xl font-secondary font-medium rounded-lg px-6 py-2'>
-                  Oprec Staff
+              <Link href={"https://mabacup-its.com/oprec-ambassador"}>
+                <button className=' oprec-button flex items-center justify-center w-full h-12 mx-auto text-sm font-secondary font-medium rounded-lg px-6 py-2'>
+                  Open Recruitment Ambassador
                 </button>
               </Link>
             </li>
