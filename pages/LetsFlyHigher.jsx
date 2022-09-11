@@ -171,7 +171,7 @@ export default function Announcement() {
               <Link
                 className='cursor-pointer'
                 href={
-                  "https://drive.google.com/file/d/1EArLceOPW75TDzlejppsGEh2KfC-6iB4/view?usp=drivesdk"
+                  "https://drive.google.com/file/d/19pYozDTzvOJ7RAoPs-kFfACJb5jgaDzo/view?usp=sharing"
                 }
               >
                 <span className='font-semibold cursor-pointer underline text-[#276CB6] mt-2'>
