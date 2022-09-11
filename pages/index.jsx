@@ -406,16 +406,17 @@ export default function Home() {
               data-aos-easing='ease-in-out'
             >
               <div className='oprec w-11/12 xl:w-4/5 h-[18rem] sm:h-[19rem] lg:h-[18rem] xl:h-[22rem] bg-red-200 mx-auto mt-8 rounded-2xl p-6 sm:p-8 xl:p-10 relative overflow-hidden'>
-                <div className='w-full sm:w-3/5 relative z-[1] '>
-                  <h1 className='font-secondary text-white text-lg sm:text-[1.5rem] xl:text-[2.25rem] 2xl:text-[2.5rem] font-semibold tracking-wide sm:tracking-[-2.2%] leading-normal sm:leading-tight'>
-                    Mari Bergabung Menjadi Bagian dari Staff Maba Cup ITS 2022
+                <div className='w-full sm:w-3/5 md:w-[70%] lg:w-3/5 relative z-[1] '>
+                  <h1 className='font-secondary text-white text-lg sm:text-[1.5rem] xl:text-[1.7rem] 2xl:text-[2.1rem] font-semibold tracking-wide sm:tracking-[-2.2%] leading-normal sm:leading-tight'>
+                    Mari Bergabung Menjadi Bagian dari Student Ambassador Maba
+                    Cup ITS 2022
                   </h1>
-                  <p className='text-white font-secondary text-sm sm:text-base xl:text-xl 2xl:text-[1.3rem] leading-5 lg:leading-6 xl:leading-8 tracking-[-0.06%] w-full sm:w-4/5 lg:w-2/3 xl:w-[60%] 2xl:w-1/2 mt-4'>
-                    Gabung menjadi staff sekarang dan dapatkan banyak
-                    Benefitnya!
+                  <p className='text-white font-secondary text-sm sm:text-base xl:text-xl 2xl:text-[1.3rem] leading-5 lg:leading-6 xl:leading-8 tracking-[-0.06%] w-full sm:w-4/5 lg:w-2/3 xl:w-2/3 2xl:w-2/3 mt-4'>
+                    Gabung menjadi Student Ambassador sekarang dan dapatkan
+                    banyak Benefitnya!
                   </p>
 
-                  <Link href={"/oprec-staff"}>
+                  <Link href={"https://mabacup-its.com/oprec-ambassador"}>
                     <a className='mt-8 absolute w-max right-1/2 sm:left-0 translate-x-1/2 sm:translate-x-0 inline-block px-3 sm:px-5 py-2 sm:py-3 border-2 border-solid border-white bg-white hover:bg-[#2C7994] text-[#2C7994] hover:text-white text-sm sm:text-lg rounded-lg font-medium'>
                       Daftar Sekarang
                     </a>
