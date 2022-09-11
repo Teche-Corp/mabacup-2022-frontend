@@ -162,29 +162,29 @@ export default function Announcement() {
                 </tbody>
               </table>
             </div>
-            <div>
-              <p className='mt-4 text-base text-[#404040]'>
-                Petualangan sesungguhnya telah dimulai! Kalian &apos;The
-                Adventure Seeker&apos; adalah ratusan dari ribuan pendaftar yang
-                berhasil. Sampai jumpa di Welcome Party Maba Cup 2022 dan kami
-                tunggu kontribusi nyata kamu!
-                <br />
-                Untuk menambah euforia petualangan kamu mempunyai misi untuk
-                menghubungi Kadiv atau Kasubdiv divisi masing-masing, jangan
-                sampai salah divisi yaa!
-                <br />
-                <Link
-                  className='cursor-pointer'
-                  href={
-                    "https://drive.google.com/file/d/1EArLceOPW75TDzlejppsGEh2KfC-6iB4/view?usp=drivesdk"
-                  }
-                >
-                  <span className='font-semibold cursor-pointer underline text-[#276CB6] mt-2'>
-                    https://mabacup-its.com/KontakKadivKasubdiv
-                  </span>
-                </Link>
-              </p>
-            </div>
+
+            <p className='mt-4 text-base text-[#404040]'>
+              Petualangan sesungguhnya telah dimulai! Kalian &apos;The Adventure
+              Seeker&apos; adalah ratusan dari ribuan pendaftar yang berhasil.
+              Sampai jumpa di Welcome Party Maba Cup 2022 dan kami tunggu
+              kontribusi nyata kamu!
+              <br />
+              Untuk menambah euforia petualangan kamu mempunyai misi untuk
+              menghubungi Kadiv atau Kasubdiv divisi masing-masing, jangan
+              sampai salah divisi yaa!
+              <br />
+              <Link
+                className='cursor-pointer'
+                href={
+                  "https://drive.google.com/file/d/19pYozDTzvOJ7RAoPs-kFfACJb5jgaDzo/view?usp=sharing"
+                }
+              >
+                <span className='font-semibold cursor-pointer underline text-[#276CB6] mt-2'>
+                  https://mabacup-its.com/KontakKadivKasubdiv
+                </span>
+              </Link>
+            </p>
+
             <button
               onClick={handleKembali}
               className='px-3 py-2 rounded-lg mt-8 bg-[#5189C4] text-white border-2 border-[#5189C4] hover:text-[#5189C4] hover:bg-white'
