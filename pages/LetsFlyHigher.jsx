@@ -129,56 +129,62 @@ export default function Announcement() {
             </h1>
             <div>
               <table className='table-auto border-spacing-4 p-4 mt-4'>
-                <tr>
-                  <td className='text-neutral-500'>NRP</td>
-                  <td className='text-neutral-500'>
-                    :{" "}
-                    <span className='text-black font-semibold'>{data.nrp}</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td className='text-neutral-500'>
-                    Asal Departemen &nbsp; &nbsp;
-                  </td>
-                  <td className='text-neutral-500'>
-                    :{" "}
-                    <span className='text-black font-semibold'>
-                      {data.departemen}
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <td className='text-neutral-500'>Divisi / Subdivisi</td>
-                  <td className='capitalize text-neutral-500'>
-                    :{" "}
-                    <span className='text-black font-semibold'>
-                      {data.divisi_diterima}
-                    </span>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td className='text-neutral-500'>NRP</td>
+                    <td className='text-neutral-500'>
+                      :{" "}
+                      <span className='text-black font-semibold'>
+                        {data.nrp}
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className='text-neutral-500'>
+                      Asal Departemen &nbsp; &nbsp;
+                    </td>
+                    <td className='text-neutral-500'>
+                      :{" "}
+                      <span className='text-black font-semibold'>
+                        {data.departemen}
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className='text-neutral-500'>Divisi / Subdivisi</td>
+                    <td className='capitalize text-neutral-500'>
+                      :{" "}
+                      <span className='text-black font-semibold'>
+                        {data.divisi_diterima}
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
-            <p className='mt-4 text-base text-[#404040]'>
-              Petualangan sesungguhnya telah dimulai! Kalian &apos;The Adventure
-              Seeker&apos; adalah ratusan dari ribuan pendaftar yang berhasil.
-              Sampai jumpa di Welcome Party Maba Cup 2022 dan kami tunggu
-              kontribusi nyata kamu!
-              <br />
-              Untuk menambah euforia petualangan kamu mempunyai misi untuk
-              menghubungi Kadiv atau Kasubdiv divisi masing-masing, jangan
-              sampai salah divisi yaa!
-              <br />
-              <Link
-                className='cursor-pointer'
-                href={
-                  "https://drive.google.com/file/d/1EArLceOPW75TDzlejppsGEh2KfC-6iB4/view?usp=drivesdk"
-                }
-              >
-                <span className='font-semibold cursor-pointer underline text-[#276CB6] mt-2'>
-                  https://mabacup-its.com/KontakKadivKasubdiv
-                </span>
-              </Link>
-            </p>
+            <div>
+              <p className='mt-4 text-base text-[#404040]'>
+                Petualangan sesungguhnya telah dimulai! Kalian &apos;The
+                Adventure Seeker&apos; adalah ratusan dari ribuan pendaftar yang
+                berhasil. Sampai jumpa di Welcome Party Maba Cup 2022 dan kami
+                tunggu kontribusi nyata kamu!
+                <br />
+                Untuk menambah euforia petualangan kamu mempunyai misi untuk
+                menghubungi Kadiv atau Kasubdiv divisi masing-masing, jangan
+                sampai salah divisi yaa!
+                <br />
+                <Link
+                  className='cursor-pointer'
+                  href={
+                    "https://drive.google.com/file/d/1EArLceOPW75TDzlejppsGEh2KfC-6iB4/view?usp=drivesdk"
+                  }
+                >
+                  <span className='font-semibold cursor-pointer underline text-[#276CB6] mt-2'>
+                    https://mabacup-its.com/KontakKadivKasubdiv
+                  </span>
+                </Link>
+              </p>
+            </div>
             <button
               onClick={handleKembali}
               className='px-3 py-2 rounded-lg mt-8 bg-[#5189C4] text-white border-2 border-[#5189C4] hover:text-[#5189C4] hover:bg-white'
@@ -205,24 +211,28 @@ export default function Announcement() {
             </h1>
             <div>
               <table className='table-auto border-spacing-4 md:p-4 p-2 mt-4'>
-                <tr>
-                  <td className='text-neutral-500'>NRP</td>
-                  <td className='text-neutral-500'>
-                    :{" "}
-                    <span className='text-black font-semibold'>{data.nrp}</span>
-                  </td>
-                </tr>
-                <tr>
-                  <td className='text-neutral-500'>
-                    Asal Departemen &nbsp; &nbsp;
-                  </td>
-                  <td className='text-neutral-500'>
-                    :{" "}
-                    <span className='text-black font-semibold'>
-                      {data.departemen}
-                    </span>
-                  </td>
-                </tr>
+                <tbody>
+                  <tr>
+                    <td className='text-neutral-500'>NRP</td>
+                    <td className='text-neutral-500'>
+                      :{" "}
+                      <span className='text-black font-semibold'>
+                        {data.nrp}
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className='text-neutral-500'>
+                      Asal Departemen &nbsp; &nbsp;
+                    </td>
+                    <td className='text-neutral-500'>
+                      :{" "}
+                      <span className='text-black font-semibold'>
+                        {data.departemen}
+                      </span>
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </div>
             <p className='mt-4 text-base text-[#404040]'>
