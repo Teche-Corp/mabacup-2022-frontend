@@ -1,14 +1,16 @@
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Toaster } from "react-hot-toast";
 import Link from "next/link";
 import Header from "../components/Header";
+import Loading from "./Loading";
 
 export default function Announcement() {
   const [value, setValue] = useState("");
   const [page, setPage] = useState(1);
   const [data, setData] = useState({});
+  const [loading, setLoading] = useState(false);
   const handleClick = () => {
     axios
       .get(`https://mabacup-its.com:8081/api/pengumuman/${value}`)
@@ -21,9 +23,7 @@ export default function Announcement() {
         } else if (res.data.data.status === "rejected") {
           setPage(3);
           setData(res?.data.data);
-          toast("Maaf anda tidak lolos", {
-            icon: "👏",
-          });
+          toast.error("Maaf anda tidak lolos");
         }
       })
       .catch((err) => {
@@ -36,9 +36,19 @@ export default function Announcement() {
     setPage(1);
   };
 
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        handleClick();
+        setLoading(false);
+      }, 5000);
+    }
+  }, [loading]);
+
+  if (loading) return <Loading />;
   return (
     <>
-    <Header title='Pengumuman | Mabacup ITS 2022' />
+      <Header title='Pengumuman | Mabacup ITS 2022' />
       <Toaster
         reverseOrder={false}
         toastOptions={{
@@ -49,11 +59,11 @@ export default function Announcement() {
           },
         }}
       />
-      <div className='min-h-screen w-screen bg-[#E1EFF2] flex flex-col'>
+      <div className='min-h-screen w-screen bg-[#E1EFF2] flex flex-col '>
         {/*  */}
-        <div className='form-staff w-full h-48 p-6 relative flex flex-row items-center gap-12 px-12'>
-          <img className='w-28' src='/mabacup.svg' alt='Mabacup' />
-          <h1 className='mt-4 font-secondary text-white font-semibold text-2xl md:text-4xl relative z-10'>
+        <div className='form-staff w-full h-48 p-6 relative flex flex-col md:flex-row items-center gap-2 md:gap-12 px-12'>
+          <img className='w-16 md:w-28' src='/mabacup.svg' alt='Mabacup' />
+          <h1 className='text-center md:text-left mt-4 font-secondary text-white font-semibold text-xl md:text-4xl relative z-10'>
             Pengumuman Lolos Staff <br />
             Mabacup 2022
           </h1>
@@ -80,8 +90,8 @@ export default function Announcement() {
           } w-10/12 lg:w-1/2 h-1/2 mx-auto my-auto bg-white rounded-xl overflow-hidden`}
         >
           <div className='bg-[#C5D8EB] h-max w-full '>
-            <div className='flex items-center h-full pl-6 py-4'>
-              <h1 className='text-[#5189C4] font-secondary font-bold text-xl'>
+            <div className='flex items-center h-full md:pl-6 py-4 p-4'>
+              <h1 className='text-[#5189C4] font-secondary font-bold text-lg md:text-xl'>
                 Selamat datang, silakan cari NRP kamu disini !
               </h1>
             </div>
@@ -96,7 +106,7 @@ export default function Announcement() {
               type='text'
             />
             <button
-              onClick={() => handleClick()}
+              onClick={() => setLoading(true)}
               className='font-secondary w-max bg-[#5189C4] border-2 border-[#5189C4] rounded-lg text-white px-6 py-3 hover:border-[#5189C4] hover:bg-white hover:text-[#5189C4]'
             >
               Lihat hasil seleksi
@@ -160,7 +170,9 @@ export default function Announcement() {
               <br />
               <Link
                 className='cursor-pointer'
-                href={"https://mabacup-its.com/KontakKadivKasubdiv"}
+                href={
+                  "https://drive.google.com/file/d/1EArLceOPW75TDzlejppsGEh2KfC-6iB4/view?usp=drivesdk"
+                }
               >
                 <span className='font-semibold cursor-pointer underline text-[#276CB6] mt-2'>
                   https://mabacup-its.com/KontakKadivKasubdiv
@@ -197,9 +209,7 @@ export default function Announcement() {
                   <td className='text-neutral-500'>NRP</td>
                   <td className='text-neutral-500'>
                     :{" "}
-                    <span className='text-black font-semibold'>
-                      {data.nrp}
-                    </span>
+                    <span className='text-black font-semibold'>{data.nrp}</span>
                   </td>
                 </tr>
                 <tr>
@@ -228,7 +238,6 @@ export default function Announcement() {
             >
               Kembali ke laman pencarian
             </button>
-            
           </div>
         </div>
       </div>
