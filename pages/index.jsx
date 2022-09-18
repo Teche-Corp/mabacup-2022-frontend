@@ -325,7 +325,7 @@ export default function Home() {
             <section className='w-full h-max lg:h-[calc(100vh-200px)] 2xl:min-h-[calc(100vh-100px)] pb-24 lg:pb-0'>
               <div className='w-11/12 sm:w-1/2 lg:w-11/12 xl:w-10/12 pt-20 flex flex-col lg:flex-row gap-8 lg:gap-4 xl:gap-8 justify-between items-center mx-auto relative z-10'>
                 <div
-                  className='event-card sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'
+                  className='event-card-active sm:w-[24.7rem] sm:h-[20.5rem] xl:h-[21.5rem] rounded-xl sm:rounded-2xl lg:rounded-3xl relative overflow-hidden'
                   data-aos='fade-up'
                   data-aos-duration='500'
                   data-aos-easing='ease-in-out'
@@ -343,7 +343,7 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <Link href={"#"}>
+                  <Link href={"/preEvent"}>
                     <a className='absolute bottom-0 font-secondary font-medium text-lg w-full h-16 bg-white text-[#2C4295]  flex justify-center items-center'>
                       Lihat Detail
                     </a>
