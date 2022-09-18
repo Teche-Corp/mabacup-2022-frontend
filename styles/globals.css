@@ -238,6 +238,16 @@ body {
   );
 }
 
+.pre-event {
+  background: linear-gradient(
+    180deg, 
+    #B5DAE2 0%, 
+    #7CACD1 17.78%, 
+    #5189C4 36.43%, 
+    #27378E 71.96%, 
+    #131E5A 96.07%);
+}
+
 .about-us-hero {
   background: linear-gradient(
     178.44deg,
