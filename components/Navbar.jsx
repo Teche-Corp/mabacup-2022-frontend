@@ -127,7 +127,7 @@ const Navbar = ({ showNav, setShowNav }) => {
                 >
                   <div className='flex flex-col w-full gap-2'>
                     <div onClick={(toggleShowEvents, notify)}>
-                      <Link href=''>
+                      <Link href={'/preEvent'}>
                         <a className='text-slate-900'>
                           <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100 '>
                             <h2>Pre Event</h2>
