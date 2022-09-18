@@ -91,6 +91,16 @@ body {
   backdrop-filter: blur(15px);
 }
 
+.event-card-active {
+  box-shadow: inset 0 0 0 1px rgb(255, 255, 255, 0.18);
+  background: linear-gradient(
+    139.65deg,
+    rgba(255, 255, 255, 0.05) 1.24%,
+    rgba(255, 255, 255, 0.3) 96.08%
+  );
+  backdrop-filter: blur(15px);
+}
+
 .event-card::before {
   content: " ";
   position: absolute;
@@ -240,12 +250,13 @@ body {
 
 .pre-event {
   background: linear-gradient(
-    180deg, 
-    #B5DAE2 0%, 
-    #7CACD1 17.78%, 
-    #5189C4 36.43%, 
-    #27378E 71.96%, 
-    #131E5A 96.07%);
+    180deg,
+    #b5dae2 0%,
+    #7cacd1 17.78%,
+    #5189c4 36.43%,
+    #27378e 71.96%,
+    #131e5a 96.07%
+  );
 }
 
 .about-us-hero {
@@ -314,5 +325,11 @@ body {
 }
 
 .close-staff {
-  background: linear-gradient(180deg, #4979B9 0%, #3E619E 31.57%, #30447E 70.39%, #273168 96.19%);
+  background: linear-gradient(
+    180deg,
+    #4979b9 0%,
+    #3e619e 31.57%,
+    #30447e 70.39%,
+    #273168 96.19%
+  );
 }
