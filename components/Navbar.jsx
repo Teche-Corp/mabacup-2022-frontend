@@ -127,7 +127,7 @@ const Navbar = ({ showNav, setShowNav }) => {
                 >
                   <div className='flex flex-col w-full gap-2'>
                     <div onClick={(toggleShowEvents, notify)}>
-                      <Link href=''>
+                      <Link href={'/preEvent'}>
                         <a className='text-slate-900'>
                           <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100 '>
                             <h2>Pre Event</h2>
@@ -165,11 +165,11 @@ const Navbar = ({ showNav, setShowNav }) => {
             </li>
           </ul>
 
-          {/* <Link href={"https://mabacup-its.com/oprec-ambassador"}>
+          <Link href={"https://mabacup-its.com/oprec-ambassador"}>
             <button className='oprec-button hidden md:block w-48 lg:w-52  h-[2.5rem] font-medium rounded-lg text-white text-sm '>
               Open Recruitment Ambassador
             </button>
-          </Link> */}
+          </Link>
 
           <ul
             className={`flex md:hidden translate-y-full ${
@@ -257,11 +257,11 @@ const Navbar = ({ showNav, setShowNav }) => {
               onClick={toggleShowNav}
               className='absolute bottom-52 translate-x-1/2 right-1/2'
             >
-              {/* <Link href={"https://mabacup-its.com/oprec-ambassador"}>
+              <Link href={"https://mabacup-its.com/oprec-ambassador"}>
                 <button className=' oprec-button flex items-center justify-center w-full h-12 mx-auto text-sm font-secondary font-medium rounded-lg px-6 py-2'>
                   Open Recruitment Ambassador
                 </button>
-              </Link> */}
+              </Link>
             </li>
             <li
               onClick={toggleShowNav}
