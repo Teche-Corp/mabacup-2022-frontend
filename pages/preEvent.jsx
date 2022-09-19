@@ -6,13 +6,13 @@ import Loading from "./Loading";
 import Layout from "../components/Layout";
 import Link from "next/link";
 
-export default function preEvent() {
+export default function PreEvent() {
   const [domLoaded, setDomLoaded] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
   useEffect(() => {
     setDomLoaded(true);
-  });
+  }, []);
   if (!domLoaded) return <Loading />;
 
   return (
