@@ -80,8 +80,8 @@ export default function PreEvent() {
             {/* Timeline */}
             <section className='w-full min-h-[36rem] md:min-h-[40rem] lg:min-h-[24rem] 2xl:min-h-[60vh]'>
               <div className='mt-20 timeline-staff w-[90%] sm:w-10/12 lg:w-11/12 h-fit mx-auto rounded-xl pb-16'>
-                <div className='px-4 sm:px-8 py-4 bg-white w-fit font-secondary text-[#6297C9] text-sm sm:text-3xl font-semibold rounded-2xl lg:translate-x-8 mx-auto lg:mx-0 -translate-y-8'>
-                  Timeline Open Recruitment Staff
+                <div className='px-4 sm:px-8 py-4 bg-white w-fit font-secondary text-[#1D5780] text-sm sm:text-3xl font-semibold rounded-2xl lg:translate-x-8 mx-auto lg:mx-0 -translate-y-8'>
+                  Timeline Pre Event
                 </div>
                 <div className='w-full sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
                   <div className='bg-white mx-auto h-96 lg:h-1  w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg'>
@@ -135,10 +135,9 @@ export default function PreEvent() {
                         alt=''
                       />
 
-                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[120%] w-48 text-center'>
+                      <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
                         Pendistribusian Karya
                         <br />
-                        (ke juri)
                       </p>
                       <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[110%] w-max'>
                         1 Oktober 2022
@@ -146,7 +145,7 @@ export default function PreEvent() {
                       <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[70%] sm:translate-x-[100%]  w-max'>
                         Pendistribusian
                         <br />
-                        Karya (ke juri)
+                        Karya
                       </p>
                     </div>
                     <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
