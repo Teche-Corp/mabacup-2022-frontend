@@ -333,3 +333,110 @@ body {
     #273168 96.19%
   );
 }
+
+.hero-main-event {
+  background: linear-gradient(
+    180deg,
+    #4979B9 0%,
+    #3E619E 31.57%,
+    #30447E 70.39%,
+    #273168 96.19%);
+}
+
+.text-main-event {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 138px;
+  /* identical to box height */
+
+  letter-spacing: 0.08em;
+  background: linear-gradient(
+    180deg,
+    #FFB50F 0%,
+    #FFE9B8 114.86%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-shadow: 0px 0px 4px #FBEABF; */
+}
+
+.text-main-event-2 {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 39px;
+  /* identical to box height */
+  background: linear-gradient(180deg, #FFB50F 0%, #FFE9B8 114.86%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-shadow: 0px 0px 4px #FBEABF; */
+}
+
+.main-event {
+  background: linear-gradient(180deg, #4979B9 0%, #3E619E 31.57%, #30447E 70.39%, #273168 96.19%);
+}
+
+.box-main-event {
+  background: linear-gradient(
+    93.43deg,
+    rgba(255, 255, 255, 0.05) 2.55%,
+    rgba(255, 255, 255, 0.3) 94.75%);
+  border-radius: 24px;
+}
+
+.p-main-event {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 38px;
+/* or 173% */
+  text-align: center;
+  letter-spacing: -0.017em;
+  color: white
+}
+
+.text-date {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 38px;
+  /* or 173% */
+  text-align: center;
+  letter-spacing: -0.017em;
+  color: #FFFFFF;
+}
+
+.text-timeline {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  /* identical to box height, or 170% */
+  text-align: center;
+  letter-spacing: -0.0006em;
+  color: #FFFFFF;
+}
+
+.text-main-event-3 {
+  font-style: normal;
+font-weight: 600;
+font-size: 54px;
+line-height: 70px;
+/* identical to box height, or 130% */
+
+letter-spacing: -0.022em;
+
+/* gold */
+
+background: linear-gradient(180deg, #FFB50F 0%, #FFE9B8 114.86%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+
+.box-lomba {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(93.43deg, rgba(255, 255, 255, 0.05) 2.55%, rgba(255, 255, 255, 0.3) 94.75%);
+  border-radius: 24px;
+}
