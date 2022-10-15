@@ -66,7 +66,7 @@ export default function MainEvent() {
                 className="hidden lg:block absolute -translate-x-1/3 rotate w-60"
               />
               <h1 className="text-center font-secondary md:text-[42px] font-semibold text-white md:pt-[140px] pt-[50px] mx-auto w-11/12">
-                In the spirit of seeking an advantageous journey, we challenge
+                In the spirit of seeking an advantageous journey, <br /> we challenge
                 you to take the call!
               </h1>
               <p className="text-center pt-[49px] md:p-main-event text-white mx-auto w-2/3 font-secondary">
@@ -250,7 +250,7 @@ export default function MainEvent() {
 
               <div className="w-4/5 mx-auto">
                 <div className="flex justify-evenly flex-wrap gap-32 py-24">
-                  <Link href={"#"}>
+                  <Link href={"/BasketCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/basket.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
@@ -258,7 +258,7 @@ export default function MainEvent() {
                       </p>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"/BadmintonCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/badminton.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
@@ -266,7 +266,7 @@ export default function MainEvent() {
                       </p>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"/MLCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/game.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
@@ -274,7 +274,7 @@ export default function MainEvent() {
                       </p>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"/EssayPosterCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/essay.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
@@ -282,7 +282,7 @@ export default function MainEvent() {
                       </p>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"/BandCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/band.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
