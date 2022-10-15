@@ -136,8 +136,8 @@ const Navbar = ({ showNav, setShowNav }) => {
                       </Link>
                     </div>
 
-                    <div onClick={(toggleShowEvents, notify)}>
-                      <Link href='#'>
+                    <div>
+                      <Link href='/MainEvent'>
                         <a className='text-slate-900'>
                           <div className='flex items-start justify-center gap-4 rounded-sm hover:bg-slate-100 '>
                             <h2>Main Event</h2>
