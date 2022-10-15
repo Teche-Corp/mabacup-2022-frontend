@@ -89,7 +89,7 @@ export default function MainEvent() {
                 </p>
               </div>
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center ">
               <div className="box-main-event w-11/12 lg:w-10/12 md:h-[350px] lg:h-[320px] mt-[100px] md:mt-[242px]">
                 <div className="md:absolute -translate-y-1/2 bg-white rounded-lg md:rounded-3xl text-[#5189C4] px-2 md:px-5 md:ml-10 text-center font-secondary text-[20px] md:text-[32px] py-[10px] lg:py-[20px] font-semibold">
                   Timeline Main Event
@@ -142,89 +142,48 @@ export default function MainEvent() {
                   </div>
                 </div>
                 {/* md timeline */}
-                <div className="md:hidden py-10 flex flex-col gap-y-20 items-center">
-                  <div className="w-1 bg-white h-[350px] mx-auto absolute z-[0] py-5"></div>
-                  <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
-                    <p className="text-white font-secondary text-center w-11/12">
-                      15 Oktober 2022
-                    </p>
-                    <img
-                      src="/page-staff/mutiara.png"
-                      alt=""
-                      className="w-12 mx-auto"
-                    />
-                    <p className="text-white font-secondary text-center w-11/12">
-                      Open Registration
-                    </p>
-                  </div>
-                  <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
-                    <p className="text-white font-secondary text-center w-11/12">
-                      22 Oktober 2022 - 5 November 2022
-                    </p>
-                    <img
-                      src="/page-staff/mutiara.png"
-                      alt=""
-                      className="w-12 mx-auto"
-                    />
-                    <p className="text-white font-secondary text-center w-11/12">
-                      Submit Karya <br /> (Essay & Poster dan Stand Up)
-                    </p>
-                  </div>
-                  <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
-                    <p className="text-white font-secondary text-center w-11/12">
-                      22 Oktober 2022 - 5 November 2022
-                    </p>
-                    <img
-                      src="/page-staff/mutiara.png"
-                      alt=""
-                      className="w-12 mx-auto"
-                    />
-                    <p className="text-white font-secondary text-center w-11/12">
-                      Close Registration
-                    </p>
-                  </div>
-                </div>
-                {/* md timeline */}
-                <div className="md:hidden py-10 flex flex-col gap-y-20 items-center">
-                  <div className="w-1 bg-white h-[350px] mx-auto absolute z-[0] py-5"></div>
-                  <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
-                    <p className="text-white font-secondary text-center w-11/12">
-                      15 Oktober 2022
-                    </p>
-                    <img
-                      src="/page-staff/mutiara.png"
-                      alt=""
-                      className="w-12 mx-auto"
-                    />
-                    <p className="text-white font-secondary text-center w-11/12">
-                      Open Registration
-                    </p>
-                  </div>
-                  <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
-                    <p className="text-white font-secondary text-center w-11/12">
-                      22 Oktober 2022 - 5 November 2022
-                    </p>
-                    <img
-                      src="/page-staff/mutiara.png"
-                      alt=""
-                      className="w-12 mx-auto"
-                    />
-                    <p className="text-white font-secondary text-center w-11/12">
-                      Submit Karya <br /> (Essay & Poster dan Stand Up)
-                    </p>
-                  </div>
-                  <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
-                    <p className="text-white font-secondary text-center w-11/12">
-                      22 Oktober 2022 - 5 November 2022
-                    </p>
-                    <img
-                      src="/page-staff/mutiara.png"
-                      alt=""
-                      className="w-12 mx-auto"
-                    />
-                    <p className="text-white font-secondary text-center w-11/12">
-                      Close Registration
-                    </p>
+                <div className="md:hidden py-10 flex flex-col h-[350px] items-center">
+                  <div className="w-1 bg-white h-[200px] absolute z-[0] py-5"></div>
+                  <div className="flex flex-col items-center justify-between h-[220px]">
+                    <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
+                      <p className="text-white font-secondary text-center w-11/12">
+                        15 Oktober 2022
+                      </p>
+                      <img
+                        src="/page-staff/mutiara.png"
+                        alt=""
+                        className="w-12 mx-auto"
+                      />
+                      <p className="text-white font-secondary text-center w-11/12">
+                        Open Registration
+                      </p>
+                    </div>
+                    <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
+                      <p className="text-white font-secondary text-center w-11/12">
+                        22 Oktober 2022 - 5 November 2022
+                      </p>
+                      <img
+                        src="/page-staff/mutiara.png"
+                        alt=""
+                        className="w-12 mx-auto"
+                      />
+                      <p className="text-white font-secondary text-center w-11/12">
+                        Submit Karya <br /> (Essay & Poster dan Stand Up)
+                      </p>
+                    </div>
+                    <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
+                      <p className="text-white font-secondary text-center w-11/12">
+                        22 Oktober 2022 - 5 November 2022
+                      </p>
+                      <img
+                        src="/page-staff/mutiara.png"
+                        alt=""
+                        className="w-12 mx-auto"
+                      />
+                      <p className="text-white font-secondary text-center w-11/12">
+                        Close Registration
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -250,7 +209,7 @@ export default function MainEvent() {
 
               <div className="w-4/5 mx-auto">
                 <div className="flex justify-evenly flex-wrap gap-32 py-24">
-                  <Link href={"#"}>
+                  <Link href={"/BasketCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/basket.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
@@ -258,7 +217,7 @@ export default function MainEvent() {
                       </p>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"/BadmintonCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/badminton.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
@@ -266,7 +225,7 @@ export default function MainEvent() {
                       </p>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"/MLCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/game.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
@@ -282,7 +241,7 @@ export default function MainEvent() {
                       </p>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"/BandCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/band.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
