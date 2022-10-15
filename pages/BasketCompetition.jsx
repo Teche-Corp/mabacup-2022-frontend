@@ -76,9 +76,11 @@ export default function BasketCompetition() {
                       Form Pendaftaran
                     </button>
                   </Link>
-                  <button className='text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium'>
-                    Unduh Guidebook
-                  </button>
+                  <Link href={"https://intip.in/GuideBookBasketMabaCup2022"}>
+                    <button className='text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium'>
+                      Unduh Guidebook
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
