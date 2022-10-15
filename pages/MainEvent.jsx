@@ -274,7 +274,7 @@ export default function MainEvent() {
                       </p>
                     </div>
                   </Link>
-                  <Link href={"#"}>
+                  <Link href={"/PosterCompetition"}>
                     <div className="box-lomba flex flex-col justify-center items-center cursor-pointer">
                       <img src="/main-event/essay.png" alt="" />
                       <p className="text-3xl font-secondary text-white pt-5">
