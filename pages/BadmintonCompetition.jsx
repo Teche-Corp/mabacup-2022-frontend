@@ -1,7 +1,8 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
+import Link from "next/link";
 
-export default function PageLomba() {
+export default function BadmintonCompetition() {
   const [showNav, setShowNav] = useState(false);
   return (
     <Layout showNav={showNav} setShowNav={setShowNav}>
@@ -9,7 +10,7 @@ export default function PageLomba() {
         <section className='w-full h-screen sm:h-[24rem] bg-red-300'>
           <div className='page-staff w-full h-full p-16 relative flex flex-col items-center md:items-start overflow-hidden'>
             <h1 className='mt-16 font-secondary text-white font-semibold text-2xl md:text-4xl lg:text-5xl text-center sm:text-left relative z-10'>
-              Basket Competition
+              Badminton Competition
             </h1>
             <h1 className='lg:mt-4 xl:mt-8 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center sm:text-left relative z-10'>
               Maba Cup 2022
@@ -37,7 +38,7 @@ export default function PageLomba() {
           </div>
         </section>
 
-        <section className='w-full min-h-[30rem] md:min-h-[37rem] lg:min-h-[26rem] xl:min-h-[28rem] 2xl:min-h-[75vh] relative'>
+        <section className='w-full min-h-[30rem] md:min-h-[37rem] lg:min-h-[24rem] xl:min-h-[30rem] 2xl:min-h-[75vh] relative'>
           <img
             className='absolute right-0 -top-16 w-10 md:w-20 lg:w-24 xl:w-28 2xl:w-36'
             src='/page-staff/terumbu-1.png'
@@ -66,9 +67,15 @@ export default function PageLomba() {
                   <p className='text-center md:text-left text-white mt-6 font-secondary font-medium text-sm md:text-base'>
                     Pendaftaran ditutup pada: 27 November 2022 23:59 PM{" "}
                   </p>
-                  <button className='text-white font-secondary mt-8 bg-[#5189C4] w-2/3 h-12 rounded-md font-medium'>
-                    Form Pendaftaran
-                  </button>
+                  <Link
+                    href={
+                      "https://docs.google.com/forms/d/e/1FAIpQLSe3jILz5Vct5gccLYcOBXNcAQHQ_oIi-pe429CGjlzhpWhuTw/viewform?usp=pp_url"
+                    }
+                  >
+                    <button className='text-white font-secondary mt-8 bg-[#5189C4] w-2/3 h-12 rounded-md font-medium'>
+                      Form Pendaftaran
+                    </button>
+                  </Link>
                   <button className='text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium'>
                     Unduh Guidebook
                   </button>
@@ -82,15 +89,16 @@ export default function PageLomba() {
             alt=''
           />
         </section>
-        <section className='w-full min-h-[22rem] md:min-h-[22rem] lg:min-h-[24rem] 2xl:min-h-[58vh] relative'>
+        <section className='w-full min-h-[22rem] md:min-h-[20rem] lg:min-h-[24rem] xl:min-h-[28rem] 2xl:min-h-[58vh] relative'>
           <div className='mt-16 timeline-staff w-[90%] sm:w-10/12 h-fit mx-auto rounded-xl p-6 md:p-8 lg:p-12 xl:p-16'>
             <p className='text-white font-secondary text-sm md:text-base lg:text-xl lg:leading-7 xl:leading-9 text-center'>
-              TEAM WORK IS KEY. With a team, you can strive further, you can
-              make the best offense and defense together. You can be the spear
-              and the shield Together! Bertanding bersama, memasuki area
-              pertandingan, dan diakhiri dengan menang bersama! Mari bergabung
-              kedalam salah satu cabang perlombaan MABACUP 2022 yaitu BASKET.
-              Raih kemenangan dan tunjukkan kemampuan kalian bersama-sama!
+              Walaupun diterjang kerasnya ombak, seorang pejuang tentunya tidak
+              boleh gentar melawan ombak tersebut. Begitu juga dengan semangat
+              kita yang tidak akan pernah padam! Salah satu olahraga yang
+              menjadi ujung tombak Indonesia, apakah kamu siap untuk berjuang di
+              perlombaan BADMINTON ini! Tak perlu gentar, tak perlu ragu!
+              Jadikan Badminton sebagai ajang bagi kamu untuk menunjukan minat
+              bakat yang kamu miliki!
             </p>
           </div>
           <img
@@ -99,7 +107,7 @@ export default function PageLomba() {
             alt=''
           />
         </section>
-        <section className='w-full min-h-[36rem] md:min-h-[40rem] lg:min-h-[24rem] 2xl:min-h-[60vh] relative'>
+        <section className='w-full min-h-[30rem] md:min-h-[38rem] lg:min-h-[26rem] xl:min-h-[28rem] 2xl:min-h-[60vh] relative'>
           <img
             className='absolute w-10 md:w-16 lg:w-16 xl:w-20 2xl:w-24 left-0 top-4 md:top-auto md:top-0'
             src='/main-event/seaweed2.png'
@@ -109,51 +117,11 @@ export default function PageLomba() {
             <div className='px-4 sm:px-8 py-4 bg-white w-fit font-secondary text-[#6297C9] text-sm sm:text-3xl font-semibold rounded-2xl lg:translate-x-8 mx-auto lg:mx-0 -translate-y-8'>
               Timeline Kompetisi
             </div>
-            <div className='w-full sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
-              <div className='bg-white mx-auto h-96 lg:h-1  w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg'>
+            <div className='w-3/4 mx-auto sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
+              <div className='bg-white mx-auto h-72 lg:h-1 w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg'>
                 <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
                   <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
-                    4-5 November 2022
-                  </p>
-                  <img
-                    className='relative w-8 md:w-16 lg:w-16 xl:w-20'
-                    src='/page-staff/mutiara.png'
-                    alt=''
-                  />
-
-                  <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
-                    Babak Penyisihan
-                  </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[90%] w-max'>
-                    4-5 November 2022
-                  </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
-                    Babak Penyisihan
-                  </p>
-                </div>
-                <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
-                  <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
-                    11-12 November 2022
-                  </p>
-                  <img
-                    className='relative w-8 md:w-16 lg:w-16 xl:w-20'
-                    src='/page-staff/mutiara.png'
-                    alt=''
-                  />
-
-                  <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
-                    Babak 32 Besar
-                  </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
-                    11-12 November 2022
-                  </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
-                    Babak 32 Besar
-                  </p>
-                </div>
-                <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
-                  <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
-                    13-18 November 2022
+                    6 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -164,16 +132,16 @@ export default function PageLomba() {
                   <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
                     Babak 16 Besar
                   </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
-                    13-18 November 2022
+                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[90%] w-max'>
+                    6 November 2022
                   </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[80%] sm:translate-x-[100%] w-max'>
+                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
                     Babak 16 Besar
                   </p>
                 </div>
                 <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
-                  <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
-                    19 November 2022
+                  <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
+                    12 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -184,16 +152,16 @@ export default function PageLomba() {
                   <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
                     Semifinal
                   </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[90%] w-max'>
-                    19 November 2022
+                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
+                    12 November 2022
                   </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[110%] sm:translate-x-[140%] w-max'>
+                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[100%] sm:translate-x-[140%] w-max'>
                     Semifinal
                   </p>
                 </div>
-                <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:translate-x-1 w-16'>
-                  <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
-                    20 November 2022
+                <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-0 lg:translate-y-0 lg:translate-x-0 w-16'>
+                  <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
+                    13 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -204,10 +172,10 @@ export default function PageLomba() {
                   <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
                     Final
                   </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[90%] w-max'>
-                    20 November 2022
+                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
+                    13 November 2022
                   </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium absolute text-white translate-x-[180%] sm:translate-x-[220%] w-max'>
+                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[150%] sm:translate-x-[230%] w-max'>
                     Final
                   </p>
                 </div>
@@ -216,7 +184,7 @@ export default function PageLomba() {
           </div>
         </section>
 
-        <section className='w-full xl:h-[32rem] 2xl:min-h-[16vh] pt-24 relative '>
+        <section className='w-full md:h-[44rem] lg:h-[38rem] xl:h-[36rem] 2xl:min-h-[16vh] pt-24 relative '>
           <img
             className='absolute w-10 md:w-16 lg:w-16 xl:w-20 2xl:w-24 bottom-16 left-0'
             src='/page-staff/terumbu-3.png'
@@ -237,8 +205,12 @@ export default function PageLomba() {
                   sama.
                 </li>
                 <li>
-                  Tiap departemen wajib mengirimkan 1 tim dengan jumlah pemain
-                  minimal terdiri dari 12 pemain dan maksimal 15 pemain.
+                  Tiap departemen wajib mengirimkan perwakilan untuk
+                  masing-masing partai.
+                </li>
+                <li>
+                  Jumlah perwakilan yang dikirimkan dalam satu departemen adalah
+                  minimal 6 orang dan maksimal 10.
                 </li>
                 <li>
                   Apabila ada peserta yang terbukti melakukan pelanggaran
@@ -268,13 +240,13 @@ export default function PageLomba() {
               </p>
               <div className='flex items-center gap-4 mt-8 h-fit'>
                 <img src='/line.svg' alt='' />
-                <p className=''>081384812052/maul112309</p>
-                <p>(Maul)</p>
+                <p>0895620045302/rychmns</p>
+                <p>(Rochman)</p>
               </div>
               <div className='flex items-center gap-4 mt-4 h-fit'>
                 <img src='/line.svg' alt='' />
-                <p className=''>081371655366/reeihan</p>
-                <p>(Reihan)</p>
+                <p>082231072070/elfredadea</p>
+                <p>(Dea)</p>
               </div>
             </div>
           </div>
