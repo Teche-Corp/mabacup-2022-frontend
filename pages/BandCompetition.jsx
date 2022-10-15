@@ -10,7 +10,7 @@ export default function BadmintonCompetition() {
         <section className='w-full h-screen sm:h-[24rem] bg-red-300'>
           <div className='page-staff w-full h-full p-16 relative flex flex-col items-center md:items-start overflow-hidden'>
             <h1 className='mt-16 font-secondary text-white font-semibold text-2xl md:text-4xl lg:text-5xl text-center sm:text-left relative z-10'>
-              Mobile Legend
+              Mobile Legend Competition
             </h1>
             <h1 className='lg:mt-4 xl:mt-8 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center sm:text-left relative z-10'>
               Maba Cup 2022
@@ -69,7 +69,7 @@ export default function BadmintonCompetition() {
                   </p>
                   <Link
                     href={
-                      "https://docs.google.com/forms/d/e/1FAIpQLSe3jILz5Vct5gccLYcOBXNcAQHQ_oIi-pe429CGjlzhpWhuTw/viewform?usp=pp_url"
+                      "https://docs.google.com/forms/d/e/1FAIpQLSfUu9MQdyfJJcrkKyZtru-8yWtJjrhka6HpVK38Ga7Y4K0SnA/viewform"
                     }
                   >
                     <button className='text-white font-secondary mt-8 bg-[#5189C4] w-2/3 h-12 rounded-md font-medium'>
@@ -94,13 +94,12 @@ export default function BadmintonCompetition() {
         <section className='w-full min-h-[22rem] md:min-h-[20rem] lg:min-h-[24rem] xl:min-h-[28rem] 2xl:min-h-[58vh] relative'>
           <div className='mt-16 timeline-staff w-[90%] sm:w-10/12 h-fit mx-auto rounded-xl p-6 md:p-8 lg:p-12 xl:p-16'>
             <p className='text-white font-secondary text-sm md:text-base lg:text-xl lg:leading-7 xl:leading-9 text-center'>
-              Walaupun diterjang kerasnya ombak, seorang pejuang tentunya tidak
-              boleh gentar melawan ombak tersebut. Begitu juga dengan semangat
-              kita yang tidak akan pernah padam! Salah satu olahraga yang
-              menjadi ujung tombak Indonesia, apakah kamu siap untuk berjuang di
-              perlombaan BADMINTON ini! Tak perlu gentar, tak perlu ragu!
-              Jadikan Badminton sebagai ajang bagi kamu untuk menunjukan minat
-              bakat yang kamu miliki!
+              Suka nyanyi atau main alat musik tapi masih gak pede “show off”?
+              Jangan takut! MABA CUP 2022 hadir dengan lomba band untuk kamu
+              yang ingin menunjukkan skill bermusik! Takut gak ada temennya?
+              Eitss, tenang aja! Karena di lomba band ini kalian akan
+              mendapatkan teman-teman sefrekuensi untuk bergabung di band
+              kalian! So, what are you waiting for? Let’s get rock and roll!
             </p>
           </div>
           <img
@@ -229,6 +228,11 @@ export default function BadmintonCompetition() {
                 <img src='/line.svg' alt='' />
                 <p>081241561742/chalvinrz</p>
                 <p>(Chalvin)</p>
+              </div>
+              <div className='flex items-center gap-4 mt-4 h-fit'>
+                <img src='/line.svg' alt='' />
+                <p>085215073382/8055kei</p>
+                <p>(Keitaro)</p>
               </div>
             </div>
           </div>

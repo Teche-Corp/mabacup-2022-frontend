@@ -10,7 +10,7 @@ export default function BadmintonCompetition() {
         <section className='w-full h-screen sm:h-[24rem] bg-red-300'>
           <div className='page-staff w-full h-full p-16 relative flex flex-col items-center md:items-start overflow-hidden'>
             <h1 className='mt-16 font-secondary text-white font-semibold text-2xl md:text-4xl lg:text-5xl text-center sm:text-left relative z-10'>
-              Badminton Competition
+              Mobile Legend Competition
             </h1>
             <h1 className='lg:mt-4 xl:mt-8 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center sm:text-left relative z-10'>
               Maba Cup 2022
