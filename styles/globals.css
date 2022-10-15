@@ -337,10 +337,11 @@ body {
 .hero-main-event {
   background: linear-gradient(
     180deg,
-    #4979B9 0%,
-    #3E619E 31.57%,
-    #30447E 70.39%,
-    #273168 96.19%);
+    #4979b9 0%,
+    #3e619e 31.57%,
+    #30447e 70.39%,
+    #273168 96.19%
+  );
 }
 
 .text-main-event {
@@ -350,10 +351,7 @@ body {
   /* identical to box height */
 
   letter-spacing: 0.08em;
-  background: linear-gradient(
-    180deg,
-    #FFB50F 0%,
-    #FFE9B8 114.86%);
+  background: linear-gradient(180deg, #ffb50f 0%, #ffe9b8 114.86%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -365,7 +363,7 @@ body {
   font-weight: 400;
   line-height: 39px;
   /* identical to box height */
-  background: linear-gradient(180deg, #FFB50F 0%, #FFE9B8 114.86%);
+  background: linear-gradient(180deg, #ffb50f 0%, #ffe9b8 114.86%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -373,14 +371,21 @@ body {
 }
 
 .main-event {
-  background: linear-gradient(180deg, #4979B9 0%, #3E619E 31.57%, #30447E 70.39%, #273168 96.19%);
+  background: linear-gradient(
+    180deg,
+    #4979b9 0%,
+    #3e619e 31.57%,
+    #30447e 70.39%,
+    #273168 96.19%
+  );
 }
 
 .box-main-event {
   background: linear-gradient(
     93.43deg,
     rgba(255, 255, 255, 0.05) 2.55%,
-    rgba(255, 255, 255, 0.3) 94.75%);
+    rgba(255, 255, 255, 0.3) 94.75%
+  );
   border-radius: 24px;
 }
 
@@ -389,10 +394,10 @@ body {
   font-weight: 400;
   font-size: 22px;
   line-height: 38px;
-/* or 173% */
+  /* or 173% */
   text-align: center;
   letter-spacing: -0.017em;
-  color: white
+  color: white;
 }
 
 .text-date {
@@ -403,7 +408,7 @@ body {
   /* or 173% */
   text-align: center;
   letter-spacing: -0.017em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .text-timeline {
@@ -414,29 +419,37 @@ body {
   /* identical to box height, or 170% */
   text-align: center;
   letter-spacing: -0.0006em;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .text-main-event-3 {
   font-style: normal;
-font-weight: 600;
-font-size: 54px;
-line-height: 70px;
-/* identical to box height, or 130% */
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 70px;
+  /* identical to box height, or 130% */
 
-letter-spacing: -0.022em;
+  letter-spacing: -0.022em;
 
-/* gold */
+  /* gold */
 
-background: linear-gradient(180deg, #FFB50F 0%, #FFE9B8 114.86%);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-background-clip: text;
+  background: linear-gradient(180deg, #ffb50f 0%, #ffe9b8 114.86%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .box-lomba {
   width: 300px;
   height: 300px;
-  background: linear-gradient(93.43deg, rgba(255, 255, 255, 0.05) 2.55%, rgba(255, 255, 255, 0.3) 94.75%);
+  background: linear-gradient(
+    93.43deg,
+    rgba(255, 255, 255, 0.05) 2.55%,
+    rgba(255, 255, 255, 0.3) 94.75%
+  );
   border-radius: 24px;
+}
+
+.flip-horizontal {
+  --transform-scale-x: -1;
 }
