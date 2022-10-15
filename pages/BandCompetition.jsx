@@ -10,7 +10,7 @@ export default function BadmintonCompetition() {
         <section className='w-full h-screen sm:h-[24rem] bg-red-300'>
           <div className='page-staff w-full h-full p-16 relative flex flex-col items-center md:items-start overflow-hidden'>
             <h1 className='mt-16 font-secondary text-white font-semibold text-2xl md:text-4xl lg:text-5xl text-center sm:text-left relative z-10'>
-              Band Competition
+              Mobile Legend
             </h1>
             <h1 className='lg:mt-4 xl:mt-8 text-white text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-center sm:text-left relative z-10'>
               Maba Cup 2022
@@ -76,9 +76,11 @@ export default function BadmintonCompetition() {
                       Form Pendaftaran
                     </button>
                   </Link>
-                  <button className='text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium'>
-                    Unduh Guidebook
-                  </button>
+                  <Link href={"https://intip.in/GuideBookBandMabacup2022"}>
+                    <button className='text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium'>
+                      Unduh Guidebook
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -107,7 +109,7 @@ export default function BadmintonCompetition() {
             alt=''
           />
         </section>
-        <section className='w-full min-h-[36rem] md:min-h-[38rem] lg:min-h-[26rem] xl:min-h-[28rem] 2xl:min-h-[60vh] relative'>
+        <section className='w-full min-h-[30rem] md:min-h-[38rem] lg:min-h-[26rem] xl:min-h-[28rem] 2xl:min-h-[60vh] relative'>
           <img
             className='absolute w-10 md:w-16 lg:w-16 xl:w-20 2xl:w-24 left-0 top-4 md:top-auto md:top-0'
             src='/main-event/seaweed2.png'
@@ -117,11 +119,11 @@ export default function BadmintonCompetition() {
             <div className='px-4 sm:px-8 py-4 bg-white w-fit font-secondary text-[#6297C9] text-sm sm:text-3xl font-semibold rounded-2xl lg:translate-x-8 mx-auto lg:mx-0 -translate-y-8'>
               Timeline Kompetisi
             </div>
-            <div className='w-3/4 mx-auto sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
-              <div className='bg-white mx-auto h-96 lg:h-1  w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg'>
+            <div className='w-1/2 mx-auto h-72 sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
+              <div className='bg-white mx-auto h-48 lg:h-1 w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg'>
                 <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
                   <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
-                    6 November 2022
+                    5 - 6 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -130,38 +132,18 @@ export default function BadmintonCompetition() {
                   />
 
                   <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
-                    Babak 16 Besar
+                    Penyisihan
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[90%] w-max'>
-                    6 November 2022
+                    5 - 6 November 2022
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
-                    Babak 16 Besar
-                  </p>
-                </div>
-                <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
-                  <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
-                    12 November 2022
-                  </p>
-                  <img
-                    className='relative w-8 md:w-16 lg:w-16 xl:w-20'
-                    src='/page-staff/mutiara.png'
-                    alt=''
-                  />
-
-                  <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
-                    Semifinal
-                  </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
-                    12 November 2022
-                  </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[80%] sm:translate-x-[140%] w-max'>
-                    Semifinal
+                    Penyisihan
                   </p>
                 </div>
                 <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-0 lg:translate-y-0 lg:translate-x-0 w-16'>
                   <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
-                    13 November 2022
+                    20 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -173,9 +155,9 @@ export default function BadmintonCompetition() {
                     Final
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
-                    13 November 2022
+                    20 November 2022
                   </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[80%] sm:translate-x-[230%] w-max'>
+                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[130%] sm:translate-x-[230%] w-max'>
                     Final
                   </p>
                 </div>
@@ -199,18 +181,24 @@ export default function BadmintonCompetition() {
                 <li>Peserta adalah mahasiswa baru ITS 2022.</li>
                 <li>Jumlah personel 4 - 8 orang tiap tim.</li>
                 <li>
-                  Tiap departemen wajib mengirimkan perwakilan untuk
-                  masing-masing partai.
+                  Tiap departemen wajib mengirimkan 2 orang sebagai perwakilan
+                  tim.
                 </li>
                 <li>
-                  Jumlah perwakilan yang dikirimkan dalam satu departemen adalah
-                  minimal 6 orang dan maksimal 10.
+                  Tim diperbolehkan dari departemen yang sama atau departemen
+                  berbeda.
                 </li>
                 <li>
-                  Apabila ada peserta yang terbukti melakukan pelanggaran
-                  terhadap segala peraturan yang telah ditetapkan, maka peserta
-                  akan didiskualifikasi dan dibatalkan status kemenangannya
-                  apabila telah ditetapkan sebagai pemenang.
+                  Tim yang mendaftar wajib mengisi link google form dan
+                  melengkapi persyaratan yang telah disediakan.
+                </li>
+                <li>
+                  Peserta tidak diperbolehkan menggunakan nama tim yang
+                  mengandung unsur SARA dan pornografi.
+                </li>
+                <li>
+                  Setiap peserta wajib vaksin minimal dosis ke-2 dan mematuhi
+                  protokol kesehatan.
                 </li>
               </ol>
             </div>
@@ -234,13 +222,13 @@ export default function BadmintonCompetition() {
               </p>
               <div className='flex items-center gap-4 mt-8 h-fit'>
                 <img src='/line.svg' alt='' />
-                <p>0895620045302/rychmns</p>
-                <p>(Rochman)</p>
+                <p>081252223553/aisyadptr_</p>
+                <p>(Aisya)</p>
               </div>
               <div className='flex items-center gap-4 mt-4 h-fit'>
                 <img src='/line.svg' alt='' />
-                <p>082231072070/elfredadea</p>
-                <p>(Dea)</p>
+                <p>081241561742/chalvinrz</p>
+                <p>(Chalvin)</p>
               </div>
             </div>
           </div>
