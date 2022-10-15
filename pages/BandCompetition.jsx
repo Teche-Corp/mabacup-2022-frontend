@@ -117,11 +117,11 @@ export default function BadmintonCompetition() {
             <div className='px-4 sm:px-8 py-4 bg-white w-fit font-secondary text-[#6297C9] text-sm sm:text-3xl font-semibold rounded-2xl lg:translate-x-8 mx-auto lg:mx-0 -translate-y-8'>
               Timeline Kompetisi
             </div>
-            <div className='w-3/4 mx-auto sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
+            <div className='w-1/2 mx-auto sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]'>
               <div className='bg-white mx-auto h-96 lg:h-1  w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg'>
                 <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
                   <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
-                    6 November 2022
+                    5 - 6 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -130,38 +130,18 @@ export default function BadmintonCompetition() {
                   />
 
                   <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
-                    Babak 16 Besar
+                    Penyisihan
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[90%] w-max'>
-                    6 November 2022
+                    5 - 6 November 2022
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]  w-max'>
-                    Babak 16 Besar
-                  </p>
-                </div>
-                <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
-                  <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
-                    12 November 2022
-                  </p>
-                  <img
-                    className='relative w-8 md:w-16 lg:w-16 xl:w-20'
-                    src='/page-staff/mutiara.png'
-                    alt=''
-                  />
-
-                  <p className='hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center'>
-                    Semifinal
-                  </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
-                    12 November 2022
-                  </p>
-                  <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[80%] sm:translate-x-[140%] w-max'>
-                    Semifinal
+                    Penyisihan
                   </p>
                 </div>
                 <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-0 lg:translate-y-0 lg:translate-x-0 w-16'>
                   <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
-                    13 November 2022
+                    20 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -173,7 +153,7 @@ export default function BadmintonCompetition() {
                     Final
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
-                    13 November 2022
+                    20 November 2022
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[80%] sm:translate-x-[230%] w-max'>
                     Final
