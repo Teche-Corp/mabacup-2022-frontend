@@ -127,7 +127,7 @@ export default function MainEvent() {
                       </div>
                       <div className="grid grid-rows-3 gap-y-1 translate-x-1/2">
                         <p className="text-date text-center my-auto">
-                          27 November 2022
+                          27 Oktober 2022
                         </p>
                         <img
                           src="/page-staff/mutiara.png"
@@ -173,12 +173,12 @@ export default function MainEvent() {
                     </div>
                     <div className="flex justify-center items-center gap-x-2 relative z-[10] -translate-y-2 w-5/6">
                       <p className="text-white font-secondary text-center w-11/12">
-                        22 Oktober 2022 - 5 November 2022
+                        27 Oktober 2022
                       </p>
                       <img
                         src="/page-staff/mutiara.png"
                         alt=""
-                        className="w-12 mx-auto"
+                        className="w-12 mx-auto translate-y-2"
                       />
                       <p className="text-white font-secondary text-center w-11/12">
                         Close Registration
