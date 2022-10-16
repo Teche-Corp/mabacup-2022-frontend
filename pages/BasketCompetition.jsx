@@ -1,10 +1,14 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
 import Link from "next/link";
+import Header from "../components/Header";
 
 export default function BasketCompetition() {
   const [showNav, setShowNav] = useState(false);
   return (
+    <>
+    <><Header title="Basket Competition | Mabacup ITS 2022" /></>
+
     <Layout showNav={showNav} setShowNav={setShowNav}>
       <main className='page-oprec-staff overflow-hidden'>
         <section className='w-full h-screen sm:h-[24rem] bg-red-300'>
@@ -76,7 +80,7 @@ export default function BasketCompetition() {
                       Form Pendaftaran
                     </button>
                   </Link>
-                  <Link href={"https://intip.in/GuideBookBasketMabaCup2022"}>
+                  <Link href={"https://drive.google.com/file/d/1p2N7St7Nsq7FSAwLsM_2kHhZexuEhAYb/view?usp=sharing"}>
                     <button className='text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium'>
                       Unduh Guidebook
                     </button>
@@ -294,5 +298,6 @@ export default function BasketCompetition() {
         </section>
       </main>
     </Layout>
+    </>
   );
 }

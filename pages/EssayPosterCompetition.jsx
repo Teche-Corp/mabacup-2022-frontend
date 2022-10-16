@@ -1,10 +1,13 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
 import Link from "next/link";
+import Header from "../components/Header";
 
 export default function BasketCompetition() {
   const [showNav, setShowNav] = useState(false);
   return (
+    <>
+    <Header title="Essay & Poster Competition | Mabacup ITS 2022" />
     <Layout showNav={showNav} setShowNav={setShowNav}>
       <main className='page-oprec-staff overflow-hidden'>
         <section className='w-full h-screen sm:h-[24rem] bg-red-300'>
@@ -167,7 +170,7 @@ export default function BasketCompetition() {
                 </div>
                 <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-1 lg:translate-y-0 lg:-translate-x-1 w-16'>
                   <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-52 text-center'>
-                    12 November 2022
+                    19 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -179,7 +182,7 @@ export default function BasketCompetition() {
                     Pengumuman 10 Besar
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max'>
-                    12 November 2022
+                    19 November 2022
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[80%] sm:translate-x-[85%] w-24'>
                     Pengumuman 10 Besar
@@ -187,7 +190,7 @@ export default function BasketCompetition() {
                 </div>
                 <div className='flex items-center justify-center md:-translate-x-0 md:-translate-y-0 lg:translate-y-0 lg:translate-x-0 w-16'>
                   <p className='hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[200%] w-44 text-center'>
-                    19 November 2022
+                    26 November 2022
                   </p>
                   <img
                     className='relative w-8 md:w-16 lg:w-16 xl:w-20'
@@ -199,7 +202,7 @@ export default function BasketCompetition() {
                     Final Presentation
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[90%] w-max'>
-                    19 November 2022
+                    26 November 2022
                   </p>
                   <p className='block lg:hidden font-secondary text-sm sm:text-base sm:text-lg font-medium absolute text-white translate-x-[75%] sm:translate-x-[100%] w-max'>
                     Final Presentation
@@ -274,5 +277,6 @@ export default function BasketCompetition() {
         </section>
       </main>
     </Layout>
+    </>
   );
 }

@@ -1,10 +1,13 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
 import Link from "next/link";
+import Header from "../components/Header";
 
 export default function StandUpCompetition() {
   const [showNav, setShowNav] = useState(false);
   return (
+    <>
+    <Header title="Stand Up Comedy Competition | Mabacup ITS 2022" />
     <Layout showNav={showNav} setShowNav={setShowNav}>
       <main className="page-oprec-staff overflow-hidden">
         <section className="w-full h-screen sm:h-[24rem] bg-red-300">
@@ -72,9 +75,11 @@ export default function StandUpCompetition() {
                       Form Pendaftaran
                     </button>
                   </Link>
-                  <button className="text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium">
-                    Unduh Guidebook
-                  </button>
+                  <Link href={'https://drive.google.com/drive/folders/1KR3QJmuHXTyMUEuk3Hagwzwy9EbPHus-'}>
+                    <button className="text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium">
+                      Unduh Guidebook
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -278,5 +283,6 @@ export default function StandUpCompetition() {
         </section>
       </main>
     </Layout>
+    </>
   );
 }

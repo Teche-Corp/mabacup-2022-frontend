@@ -2,7 +2,6 @@ import Header from "../components/Header";
 import Layout from "../components/Layout";
 import Loading from "./Loading";
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function MainEvent() {
