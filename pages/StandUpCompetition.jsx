@@ -108,7 +108,7 @@ export default function StandUpCompetition() {
               </p>
             </div>
             <img
-              className="absolute w-20 md:w-24 lg:w-24 xl:w-32 -rotate-[30deg] bottom-0 -right-4"
+              className="absolute w-16 md:w-24 lg:w-24 xl:w-32 -rotate-[30deg] bottom-0 -right-4"
               src="/about/mutiara.png"
               alt=""
             />
@@ -124,8 +124,8 @@ export default function StandUpCompetition() {
                 Timeline Kompetisi
               </div>
               <div className="w-3/4 mx-auto sm:h-96 lg:h-48 flex justify-center items-center relative z-[1]">
-                <div className="bg-white mx-auto h-96 lg:h-1  w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg">
-                  <div className="flex items-center justify-center md:-translate-x-0 md:-translate-y- lg:translate-y-0 lg:-translate-x-1 w-16 p-2">
+                <div className="bg-white mx-auto h-96 lg:h-1 w-[2px] sm:w-1 lg:w-10/12 xl:w-4/5 flex flex-col lg:flex-row justify-between items-center rounded-lg">
+                  <div className="flex items-center justify-center -translate-y-2 md:-translate-x-0 md:-translate-y- lg:translate-y-0 lg:-translate-x-1 w-16 p-2">
                     <p className="hidden lg:block font-secondary text-md font-semibold absolute text-white -translate-y-[100%] w-44 text-center">
                       22 Oktober - 5 November 2022
                     </p>
@@ -138,10 +138,10 @@ export default function StandUpCompetition() {
                     <p className="hidden lg:block font-secondary text-lg font-medium absolute text-white translate-y-[200%] w-48 text-center">
                       Pengumpulan Karya
                     </p>
-                    <p className="inline-block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[90%]">
+                    <p className="inline-block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[65%] sm:-translate-x-[90%] w-32">
                       22 Oktober - 5 November 2022
                     </p>
-                    <p className="inline-block lg:hidden font-secondary text-sm sm:text-base font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]">
+                    <p className="inline-block lg:hidden font-secondary text-sm sm:text-base font-medium absolute text-white  translate-x-[85%] sm:translate-x-[100%]">
                       Pengumpulan Karya
                     </p>
                   </div>
@@ -161,7 +161,7 @@ export default function StandUpCompetition() {
                     <p className="block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max">
                       5-11 November 2022
                     </p>
-                    <p className="inline-block lg:hidden font-secondary text-sm sm:text-base font-medium absolute text-white  translate-x-[80%] sm:translate-x-[100%]">
+                    <p className="inline-block lg:hidden font-secondary text-sm sm:text-base font-medium absolute text-white  translate-x-[110%] sm:translate-x-[100%]">
                       Penjurian
                     </p>
                   </div>
@@ -181,7 +181,7 @@ export default function StandUpCompetition() {
                     <p className="block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max">
                       12 November 2022
                     </p>
-                    <p className="inline-block lg:hidden font-secondary text-sm sm:text-base font-medium absolute text-white translate-x-[80%] sm:translate-x-[230%]">
+                    <p className="inline-block lg:hidden font-secondary text-sm sm:text-base font-medium absolute text-white translate-x-[77%] sm:translate-x-[230%] w-32">
                       Pengumuman 10 Besar
                     </p>
                   </div>
@@ -201,7 +201,7 @@ export default function StandUpCompetition() {
                     <p className="block lg:hidden font-secondary text-sm sm:text-lg font-medium sm:font-semibold absolute text-white text-center -translate-x-[70%] sm:-translate-x-[85%] w-max">
                       19 November 2022
                     </p>
-                    <p className="block lg:hidden font-secondary text-sm sm:text-base font-medium absolute text-white translate-x-[80%] sm:translate-x-[230%] w-max">
+                    <p className="block lg:hidden font-secondary text-sm sm:text-base font-medium absolute text-white translate-x-[160%] sm:translate-x-[230%] w-max">
                       Final
                     </p>
                   </div>
