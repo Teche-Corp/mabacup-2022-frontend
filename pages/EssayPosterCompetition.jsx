@@ -85,7 +85,7 @@ export default function BasketCompetition() {
                         "https://drive.google.com/file/d/1mWt97VSEXuJtkSthF9_XKERBGBHFfADW/view?usp=sharing"
                       }
                     >
-                      <button className="text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium flex justify-center items-center gap-1">
+                      <button className="text-[#5189C4] hover:text-white hover:border-white hover:border-2 font-secondary mt-4 bg-white hover:bg-transparent w-2/3 h-12 rounded-md font-medium flex justify-center items-center gap-1">
                         <BsDownload />
                         Unduh Guidebook
                       </button>

@@ -79,7 +79,7 @@ export default function BasketCompetition() {
                         "https://docs.google.com/forms/d/e/1FAIpQLSeN2ZIgIqYex2aWLDCQZkhDetLVfgJCWDH26auA96hRFt4FUw/viewform?usp=pp_url"
                       }
                     >
-                      <button className="text-white font-secondary mt-8 bg-[#5189C4] w-2/3 h-12 rounded-md font-medium">
+                      <button className="text-white font-secondary mt-8 bg-[#5189C4] hover:bg-[#4372a3] w-2/3 h-12 rounded-md font-medium">
                         Form Pendaftaran
                       </button>
                     </Link>
@@ -88,7 +88,7 @@ export default function BasketCompetition() {
                         "https://drive.google.com/file/d/1p2N7St7Nsq7FSAwLsM_2kHhZexuEhAYb/view?usp=sharing"
                       }
                     >
-                      <button className="text-[#5189C4] font-secondary mt-4 bg-white w-2/3 h-12 rounded-md font-medium flex justify-center items-center gap-1">
+                      <button className="text-[#5189C4] hover:text-white hover:border-white hover:border-2 font-secondary mt-4 bg-white hover:bg-transparent w-2/3 h-12 rounded-md font-medium flex justify-center items-center gap-1">
                         <BsDownload />
                         Unduh Guidebook
                       </button>
